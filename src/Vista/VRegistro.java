@@ -44,6 +44,7 @@ public class VRegistro extends JFrame {
 	private JPasswordField passwordField_1;
 	private JLabel lblNewLabel;
 	private JDateChooser dateChooser;
+	private JTextPane txtpnSiYaEstas;
 
 	/**
 	 * Launch the application.
@@ -203,18 +204,24 @@ public class VRegistro extends JFrame {
 		barra.add(minimizar);
 		barra.add(cerrar);
 		
+		JLabel lblNewLabel_1 = new JLabel("Confirmacion");
+		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
+		lblNewLabel_1.setForeground(Color.GREEN);
+		lblNewLabel_1.setBounds(198, 524, 118, 20);
+		contentPane.add(lblNewLabel_1);
+		
 		JLabel lblGenero_1 = new JLabel("Genero");
 		lblGenero_1.setForeground(Color.BLACK);
 		lblGenero_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		lblGenero_1.setBounds(27, 192, 112, 27);
 		contentPane.add(lblGenero_1);
 		
-		JTextPane txtpnSiYaEstas = new JTextPane();
+		txtpnSiYaEstas = new JTextPane();
 		txtpnSiYaEstas.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
 		txtpnSiYaEstas.setBackground(new Color(1, 1, 1,0));
-		txtpnSiYaEstas.setText("Si ya estas registrado\r\nclickea aqui!");
+		txtpnSiYaEstas.setText("Si ya estas registrado\r\n        clickea aqui !");
 		txtpnSiYaEstas.setForeground(Color.WHITE);
-		txtpnSiYaEstas.setBounds(541, 288, 128, 80);
+		txtpnSiYaEstas.setBounds(501, 288, 209, 80);
 		contentPane.add(txtpnSiYaEstas);
 		
 		lblNewLabel = new JLabel("");
