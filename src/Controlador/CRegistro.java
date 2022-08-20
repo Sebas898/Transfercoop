@@ -1,37 +1,75 @@
 package Controlador;
 
-import java.awt.event.MouseAdapter;
-
-import javax.swing.ImageIcon;
-
-import org.w3c.dom.events.MouseEvent;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 
 import Modelo.MRegistro;
 import Vista.VRegistro;
 
-public class CRegistro {
+public class CRegistro implements MouseListener, KeyListener {
 
 	private VRegistro v;
 	private MRegistro m;
 	
-	public static void main(String[] args) {
-	}
+
 	
 	public CRegistro(VRegistro v, MRegistro m) {
 		this.v = v;
 		this.m = m;
+		v.btnNext.addMouseListener(this);
+		v.txtCpassword.addKeyListener(this);
 		
-		v.btnNext.addMouseListener(new MouseAdapter() {
-			public void mouseEntered(MouseEvent e) {
-				v.btnNext.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/btnSiginup2.png")));
-			}
-
-			public void mouseExited(MouseEvent e) {
-				v.btnNext.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/btnSiginup1.png")));
-				v.contentPane.updateUI();
-			}
-		});
 	}
+	@Override
+	public void mouseClicked(MouseEvent e) {
+		if(e.getSource()== v.btnNext) {
+			System.out.println("hHi");
+		}
+		
+	}
+	@Override
+	public void mousePressed(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseReleased(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void mouseEntered(MouseEvent e) {
+		// TODO Auto-generated method stub
+		 
+	}
+	@Override
+	public void mouseExited(MouseEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	@Override
+	public void keyTyped(KeyEvent e) {
+
+	}
+	@Override
+	public void keyPressed(KeyEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		if(e.getSource()== v.txtCpassword) {
+			m.comprobarContrasena(v);
+		}
+	}
+
+
+	
+
+	
 	
 	
 }

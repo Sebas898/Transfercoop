@@ -7,6 +7,11 @@ import javax.swing.*;
 import javax.swing.border.*;
 import com.toedter.calendar.JDateChooser;
 
+import Controlador.CLogin;
+import Controlador.CRegistro;
+import Modelo.MLogin;
+import Modelo.MRegistro;
+
 
 public class VRegistro extends JFrame {
 
@@ -34,33 +39,22 @@ public class VRegistro extends JFrame {
 	private JLabel lbl;
 	private JLabel lblApellidos_2;
 	private JLabel lblApellidos_3;
-	private JPasswordField passwordField;
-	private JPasswordField passwordField_1;
+	public JPasswordField txtPassword;
+	public JPasswordField txtCpassword;
 	private JLabel lblNewLabel;
 	private JDateChooser dateChooser;
 	private JTextPane txtpnSiYaEstas;
+	public JLabel lblConfirm;
 
 	/**
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					VRegistro frame = new VRegistro();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+		VRegistro v = new VRegistro();
+		MRegistro m = new MRegistro();
+		CRegistro c = new CRegistro(v, m);
+		v.setVisible(true);
 	}
-
-	/**
-	 * Create the frame.
-	 * 
-	 * 
-	 */
 
 	
 
@@ -154,7 +148,7 @@ public class VRegistro extends JFrame {
 
 		logo = new JLabel("");
 		logo.setHorizontalAlignment(SwingConstants.CENTER);
-		logo.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/LOGO PEQUE\u00D1O.png")));
+		logo.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/LOGO PEQUENO.png")));
 		logo.setBounds(479, 37, 231, 80);
 
 		lblSingup = new JLabel("RESGISTRO");
@@ -164,6 +158,18 @@ public class VRegistro extends JFrame {
 		lblSingup.setBounds(10, 37, 470, 30);
 
 		btnNext = new JLabel();
+		btnNext.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnNext.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/btnSiginup2.png")));
+				contentPane.updateUI();
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btnNext.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/btnSiginup1.png")));
+				contentPane.updateUI();
+			}
+		});
 		btnNext.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/btnSiginup1.png")));
 		btnNext.setHorizontalAlignment(SwingConstants.CENTER);
 		btnNext.setBounds(169, 570, 150, 39);
@@ -198,11 +204,11 @@ public class VRegistro extends JFrame {
 		barra.add(minimizar);
 		barra.add(cerrar);
 		
-		JLabel lblNewLabel_1 = new JLabel("Confirmacion");
-		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		lblNewLabel_1.setForeground(Color.GREEN);
-		lblNewLabel_1.setBounds(198, 524, 118, 20);
-		contentPane.add(lblNewLabel_1);
+		lblConfirm = new JLabel("Confirmacion");
+		lblConfirm.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
+		lblConfirm.setForeground(Color.GREEN);
+		lblConfirm.setBounds(198, 524, 257, 20);
+		contentPane.add(lblConfirm);
 		
 		JLabel lblGenero_1 = new JLabel("Genero");
 		lblGenero_1.setForeground(Color.BLACK);
@@ -223,21 +229,21 @@ public class VRegistro extends JFrame {
 		lblNewLabel.setBounds(531, 149, 128, 128);
 		contentPane.add(lblNewLabel);
 		
-		passwordField_1 = new JPasswordField();
-		passwordField_1.setBackground(Color.LIGHT_GRAY);
-		passwordField_1.setBorder(null);
-		passwordField_1.setForeground(Color.BLACK);
-		passwordField_1.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
-		passwordField_1.setBounds(198, 487, 257, 27);
-		contentPane.add(passwordField_1);
+		txtCpassword = new JPasswordField();
+		txtCpassword.setBackground(Color.LIGHT_GRAY);
+		txtCpassword.setBorder(null);
+		txtCpassword.setForeground(Color.BLACK);
+		txtCpassword.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
+		txtCpassword.setBounds(198, 487, 257, 27);
+		contentPane.add(txtCpassword);
 		
-		passwordField = new JPasswordField();
-		passwordField.setBackground(Color.LIGHT_GRAY);
-		passwordField.setBorder(null);
-		passwordField.setForeground(Color.BLACK);
-		passwordField.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
-		passwordField.setBounds(198, 436, 257, 27);
-		contentPane.add(passwordField);
+		txtPassword = new JPasswordField();
+		txtPassword.setBackground(Color.LIGHT_GRAY);
+		txtPassword.setBorder(null);
+		txtPassword.setForeground(Color.BLACK);
+		txtPassword.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
+		txtPassword.setBounds(198, 436, 257, 27);
+		contentPane.add(txtPassword);
 		
 		lblApellidos_3 = new JLabel("Confirmar: ");
 		lblApellidos_3.setForeground(Color.BLACK);
