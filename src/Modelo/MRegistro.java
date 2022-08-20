@@ -37,9 +37,7 @@ public class MRegistro {
 	}
 
 	
-	public Date fecha(dateChooser dj) {
-		
-	}
+
 	
 	
 	public void guardar(VRegistro v){
