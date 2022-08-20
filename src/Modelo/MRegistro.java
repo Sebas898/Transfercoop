@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.Calendar;
 import java.sql.Date;
 
 import javax.swing.JOptionPane;
@@ -45,23 +46,26 @@ public class MRegistro {
 						JOptionPane.showMessageDialog(null, "Hay campos vacios","Error",JOptionPane.ERROR_MESSAGE);
 
 			}else{
-				java.util.Date dateUtil=new java.util.Date(v.dateChooser.getDateFormatString());                                                
 
-				java.sql.Date dateSql= new java.sql.Date(dateUtil.getDay(),dateUtil.getMonth(),dateUtil.getYear());
+				String f = String.valueOf(v.dateChooser.getCalendar().get(Calendar.YEAR));
+				String f2 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.MONTH));
+				String f3 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH));
+				String fehca = (f+"-"+f2+"-"+f3);
+				Date z1 = Date.valueOf(fehca);
 
 				con = Conexion.getConection();
 				ps = con.prepareStatement("INSERT INTO usuarios (nID, nombre, apellido, fNacimiento, genero, contrasena, dinero, rango) VALUES (?,?,?,?,?,?,?,?)");
 				ps.setString(1, v.nID.getText());
 				ps.setString(2, v.nombre.getText());
 				ps.setString(3, v.apellido.getText());
-				ps.setDate(4, dateSql);
+				ps.setDate(4, z1);
 				ps.setString(5, v.buttonGroup.getSelection().getActionCommand());
 				ps.setString(6, v.txtCpassword.getText());
 				ps.setDouble(7, 0);
 				ps.setString(8, "U");
-				rs = ps.executeQuery();
+				int rs = ps.executeUpdate();
 	
-				if(rs.next()){
+				if(rs > 0){
 					JOptionPane.showMessageDialog(null, "Registro exitoso","Aviso",JOptionPane.INFORMATION_MESSAGE);
 				}else{
 					JOptionPane.showMessageDialog(null, "Error al registrar","Error",JOptionPane.ERROR_MESSAGE);
