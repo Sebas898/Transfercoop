@@ -20,7 +20,8 @@ public class CRegistro implements MouseListener, KeyListener {
 		this.m = m;
 		v.btnNext.addMouseListener(this);
 		v.txtCpassword.addKeyListener(this);
-		
+		v.txtPassword.addKeyListener(this);
+		m.casiilasEnBlanco(v);
 	}
 	@Override
 	public void mouseClicked(MouseEvent e) {
@@ -28,6 +29,17 @@ public class CRegistro implements MouseListener, KeyListener {
 			System.out.println("hHi");
 		}
 		
+	}
+	@Override
+	public void keyReleased(KeyEvent e) {
+		if(e.getSource()== v.txtCpassword) {
+			m.comprobarContrasena(v);		
+			m.casiilasEnBlanco(v);
+		}
+		if(e.getSource()== v.txtPassword) {
+			m.comprobarContrasena(v);
+			m.casiilasEnBlanco(v);
+		}
 	}
 	@Override
 	public void mousePressed(MouseEvent e) {
@@ -58,18 +70,5 @@ public class CRegistro implements MouseListener, KeyListener {
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 		
-	}
-	@Override
-	public void keyReleased(KeyEvent e) {
-		if(e.getSource()== v.txtCpassword) {
-			m.comprobarContrasena(v);
-		}
-	}
-
-
-	
-
-	
-	
-	
+	}	
 }
