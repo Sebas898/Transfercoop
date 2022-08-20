@@ -3,16 +3,10 @@ package Vista;
 import java.awt.*;
 
 import java.awt.event.*;
-
 import javax.swing.*;
 import javax.swing.border.*;
-
-import AppPackage.AnimationClass;
 import com.toedter.calendar.JDateChooser;
-import com.toedter.calendar.JDayChooser;
-import rojerusan.RSPanelsSlider;
-import rojerusan.RSPanelsSlider.DIRECT;
-import com.toedter.components.JLocaleChooser;
+
 
 public class VRegistro extends JFrame {
 
