@@ -13,8 +13,6 @@ public class CRegistro implements MouseListener, KeyListener {
 	private VRegistro v;
 	private MRegistro m;
 	
-
-	
 	public CRegistro(VRegistro v, MRegistro m) {
 		this.v = v;
 		this.m = m;
@@ -26,7 +24,7 @@ public class CRegistro implements MouseListener, KeyListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if(e.getSource()== v.btnNext) {
-			System.out.println("hHi");
+			m.guardar(v);
 		}
 		
 	}

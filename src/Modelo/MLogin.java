@@ -29,9 +29,7 @@ public class MLogin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 
-	
 	public void mostrar(VLogin v) {
 		Connection con = null;
 		try {
