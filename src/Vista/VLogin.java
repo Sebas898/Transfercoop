@@ -4,6 +4,9 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+import Controlador.CLogin;
+import Modelo.MLogin;
+
 public class VLogin extends JFrame {
 
 	private JPanel contentPane;
@@ -23,8 +26,10 @@ public class VLogin extends JFrame {
 	private int mouseY;
 
 	public static void main(String[] args) {
-		VLogin frame = new VLogin();
-		frame.setVisible(true);
+		VLogin v = new VLogin();
+		MLogin m = new MLogin();
+		CLogin c = new CLogin(v, m);
+		v.setVisible(true);
 	}
 	
 	
@@ -143,7 +148,7 @@ public class VLogin extends JFrame {
 
 		lblLogo = new JLabel("");
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
-		lblLogo.setIcon(new ImageIcon(VLogin.class.getResource("/Vista/img/LOGO PEQUEÑO.png")));
+		lblLogo.setIcon(new ImageIcon(VLogin.class.getResource("/Vista/img/LOGO PEQUENO.png")));
 		lblLogo.setBounds(0, 54, 400, 78);
 
 		lblLogin = new JLabel("Hola bienvenido a Transfercoop");

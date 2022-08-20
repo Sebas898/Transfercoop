@@ -3,6 +3,9 @@ package Modelo;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
@@ -12,6 +15,8 @@ public class MLogin {
 	private String username;
 	private String password;
 	
+	PreparedStatement ps;
+	ResultSet rs;
 	
 	public String getUsername() {
 		return username;
@@ -30,11 +35,21 @@ public class MLogin {
 
 	
 	public void mostrar(VLogin v) {
-		System.out.println("USUARIO: "+v.username.getText()+" CONTRASEÑA: "+v.password.getText());
-		if (v.username.getText().equals("1006859078") && v.password.getText().equals("1234")) {
-			JOptionPane.showMessageDialog(null, "Acceso Concedido");
-		} else {
-			JOptionPane.showMessageDialog(null, "Acceso Denegado");
+		Connection con = null;
+		try {
+			con = Conexion.getConection();
+			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ? AND contrasena = ?");
+			ps.setString(1, v.username.getText());
+			ps.setString(2, v.password.getText());
+			rs = ps.executeQuery();
+			if(rs.next()){
+				JOptionPane.showMessageDialog(null, "Welcome "+rs.getString("nombre"), "Aviso", JOptionPane.INFORMATION_MESSAGE);
+			}else{
+				JOptionPane.showMessageDialog(null, "Datos no validos", "Error", JOptionPane.ERROR_MESSAGE);
+			}
+			
+		} catch (Exception e) {
+			System.out.println(e);
 		}
 	}
 
