@@ -9,6 +9,8 @@ import java.sql.Date;
 
 import javax.swing.JOptionPane;
 
+import com.toedter.calendar.JDateChooser;
+
 import Vista.VRegistro;
 
 public class MRegistro {
@@ -36,6 +38,17 @@ public class MRegistro {
 		}
 	}
 
+	public Date fecha(JDateChooser jd) {
+		if(jd.getDate() != null) {
+			return Date.valueOf((String.valueOf(v.dateChooser.getCalendar().get(Calendar.YEAR))
+					+"-"+String.valueOf(v.dateChooser.getCalendar().get(Calendar.MONTH))
+					+"-"+String.valueOf(v.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH))));
+		}else {
+			return null;
+		}
+	}
+	
+	
 	public void guardar(VRegistro v){
 		Connection con = null;
 
@@ -47,18 +60,12 @@ public class MRegistro {
 
 			}else{
 
-				String f = String.valueOf(v.dateChooser.getCalendar().get(Calendar.YEAR));
-				String f2 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.MONTH));
-				String f3 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH));
-				String fehca = (f+"-"+f2+"-"+f3);
-				Date z1 = Date.valueOf(fehca);
-
 				con = Conexion.getConection();
 				ps = con.prepareStatement("INSERT INTO usuarios (nID, nombre, apellido, fNacimiento, genero, contrasena, dinero, rango) VALUES (?,?,?,?,?,?,?,?)");
 				ps.setString(1, v.nID.getText());
 				ps.setString(2, v.nombre.getText());
 				ps.setString(3, v.apellido.getText());
-				ps.setDate(4, z1);
+				ps.setDate(4, fecha(v.dateChooser));
 				ps.setString(5, v.buttonGroup.getSelection().getActionCommand());
 				ps.setString(6, v.txtCpassword.getText());
 				ps.setDouble(7, 0);
