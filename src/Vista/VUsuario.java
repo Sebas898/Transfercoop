@@ -5,6 +5,10 @@ import java.awt.Color;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Controlador.CUsuario;
+import Modelo.MUsuario;
+
 import javax.swing.JLabel;
 import javax.swing.ImageIcon;
 import java.awt.Font;
@@ -35,12 +39,15 @@ public class VUsuario extends JFrame {
 	private JTextPane txtFrase;
 	private JLabel btnTrasferir;
 	private JLabel btnMovimientos;
-	private JLabel btnSalir;
+	public JLabel btnSalir;
 	private JLabel Logo;
 	
 	public static void main(String[] args) {
-		VUsuario frame = new VUsuario();
-		frame.setVisible(true);
+		VUsuario v = new VUsuario();
+		MUsuario m = new MUsuario();
+		CUsuario c = new CUsuario(v, m);
+		v.setVisible(true);
+		
 	}
 
 	public VUsuario() {

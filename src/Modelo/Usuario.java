@@ -1,5 +1,7 @@
 package Modelo;
 import javax.xml.crypto.Data;
+
+import Vista.VUsuario;
 public class Usuario {
 	
 	String nombre;
@@ -10,10 +12,15 @@ public class Usuario {
 	char rango;
 	Data FechaN;
 	
+	VUsuario vUsuario = new VUsuario();
+
+
 	public Usuario() {
 		
 	}
 	
+
+
 	// Metodos
 	public void ingresar() {
 		

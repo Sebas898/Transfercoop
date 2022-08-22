@@ -8,6 +8,7 @@ import java.sql.ResultSet;
 import javax.swing.JOptionPane;
 
 import Vista.VLogin;
+import Vista.VUsuario;
 
 public class MLogin {
 	private String username;
@@ -17,6 +18,8 @@ public class MLogin {
 	ResultSet rs;
 
 	Encriptacion en = new Encriptacion();
+	VUsuario vUsuario = new VUsuario();
+	VLogin vLogin = new VLogin();
 	
 	public String getUsername() {
 		return username;
@@ -42,6 +45,8 @@ public class MLogin {
 			rs = ps.executeQuery();
 			if(rs.next()){
 				JOptionPane.showMessageDialog(null, "Welcome "+rs.getString("nombre"), "Aviso", JOptionPane.INFORMATION_MESSAGE);
+				vUsuario.setVisible(true);
+				vLogin.setVisible(false);
 			}else{
 				JOptionPane.showMessageDialog(null, "Datos no validos", "Error", JOptionPane.ERROR_MESSAGE);
 			}
