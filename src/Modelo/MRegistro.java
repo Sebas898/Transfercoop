@@ -8,7 +8,6 @@ import java.util.Calendar;
 import java.sql.Date;
 
 import javax.swing.JOptionPane;
-
 import Vista.VRegistro;
 
 public class MRegistro {
@@ -17,6 +16,8 @@ public class MRegistro {
 	ResultSet rs;
 	
 	VRegistro v = new VRegistro();
+	Encriptacion en = new Encriptacion();
+	
 	
 	public void comprobarContrasena(VRegistro v) {
 	
@@ -36,10 +37,6 @@ public class MRegistro {
 		}
 	}
 
-	
-
-	
-	
 	public void guardar(VRegistro v){
 		Connection con = null;
 
@@ -64,7 +61,7 @@ public class MRegistro {
 				ps.setString(3, v.apellido.getText());
 				ps.setDate(4, z1);
 				ps.setString(5, v.buttonGroup.getSelection().getActionCommand());
-				ps.setString(6, v.txtCpassword.getText());
+				ps.setString(6, en.encriptar(v.txtCpassword.getText()));
 				ps.setDouble(7, 0);
 				ps.setString(8, "U");
 				int rs = ps.executeUpdate();

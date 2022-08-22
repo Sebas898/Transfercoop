@@ -15,6 +15,8 @@ public class MLogin {
 	
 	PreparedStatement ps;
 	ResultSet rs;
+
+	Encriptacion en = new Encriptacion();
 	
 	public String getUsername() {
 		return username;
@@ -36,7 +38,7 @@ public class MLogin {
 			con = Conexion.getConection();
 			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ? AND contrasena = ?");
 			ps.setString(1, v.username.getText());
-			ps.setString(2, v.password.getText());
+			ps.setString(2, en.encriptar(v.password.getText()));
 			rs = ps.executeQuery();
 			if(rs.next()){
 				JOptionPane.showMessageDialog(null, "Welcome "+rs.getString("nombre"), "Aviso", JOptionPane.INFORMATION_MESSAGE);
