@@ -24,25 +24,25 @@ public class VRegistro extends JFrame {
 	private JLabel minimizar;
 	private JLabel logo;
 	private JLabel lblSingup;
-	public final ButtonGroup buttonGroup = new ButtonGroup(); // genero
+	private final ButtonGroup buttonGroup = new ButtonGroup();
 	public JLabel btnNext;
-	public JTextField nombre; //nombre
+	private JTextField nombre;
 	private JLabel lblNombre;
 	private JLabel lblApellidos;
-	public JTextField apellido; //apellido
+	private JTextField textField;
 	private JLabel lblGenero;
-	public JTextField nID; // ID
-	public JRadioButton rbFemenino;  // genero 1
-	public JRadioButton rdbtnMasculino; // genero 2
-	public JRadioButton rdbtnOtro; // genero 3
+	private JTextField textField_1;
+	private JRadioButton rbFemenino;
+	private JRadioButton rdbtnMasculino;
+	private JRadioButton rdbtnOtro;
 	private JLabel lblFechaDeNacimiento;
 	private JLabel lbl;
 	private JLabel lblApellidos_2;
 	private JLabel lblApellidos_3;
-	public JPasswordField txtPassword; // contra
-	public JPasswordField txtCpassword; // vercontra
+	public JPasswordField txtPassword;
+	public JPasswordField txtCpassword;
 	private JLabel lblNewLabel;
-	public JDateChooser dateChooser; // fechaNaci
+	private JDateChooser dateChooser;
 	private JTextPane txtpnSiYaEstas;
 	public JLabel lblConfirm;
 
@@ -56,7 +56,7 @@ public class VRegistro extends JFrame {
 		v.setVisible(true);
 	}
 
-	
+
 
 	public VRegistro() {
 		setUndecorated(true);
@@ -70,7 +70,7 @@ public class VRegistro extends JFrame {
 				contentPane.updateUI();
 			}
 		});
-		
+
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -177,7 +177,7 @@ public class VRegistro extends JFrame {
 		fondo = new JLabel();
 		fondo.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/fondo_singup.png")));
 		fondo.setBounds(10, 10, 700, 625);
-		
+
 		nombre = new JTextField();
 		nombre.setBackground(Color.LIGHT_GRAY);
 		nombre.setForeground(Color.BLACK);
@@ -191,7 +191,7 @@ public class VRegistro extends JFrame {
 		nombre.setBorder(null);
 		nombre.setBounds(169, 103, 289, 26);
 		nombre.setColumns(10);
-		
+
 		lblNombre = new JLabel("Nombres:");
 		lblNombre.setForeground(Color.BLACK);
 		lblNombre.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
@@ -257,7 +257,7 @@ public class VRegistro extends JFrame {
 		lbl.setBounds(30, 382, 150, 27);
 		
 		
-		lblApellidos_2 = new JLabel("Contraseña: ");
+		lblApellidos_2 = new JLabel("Contrase\u00F1a: ");
 		lblApellidos_2.setForeground(Color.BLACK);
 		lblApellidos_2.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		lblApellidos_2.setBounds(30, 436, 136, 27);
@@ -282,7 +282,6 @@ public class VRegistro extends JFrame {
 		rdbtnOtro = new JRadioButton("Otro");
 		rdbtnOtro.setForeground(Color.BLACK);
 		buttonGroup.add(rdbtnOtro);
-		rdbtnOtro.setActionCommand("Otro");
 		rdbtnOtro.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
 		rdbtnOtro.setBackground(new Color(1, 1, 1, 0));
 		rdbtnOtro.setBounds(371, 239, 84, 23);
@@ -291,7 +290,6 @@ public class VRegistro extends JFrame {
 		rdbtnMasculino = new JRadioButton("Masculino");
 		rdbtnMasculino.setForeground(Color.BLACK);
 		buttonGroup.add(rdbtnMasculino);
-		rdbtnMasculino.setActionCommand("Masculino");
 		rdbtnMasculino.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
 		rdbtnMasculino.setBackground(new Color(1, 1, 1, 0));
 		rdbtnMasculino.setBounds(180, 239, 136, 23);
@@ -300,28 +298,27 @@ public class VRegistro extends JFrame {
 		rbFemenino = new JRadioButton("Femenino");
 		rbFemenino.setForeground(Color.BLACK);
 		buttonGroup.add(rbFemenino);
-		rbFemenino.setActionCommand("Femenino");
 		rbFemenino.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
 		rbFemenino.setBounds(30, 239, 109, 23);
 		rbFemenino.setBackground(new Color(1,1,1,0));
 		
 		
-		apellido = new JTextField();
-		apellido.setBackground(Color.LIGHT_GRAY);
-		apellido.setForeground(Color.BLACK);
-		apellido.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
-		apellido.setColumns(10);
-		apellido.setBorder(null);
-		apellido.setBounds(169, 144, 289, 26);
+		textField = new JTextField();
+		textField.setBackground(Color.LIGHT_GRAY);
+		textField.setForeground(Color.BLACK);
+		textField.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
+		textField.setColumns(10);
+		textField.setBorder(null);
+		textField.setBounds(169, 144, 289, 26);
 		
 		
-		nID = new JTextField();
-		nID.setBackground(Color.LIGHT_GRAY);
-		nID.setForeground(Color.BLACK);
-		nID.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
-		nID.setColumns(10);
-		nID.setBorder(null);
-		nID.setBounds(198, 383, 260, 26);
+		textField_1 = new JTextField();
+		textField_1.setBackground(Color.LIGHT_GRAY);
+		textField_1.setForeground(Color.BLACK);
+		textField_1.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
+		textField_1.setColumns(10);
+		textField_1.setBorder(null);
+		textField_1.setBounds(198, 383, 260, 26);
 	
 		
 		lblGenero = new JLabel("Genero");
@@ -344,8 +341,8 @@ public class VRegistro extends JFrame {
 		contentPane.add(rdbtnOtro);
 		contentPane.add(rdbtnMasculino);
 		contentPane.add(rbFemenino);
-		contentPane.add(apellido);
-		contentPane.add(nID);
+		contentPane.add(textField);
+		contentPane.add(textField_1);
 		contentPane.add(lblApellidos);
 		contentPane.add(nombre);
 		contentPane.add(lblNombre);

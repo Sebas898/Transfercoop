@@ -34,8 +34,16 @@ public class MLogin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+	public void cargarDatos(VLogin v) {
+		
+	}
 
-	public void mostrar(VLogin v) {
+	public void guardarDatos(VLogin v) {
+		
+	}
+	
+	public void ingresar(VLogin v) {
 		Connection con = null;
 		try {
 			con = Conexion.getConection();
@@ -47,6 +55,11 @@ public class MLogin {
 				JOptionPane.showMessageDialog(null, "Welcome "+rs.getString("nombre"), "Aviso", JOptionPane.INFORMATION_MESSAGE);
 				vUsuario.setVisible(true);
 				vLogin.setVisible(false);
+				
+				if(rs.getString("Rango").equals("U")) {
+					
+				}
+				
 			}else{
 				JOptionPane.showMessageDialog(null, "Datos no validos", "Error", JOptionPane.ERROR_MESSAGE);
 			}
