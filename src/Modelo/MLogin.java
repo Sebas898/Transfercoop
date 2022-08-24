@@ -18,7 +18,6 @@ public class MLogin {
 
 	PreparedStatement ps;
 	ResultSet rs;
-	String a;
 
 	Encriptacion en = new Encriptacion();
 	VUsuario vUsuario = new VUsuario();
@@ -67,10 +66,8 @@ public class MLogin {
 					cliente.setApellido(rs.getString("apellido"));
 					cliente.setContrasena(rs.getString("contrasena"));
 					cliente.setFechaN(rs.getDate("fNacimiento"));
-					a = rs.getString("genero");
-					cliente.setSexo(a.charAt(0));
-					a = rs.getString("rango");
-					cliente.setRango(a.charAt(0));
+					cliente.setSexo(rs.getString("genero").charAt(0));;
+					cliente.setRango(rs.getString("rango").charAt(0));
 					cliente.setDinero(rs.getDouble("dinero"));
 					
 					cerrar(v);

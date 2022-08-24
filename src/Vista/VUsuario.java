@@ -34,7 +34,7 @@ public class VUsuario extends JFrame {
 	private JLabel cerrar;
 	private int mouseX;
 	private int mouseY;
-	private JLabel lblDinero;
+	public JLabel lblDinero;
 	private JLabel lblSaldo;
 	private JLabel btnRetirar;
 	private JTextPane txtFrase;
@@ -170,6 +170,7 @@ public class VUsuario extends JFrame {
 		txtFrase.setFont(new Font("Tw Cen MT", Font.PLAIN, 16));
 		txtFrase.setBackground(new Color(32, 178, 170,0));
 		txtFrase.setBounds(10, 138, 210, 96);
+		txtFrase.setEditable(false);
 		
 		lblSaldo = new JLabel("Saldo");
 		lblSaldo.setForeground(Color.BLACK);
