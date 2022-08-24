@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import Controlador.CUsuario;
+import Modelo.MLogin;
 import Modelo.MUsuario;
 
 import javax.swing.JLabel;
@@ -24,8 +25,8 @@ public class VUsuario extends JFrame {
 	private JLabel fondo;
 	private JPanel panel;
 	private JLabel imagenUser;
-	private JLabel lblNombre;
-	private JLabel lblId;
+	public JLabel lblNombre;
+	public JLabel lblId;
 	private JLabel lblFecha;
 	private JLabel lblMarca;
 	private JPanel barra;
@@ -45,7 +46,8 @@ public class VUsuario extends JFrame {
 	public static void main(String[] args) {
 		VUsuario v = new VUsuario();
 		MUsuario m = new MUsuario();
-		CUsuario c = new CUsuario(v, m);
+		MLogin mLogin = new MLogin();
+		CUsuario c = new CUsuario(v, m, mLogin);
 		v.setVisible(true);
 		
 	}
@@ -132,7 +134,7 @@ public class VUsuario extends JFrame {
 		imagenUser.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/login.png")));
 		imagenUser.setBounds(47, 11, 128, 128);
 		
-		lblNombre = new JLabel("Nombre Apellido");
+		lblNombre = new JLabel();
 		lblNombre.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombre.setForeground(Color.WHITE);
 		lblNombre.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
