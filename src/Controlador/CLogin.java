@@ -22,7 +22,7 @@ public class CLogin implements MouseListener {
 	@Override
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource() == v.login) {
-			m.ingresar(v);
+			m.mostrar(v);
 		}
 	}
 

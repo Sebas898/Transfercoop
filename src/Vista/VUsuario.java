@@ -41,13 +41,13 @@ public class VUsuario extends JFrame {
 	private JLabel btnMovimientos;
 	public JLabel btnSalir;
 	private JLabel Logo;
-
+	
 	public static void main(String[] args) {
 		VUsuario v = new VUsuario();
 		MUsuario m = new MUsuario();
 		CUsuario c = new CUsuario(v, m);
 		v.setVisible(true);
-
+		
 	}
 
 	public VUsuario() {
@@ -60,7 +60,7 @@ public class VUsuario extends JFrame {
 		contentPane.setLayout(null);
 		setBackground(new Color(1,1,1,0));
 		setLocationRelativeTo(null);
-
+		
 		barra = new JPanel();
 		barra.setLayout(null);
 		barra.setBackground(new Color(25,25,25,0));
