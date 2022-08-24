@@ -18,7 +18,7 @@ public class CUsuario implements MouseListener{
         this.m = m;
         this.mLogin = mLogin;
         v.btnSalir.addMouseListener(this);
-        v.lblNombre.setText(mLogin.cliente.getNombre());
+        m.mostrarDatos(v, mLogin);
     }
 
     @Override

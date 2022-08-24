@@ -6,13 +6,14 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+import Controlador.CUsuario;
 import Vista.VLogin;
 import Vista.VUsuario;
 
 public class MLogin {
 	private String username;
 	private String password;
-	
+
 	public Cliente cliente;
 
 	PreparedStatement ps;
@@ -21,20 +22,29 @@ public class MLogin {
 
 	Encriptacion en = new Encriptacion();
 	VUsuario vUsuario = new VUsuario();
-	VLogin vLogin = new VLogin();
-	
+
 	public String getUsername() {
 		return username;
 	}
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
-	
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public void cerrar(VLogin v) {
+		VUsuario vU = new VUsuario();
+		MUsuario m = new MUsuario();
+		CUsuario c = new CUsuario(vU, m, this);
+		vU.setVisible(true);
+		v.dispose();
 	}
 
 	public void mostrar(VLogin v) {
@@ -45,12 +55,11 @@ public class MLogin {
 			ps.setString(1, v.username.getText());
 			ps.setString(2, en.encriptar(v.password.getText()));
 			rs = ps.executeQuery();
-			if(rs.next()){
-				JOptionPane.showMessageDialog(null, "Welcome "+rs.getString("nombre"), "Aviso", JOptionPane.INFORMATION_MESSAGE);
-				vUsuario.setVisible(true);
-				vLogin.setVisible(false);
+			if (rs.next()) {
+				JOptionPane.showMessageDialog(null, "Welcome " + rs.getString("nombre"), "Aviso",
+						JOptionPane.INFORMATION_MESSAGE);
 
-				if(rs.getString("rango").equals("U")){
+				if (rs.getString("rango").equals("U")) {
 					cliente = new Cliente();
 
 					cliente.setID(rs.getString("nID"));
@@ -63,15 +72,18 @@ public class MLogin {
 					a = rs.getString("rango");
 					cliente.setRango(a.charAt(0));
 					cliente.setDinero(rs.getDouble("dinero"));
+					
+					cerrar(v);
 				}
-				
-			}else{
+
+			} else {
 				JOptionPane.showMessageDialog(null, "Datos no validos", "Error", JOptionPane.ERROR_MESSAGE);
 			}
-			
+
 		} catch (Exception e) {
 			System.out.println(e);
 		}
+
 	}
 
 }

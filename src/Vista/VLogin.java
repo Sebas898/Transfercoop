@@ -25,13 +25,6 @@ public class VLogin extends JFrame {
 	private int mouseX;
 	private int mouseY;
 
-	public static void main(String[] args) {
-		VLogin v = new VLogin();
-		MLogin m = new MLogin();
-		CLogin c = new CLogin(v, m);
-		v.setVisible(true);
-	}
-	
 	
 	public VLogin() {
 
