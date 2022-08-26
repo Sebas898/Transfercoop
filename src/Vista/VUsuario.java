@@ -56,8 +56,8 @@ public class VUsuario extends JFrame {
 	public JPanel panel;
 	private JLabel fondo;
 	public JPanel panelT;
-	private JTextField id;
-	private JTextField monto;
+	public JTextField id;
+	public JTextField monto;
 	private JLabel btnTrasferir_1;
 	private JLabel lblIdEnvio;
 	private JLabel lblMonto;
