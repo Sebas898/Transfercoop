@@ -10,7 +10,8 @@ public class CCorresponsal {
 
 	public CCorresponsal(VCorresponsal v, MCorresponsal m) {
 		this.v = v;
-		this.m = 
+		this.m = m;
+		
 	}
 
 }
