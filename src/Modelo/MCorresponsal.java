@@ -1,15 +1,15 @@
 package Modelo;
 
-import Controlador.CUsuario;
-import Vista.VLogin;
-import Vista.VUsuario;
+import Controlador.CCorresponsal;
+import Vista.VCorresponsal;
+
 
 public class MCorresponsal {
 
-	public void cerrar(VLogin v) {
-		VCorresponsal vU = new MCorresponsal();
+	public void cerrar(VCorresponsal v) {
+		VCorresponsal vU = new VCorresponsal();
 		MCorresponsal m = new MCorresponsal();
-		MCorresponsal c = new MCorresponsal(vU, m, this);
+		CCorresponsal c = new CCorresponsal(vU, m, this);
 		vU.setVisible(true);
 		v.dispose();
 	}
