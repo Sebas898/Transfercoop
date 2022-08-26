@@ -150,7 +150,7 @@ public class VUsuario extends JFrame {
 		lblMovimientos.setBounds(195, 96, 192, 33);
 		panelm.add(lblMovimientos);
 		
-		JLabel lblNewLabel = new JLabel("Volver");
+		JLabel lblNewLabel = new JLabel("New label");
 		lblNewLabel.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		lblNewLabel.setForeground(Color.BLACK);
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
