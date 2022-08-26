@@ -19,7 +19,7 @@ public class MLogin {
 	PreparedStatement ps;
 	ResultSet rs;
 	String a;
-	Connection con = Conexion.getConection();
+	
 	Encriptacion en = new Encriptacion();
 	VUsuario vUsuario = new VUsuario();
 
@@ -47,7 +47,8 @@ public class MLogin {
 		v.dispose();
 	}
 
-	public void mostrar(VLogin v) {
+	public void login(VLogin v) {
+		Connection con = Conexion.getConection();
 		try {
 			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ? AND contrasena = ?");
 			ps.setString(1, v.username.getText());

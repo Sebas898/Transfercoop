@@ -19,7 +19,9 @@ public class CUsuario implements MouseListener{
         this.mLogin = mLogin;
         v.btnSalir.addMouseListener(this);
         v.btnTrasferir.addMouseListener(this);
-        v.btnVolver.addMouseListener(this);
+        v.btnMovimientos.addMouseListener(this);
+        v.btnVolverT.addMouseListener(this);
+        v.btnVolverM.addMouseListener(this);
         m.mostrarDatos(v, mLogin);
     }
 
@@ -51,8 +53,16 @@ public class CUsuario implements MouseListener{
     		m.abrirVTransferir(v);
     	}
     	
-    	if(e.getSource() == v.btnVolver) {
+    	if(e.getSource() == v.btnVolverM) {
     		m.volver(v);
+    	}
+    	
+    	if(e.getSource() == v.btnVolverT) {
+    		m.volver(v);
+    	}
+    	
+    	if(e.getSource() == v.btnMovimientos) {
+    		m.abrirVMovimientos(v);
     	}
     }
 
