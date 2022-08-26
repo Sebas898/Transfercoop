@@ -66,18 +66,18 @@ public class VLogin extends JFrame {
 		lblUsername = new JLabel("Username:");
 		lblUsername.setForeground(Color.WHITE);
 		lblUsername.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		lblUsername.setBounds(40, 231, 86, 20);
+		lblUsername.setBounds(40, 205, 86, 20);
 
 		lblPassword = new JLabel("Password:");
 		lblPassword.setForeground(Color.WHITE);
 		lblPassword.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		lblPassword.setBounds(40, 269, 86, 18);
+		lblPassword.setBounds(40, 243, 86, 18);
 
 		username = new JTextField();
 		username.setForeground(Color.WHITE);
 		username.setBackground(new Color(1, 1, 1, 0));
 		username.setFont(new Font("Tw Cen MT", Font.BOLD, 16));
-		username.setBounds(136, 229, 200, 20);
+		username.setBounds(136, 203, 200, 22);
 		username.setBorder(null);
 		username.setCaretColor(Color.white);
 		username.setColumns(10);
@@ -101,7 +101,7 @@ public class VLogin extends JFrame {
 		password.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		password.setForeground(Color.WHITE);
 		password.setBackground(new Color(1, 1, 1, 0));
-		password.setBounds(136, 267, 200, 20);
+		password.setBounds(136, 241, 200, 20);
 		password.setBorder(null);
 		password.setCaretColor(Color.white);
 		password.addKeyListener(new KeyAdapter() {
@@ -137,7 +137,7 @@ public class VLogin extends JFrame {
 		login.setForeground(Color.WHITE);
 		login.setBackground(new Color(50, 205, 50));
 		login.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		login.setBounds(128, 324, 150, 39);
+		login.setBounds(120, 286, 150, 39);
 
 		lblLogo = new JLabel("");
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -148,7 +148,7 @@ public class VLogin extends JFrame {
 		lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogin.setForeground(Color.WHITE);
 		lblLogin.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
-		lblLogin.setBounds(0, 160, 400, 32);
+		lblLogin.setBounds(10, 143, 400, 32);
 
 		fondo = new JLabel("");
 		fondo.setHorizontalAlignment(SwingConstants.CENTER);
