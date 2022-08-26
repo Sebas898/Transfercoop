@@ -1,10 +1,12 @@
-## Table of Contents
-1. [General Info](#general-info)
+![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
+***
+## Tabla de contenido.
+1. [Introduccion](#Introduccion)
 2. [Technologies](#technologies)
 3. [Installation](#installation)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
-### General Info
+### Introduccion.
 ***
 Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
 ### Screenshot
