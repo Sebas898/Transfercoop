@@ -20,6 +20,7 @@ El software quiere solucionar los problemas que tiene la gente con algunas ident
 ## 📄Planteamiento del problema
 ***
 ### 🖋️Descripcion de Problematica
+La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.
 ***
 ## 🗄️Objetivos.
 ***
