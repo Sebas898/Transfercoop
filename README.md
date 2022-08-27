@@ -2,26 +2,26 @@
 ![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
 ***
 # **🗃️Tabla de contenido**.
-1. [Introduccion.](#Introduccion.)
-2. [Resumen.](#Resumen.)
-3. [Planteamiento del problema.](#Planteamientodelproblema.)
+1. [Introduccion.](#Introduccion)
+2. [Resumen.](#Resumen)
+3. [Planteamiento del problema.](#Planteamientodelproblema)
 
-      3.1.[Descripcion del problema.](#Descripciondelproblema.)
+      3.1.[Descripcion del problema.](#Descripciondelproblema)
   
-4. [Objetivos.](#Objetivos.)
+4. [Objetivos.](#Objetivos)
 
-      4.1.[Objetivo General.](#Objetivo_General.)
+      4.1.[Objetivo General.](#Objetivo_General)
       
-      4.2.[Objetivos Especificos.](#Objetivos_Especificos.)
+      4.2.[Objetivos Especificos.](#Objetivos_Especificos)
       
-5. [Justificacion.](#Justificacion.)
-6. [Desarollo Ingenieril.](#Desarollo_Ingenieril.)
+5. [Justificacion.](#Justificacion)
+6. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
 
-      6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema.)
+      6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
       
-      6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz.)
+      6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
       
-7. [Conclusiones.](#Conclusines.)
+7. [Conclusiones.](#Conclusines)
 ***
 ## **💡Introduccion.** 
 Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
