@@ -4,7 +4,7 @@
 # **🗃️Tabla de contenido**.
 1. [Introduccion](#Introduccion)
 2. [Resumen](#Resumen)
-3. [Planteamiento del problema](#Planteamiento)
+3. [Planteamiento del problema](#Planteamientodelproblema)
 
       3.1.[Descripcion del problema](#Descripcion)
   
