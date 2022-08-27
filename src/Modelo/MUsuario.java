@@ -27,6 +27,9 @@ public class MUsuario {
 
     Double retirado;
     Double dinero;
+
+    Connection con = null;
+    String accion = cliente.getAccion();
     
     PreparedStatement ps;
     ResultSet rs;
@@ -72,7 +75,7 @@ public class MUsuario {
     }
 
     public void trasferir(VUsuario v, MLogin ml){
-		Connection con = null;
+        accion = "Transferencia";
         try {
             con = conexion.getConection();
             ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
@@ -140,4 +143,18 @@ public class MUsuario {
 
 	}
 
+    public void registrar(){
+        try {
+            con = conexion.getConection();
+            ps = con.prepareStatement("INSERT INTO movimientos (nID, fecha, nID_Des, accion, monto) VALUES(?,?,?,?,?)");
+            ps.setString(1, cliente.getID());
+            ps.setTimestamp(2, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));;
+            ps.setString(3, "");
+            ps.setString(4, accion);
+            ps.setDouble(5, retirado);
+            
+        } catch (Exception e) {
+            //TODO: handle exception
+        }
+    }
 }
