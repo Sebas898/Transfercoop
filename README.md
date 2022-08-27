@@ -25,7 +25,7 @@
 
 ***
 ## **💡Introduccion.** 
-Write down the general informations of your project. It is worth to always put a project status in the Readme file. This is where you can add it. 
+En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
 ***
 ## **📝Resumen.**
 El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
