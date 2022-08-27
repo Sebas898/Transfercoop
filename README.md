@@ -4,9 +4,9 @@
 # **🗃️Tabla de contenido**.
 1. [Introduccion](#Introduccion)
 2. [Resumen](#Resumen)
-3. [Planteamiento del problema](#Planteamientodelproblema)
+3. [Planteamiento del problema](#📄)
 
-      3.1.[Descripcion del problema](#Descripcion)
+      3.1.[Descripcion del problema](#🛡️)
   
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
@@ -17,9 +17,9 @@ Write down the general informations of your project. It is worth to always put a
 ## **📝Resumen.**
 El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
 ***
-## Planteamiento del problema
+## 📄Planteamiento del problema
 ***
-### Descripcion de Problematica
+### 🛡️Descripcion de Problematica
 ***
 A list of technologies used within the project:
 * [Technologie name](https://example.com): Version 12.3 
