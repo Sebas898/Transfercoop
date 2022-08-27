@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.text.NumberFormat;
 import java.util.Locale;
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 import Controlador.CLogin;
 import Vista.VLogin;
 import Vista.VUsuario;
@@ -137,9 +139,57 @@ public class MUsuario {
 		}
 	}
 
-	public void actualizar(MLogin ml) {
-		Connection con = null;
+	public void listaTransacciones(VUsuario v, MLogin ml){
+		String a;
+		String sql;
+		String h;
 
+		v.id.setText(ml.cliente.getID());
+		DefaultTableModel model = new DefaultTableModel();
+
+		model.addColumn("ID");
+		model.addColumn("ID destino");
+		model.addColumn("Fecah");
+		model.addColumn("Accion");
+		model.addColumn("Dinero");
+		
+		v.table.setModel(model);
+
+		a = String.valueOf(ml.cliente.getRango());
+		try {
+			if(a.equals("A")){
+				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
+			}else{
+				sql = "SELECT * FROM movimientos WHERE nID ='" + ml.cliente.getRango() + "' OR nID_Des = '" + ml.cliente.getRango() + "' ORDER BY fecha DESC";
+			}
+			String usuarios[] = new String[5];
+			con = Conexion.getConection();
+
+			ps = con.prepareStatement(sql);
+			rs = ps.executeQuery();
+
+			NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
+			while(rs.next()){
+				h = nf.format(rs.getDouble("monto"));
+
+				usuarios[0] = rs.getString("nID");
+				usuarios[1] = rs.getString("nID_Des");
+				usuarios[2] = rs.getString("fecha");
+				usuarios[3] = rs.getString("accion");
+				usuarios[4] = h;
+
+				model.addRow(usuarios);
+			}
+			v.table.setModel(model);
+			v.table.getColumnModel().getColumn(2).setPreferredWidth(150);
+			v.table.getTableHeader().setReorderingAllowed(false);
+			
+		} catch (Exception e) {
+			System.out.println(e);
+		}
+	}
+
+	public void actualizar(MLogin ml) {
 		try {
 			con = conexion.getConection();
 			ps = con.prepareStatement("UPDATE usuarios SET dinero = ? WHERE nID = ?");
@@ -150,7 +200,6 @@ public class MUsuario {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-
 	}
 
 	public void registrar(MLogin ml, VUsuario v) {
