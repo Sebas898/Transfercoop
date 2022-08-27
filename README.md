@@ -4,9 +4,9 @@
 # **🗃️Tabla de contenido**.
 1. [Introduccion](#Introduccion)
 2. [Resumen](#Resumen)
-3. [Planteamiento del problema](#Planteamiento_del_problema)
+3. [Planteamiento del problema](#Planteamiento)
 
-      3.1.[Descripcion del problema](#Descripcion_del_problema)
+      3.1.[Descripcion del problema](#Descripcion)
   
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
