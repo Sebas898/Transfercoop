@@ -18,6 +18,7 @@
 6. [Desarollo Ingenieril.](#Desarollo_Ingenieri)
 
       6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
+      
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz.)
       
 7. [Conclusiones.](#Conclusines)
