@@ -71,7 +71,7 @@ public class MUsuario {
         v.lblDinero.setText(prt.format(m.cliente.getDinero()));
     }
 
-    public void listaTransacciones(VUsuario v, MLogin ml){
+    public void trasferir(VUsuario v, MLogin ml){
 		Connection con = null;
         try {
             con = conexion.getConection();
