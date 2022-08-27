@@ -322,6 +322,21 @@ public class VUsuario extends JFrame {
 		
 		barra = new JPanel();
 		barra.setBounds(0, 0, 800, 36);
+		barra.addMouseMotionListener(new MouseMotionAdapter() {
+			@Override
+			public void mouseDragged(MouseEvent e) {
+				setLocation(getX() + e.getX() - mouseX, getY() + e.getY() - mouseY);
+			}
+		});
+		barra.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mousePressed(MouseEvent e) {
+
+				mouseX = e.getX();
+				mouseY = e.getY();
+
+			}
+		});
 		panel.add(barra);
 		barra.setLayout(null);
 		barra.setBackground(new Color(25, 25, 25, 0));

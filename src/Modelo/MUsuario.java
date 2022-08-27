@@ -43,9 +43,10 @@ public class MUsuario {
 
 	}
 
-	public void abrirVMovimientos(VUsuario v) {
+	public void abrirVMovimientos(VUsuario v, MLogin ml) {
 		v.panelP.setVisible(false);
 		v.panelM.setVisible(true);
+		listaTransacciones(v, ml);
 
 	}
 
@@ -140,11 +141,12 @@ public class MUsuario {
 	}
 
 	public void listaTransacciones(VUsuario v, MLogin ml){
+		System.out.println("entrando metodo");
 		String a;
 		String sql;
 		String h;
 
-		v.id.setText(ml.cliente.getID());
+		
 		DefaultTableModel model = new DefaultTableModel();
 
 		model.addColumn("ID");
@@ -156,20 +158,29 @@ public class MUsuario {
 		v.table.setModel(model);
 
 		a = String.valueOf(ml.cliente.getRango());
-		try {
-			if(a.equals("A")){
-				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
-			}else{
-				sql = "SELECT * FROM movimientos WHERE nID ='" + ml.cliente.getRango() + "' OR nID_Des = '" + ml.cliente.getRango() + "' ORDER BY fecha DESC";
-			}
+			try {
+			System.out.println("Try");
+//			if(a.equals("A")){
+//				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
+//			}else{
+//				"SELECT * FROM movimientos WHERE nID= ? OR nID_Des = ? ORDER BY fecha DESC";
+//			}
 			String usuarios[] = new String[5];
-			con = Conexion.getConection();
-
-			ps = con.prepareStatement(sql);
-			rs = ps.executeQuery();
-
+			
 			NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
+			con = conexion.getConection();
+
+
+			
+			ps = con.prepareStatement("SELECT * FROM movimientos WHERE nID= ? OR nID_Des = ? ORDER BY fecha DESC");
+			ps.setString(1, ml.cliente.getID());
+			ps.setString(2, ml.cliente.getID());
+			rs = ps.executeQuery();
+			rs.next();
+		
+			System.out.println("Antes del while\nValor rs "+rs.next());
 			while(rs.next()){
+				System.out.println("Dentro");
 				h = nf.format(rs.getDouble("monto"));
 
 				usuarios[0] = rs.getString("nID");
@@ -177,7 +188,7 @@ public class MUsuario {
 				usuarios[2] = rs.getString("fecha");
 				usuarios[3] = rs.getString("accion");
 				usuarios[4] = h;
-
+				System.out.println("adding");
 				model.addRow(usuarios);
 			}
 			v.table.setModel(model);
