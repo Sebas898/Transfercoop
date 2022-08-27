@@ -24,6 +24,7 @@ public class VLogin extends JFrame {
 	private JLabel creador;
 	private int mouseX;
 	private int mouseY;
+	private JLabel registrate;
 
 	
 	public VLogin() {
@@ -77,7 +78,7 @@ public class VLogin extends JFrame {
 		username.setForeground(Color.WHITE);
 		username.setBackground(new Color(1, 1, 1, 0));
 		username.setFont(new Font("Tw Cen MT", Font.BOLD, 16));
-		username.setBounds(136, 203, 200, 22);
+		username.setBounds(136, 205, 200, 22);
 		username.setBorder(null);
 		username.setCaretColor(Color.white);
 		username.setColumns(10);
@@ -101,7 +102,7 @@ public class VLogin extends JFrame {
 		password.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		password.setForeground(Color.WHITE);
 		password.setBackground(new Color(1, 1, 1, 0));
-		password.setBounds(136, 241, 200, 20);
+		password.setBounds(136, 242, 200, 20);
 		password.setBorder(null);
 		password.setCaretColor(Color.white);
 		password.addKeyListener(new KeyAdapter() {
@@ -137,18 +138,18 @@ public class VLogin extends JFrame {
 		login.setForeground(Color.WHITE);
 		login.setBackground(new Color(50, 205, 50));
 		login.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		login.setBounds(120, 286, 150, 39);
+		login.setBounds(125, 286, 150, 39);
 
 		lblLogo = new JLabel("");
 		lblLogo.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogo.setIcon(new ImageIcon(VLogin.class.getResource("/Vista/img/LOGO PEQUENO.png")));
-		lblLogo.setBounds(0, 54, 400, 78);
+		lblLogo.setBounds(29, 54, 342, 78);
 
 		lblLogin = new JLabel("Hola bienvenido a Transfercoop");
 		lblLogin.setHorizontalAlignment(SwingConstants.CENTER);
 		lblLogin.setForeground(Color.WHITE);
 		lblLogin.setFont(new Font("Tw Cen MT", Font.BOLD, 22));
-		lblLogin.setBounds(10, 143, 400, 32);
+		lblLogin.setBounds(22, 143, 355, 32);
 
 		fondo = new JLabel("");
 		fondo.setHorizontalAlignment(SwingConstants.CENTER);
@@ -211,6 +212,18 @@ public class VLogin extends JFrame {
 		
 		barra.add(minimizar);
 		barra.add(cerrar);
+		
+		registrate = new JLabel("!!! Registrate aqui \u00A1\u00A1\u00A1");
+		registrate.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+			}
+		});
+		registrate.setHorizontalAlignment(SwingConstants.CENTER);
+		registrate.setForeground(Color.WHITE);
+		registrate.setFont(new Font("Tw Cen MT", Font.BOLD | Font.ITALIC, 18));
+		registrate.setBounds(108, 346, 183, 21);
+		contentPane.add(registrate);
 
 		// Agregar componentes
 		contentPane.add(creador);

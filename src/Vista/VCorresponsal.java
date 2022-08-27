@@ -59,14 +59,21 @@ public class VCorresponsal extends JFrame {
 	private JTextPane txtFrase;
 	private JLabel lblFecha;
 
+	public static void main(String[] args) {
+		VCorresponsal frame = new VCorresponsal();
+		frame.setVisible(true);
+	}
 
 	
 
 	public VCorresponsal() {
+		setBackground(new Color(64, 224, 208,0));
 		setUndecorated(true);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setLocationRelativeTo(null);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
+		contentPane.setBackground(new Color(0, 250, 154,0));
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
@@ -74,10 +81,7 @@ public class VCorresponsal extends JFrame {
 		panelD = new JPanel();
 		panelD.setBounds(230, 36, 570, 414);
 		panelD.setBackground(Color.WHITE);
-		panelCg.setBounds(panelD.getBounds());
-		panelR.setBounds(panelD.getBounds());
-		panelCg.setBounds(panelD.getBounds());
-		panelR.setBounds(panelD.getBounds());
+
 		
 		
 		barra = new JPanel();
@@ -93,32 +97,33 @@ public class VCorresponsal extends JFrame {
 		contentPane.add(panelD);
 		panelD.setLayout(null);
 		
-		btnConsignar = new JLabel("Consignar");
+		btnConsignar = new JLabel("");
+		btnConsignar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnCga.png")));
 		btnConsignar.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		btnConsignar.setHorizontalAlignment(SwingConstants.CENTER);
-		btnConsignar.setBounds(66, 198, 104, 27);
+		btnConsignar.setBounds(26, 283, 150, 39);
 		panelD.add(btnConsignar);
 		
 		btnRetirar_1 = new JLabel("");
 		btnRetirar_1.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnRa.png")));
 		btnRetirar_1.setHorizontalAlignment(SwingConstants.CENTER);
 		btnRetirar_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		btnRetirar_1.setBounds(221, 198, 150, 39);
+		btnRetirar_1.setBounds(216, 283, 150, 39);
 		panelD.add(btnRetirar_1);
 		
-		btnConsultar = new JLabel("Consulta");
+		btnConsultar = new JLabel("");
+		btnConsultar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnCtb.png")));
 		btnConsultar.setHorizontalAlignment(SwingConstants.CENTER);
 		btnConsultar.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		btnConsultar.setBounds(393, 198, 104, 27);
+		btnConsultar.setBounds(397, 283, 150, 39);
 		panelD.add(btnConsultar);
 		
-		btnSalir = new JLabel("Salir");
+		btnSalir = new JLabel("");
+		btnSalir.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnSa.png")));
 		btnSalir.setHorizontalAlignment(SwingConstants.CENTER);
 		btnSalir.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		btnSalir.setBounds(411, 362, 104, 27);
+		btnSalir.setBounds(411, 364, 150, 39);
 		panelD.add(btnSalir);
-		panelCt.setBounds(panelD.getBounds());
-		panelCt.setBounds(panelD.getBounds());
 		
 		
 		panelI = new JPanel();
