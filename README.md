@@ -21,7 +21,7 @@
       
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
       
-7. [Conclusiones.](#Conclusines)
+7. [Conclusiones.](#Conclusiones)
 
 ***
 ## **💡Introduccion.** 
