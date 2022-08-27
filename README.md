@@ -4,11 +4,11 @@
 # **🗃️Tabla de contenido**.
 1. [Introduccion](#Introduccion)
 2. [Resumen](#Resumen)
-3. [Planteamiento del problema](#Planteamientodelproblema)
+3. [Planteamiento del problema](#Planteamiento del problema)
 
-      3.1.[Descripcion del problema](#Descripciondelproblema)
+      3.1.[Descripcion del problema](#Descripcion del problema)
   
-4. [Collaboration](#collaboration)
+4. [Objetivos](#Objetivos)
 5. [FAQs](#faqs)
 ***
 ## **💡Introduccion.** 
@@ -19,13 +19,9 @@ El software quiere solucionar los problemas que tiene la gente con algunas ident
 ***
 ## 📄Planteamiento del problema
 ***
-### 🛡️Descripcion de Problematica
+### 🖋️Descripcion de Problematica
 ***
-A list of technologies used within the project:
-* [Technologie name](https://example.com): Version 12.3 
-* [Technologie name](https://example.com): Version 2.34
-* [Library name](https://example.com): Version 1234
-## Installation
+## 🗄️Objetivos.
 ***
 A little intro about the installation. 
 ```
