@@ -13,6 +13,8 @@
       4.1.[Objetivo General.](#Objetivo_General)
       
       4.2.[Objetivos Especificos.](#Objetivos_Especificos)
+      
+5. [Justificacion.](#Justificacion)
 
 ***
 ## **💡Introduccion.** 
@@ -32,14 +34,50 @@ La problemática que se vive hoy en día es, que la mayoría de los estudiantes,
 El objetivo principal de nuestro sistema es crear un sistema de cooperativa moderno que facilite a los estudiantes, maestros o personas de la comunidad, a hacer un ahorro económico, también puedan transferir dinero, ingresar dinero o retirar el mismo que se va a ahorrar, permitiendo a los usuarios ver un registro de los movimientos de la cuenta dando información o recibos que contiene el tipo de movimiento que hizo en la cuenta, la fecha y hora que se realizó su acción. Asimismo, también tiene acceso para los administradores que tienen el fin de modificar, agregar o eliminar usuarios ya existentes en el sistema.
 ### 🔎Objetivos Especificos.
 Nuestro proyecto/sistema tiene como objetivo:
-- [x] Brindar un nuevo sistema más cómodo y moderno para las personas.
-- [x] El usuario no tendrá contacto directo con la base de datos.
-- [x] Mejorar la información de cada transacción realizada por el usuario.
-- [x] Cambiar el enfoque de los sistemas de transacciones a nuestro favor. 
-- [x] Ser un buen sistema de transacciones bancarias.
-- [x] Extender nuestro sistema y ser reconocidos nacional e internacionalmente. 
-- [x] Distinguir notoriamente de las demás proyectos y sistemas.
-- [x] Generar satisfacción en todas las necesidades del cliente y usuario.
-- [x] Actualizar el proyecto y mejorar a medida que aumente su popularidad.
-***
 
+✅ Brindar un nuevo sistema más cómodo y moderno para las personas.
+
+✅ El usuario no tendrá contacto directo con la base de datos.
+
+✅ Mejorar la información de cada transacción realizada por el usuario.
+
+✅ Cambiar el enfoque de los sistemas de transacciones a nuestro favor. 
+
+✅ Ser un buen sistema de transacciones bancarias.
+
+✅ Extender nuestro sistema y ser reconocidos nacional e internacionalmente. 
+
+✅ Distinguir notoriamente de las demás proyectos y sistemas.
+
+✅ Generar satisfacción en todas las necesidades del cliente y usuario.
+
+✅ Actualizar el proyecto y mejorar a medida que aumente su popularidad.
+
+***
+## **Justificacion.** 
+ Una de las cualidades importante que tiene el proyecto es el fácil uso que tiene al manejarlos, genera beneficios tanto a los clientes como a los labradores, con esto quiere decir que se puede generar ganancias por habilidad más capacidad de ahorro en la cuenta, por ejemplo: el cliente tiene capacidad y ahorrar 10.000.000 de pesos, el cual quedara hasta ese monto para poder ingresar más dinero, entonces el usuario deberá pagar un pequeño costo para aumentar la capacidad de ahorro ya se a 20 o 30 millones. En base a los diferentes beneficios que puede atraer a los dos bandos los cuales son:
+ 
+ 🟪 Seguridad de datos personales.
+ 
+ 🟪 No cobra costos adicionales al hacer un movimiento. (Solo se cobrar el aumento de capacidad de al depositar el dinero que van a ahorrar).
+ 
+ 🟪 Fácil acceso a los usuarios.
+ 
+ 🟪 Interacción más rápida en los menús.
+ 
+ 🟪 Equipo de soporte para modificar los datos personales.
+ 
+ 🟪 Puede llevar un ahorro diario.
+ 
+ 
+Lo que se espera del software es:
+ 
+ 🟦 Fácil de usar.
+ 
+ 🟦 No tenga muchos costos adicionales.
+ 
+ 🟦 Sea seguro, util y comodo para los usuarios.
+ 
+ 🟦 El manejo de administrativo sea optimo, eficiente y confiable.
+ 
+ 
