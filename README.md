@@ -61,6 +61,7 @@ Nuestro proyecto/sistema tiene como objetivo:
 
 ***
 ## **▶️Justificacion.** 
+***
  Una de las cualidades importante que tiene el proyecto es el fácil uso que tiene al manejarlos, genera beneficios tanto a los clientes como a los labradores, con esto quiere decir que se puede generar ganancias por habilidad más capacidad de ahorro en la cuenta, por ejemplo: el cliente tiene capacidad y ahorrar 10.000.000 de pesos, el cual quedara hasta ese monto para poder ingresar más dinero, entonces el usuario deberá pagar un pequeño costo para aumentar la capacidad de ahorro ya se a 20 o 30 millones. En base a los diferentes beneficios que puede atraer a los dos bandos los cuales son:
  
  🟪 Seguridad de datos personales.
@@ -118,4 +119,5 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ![image](https://user-images.githubusercontent.com/110683543/187016970-db61c640-37a4-4346-8300-34f025419cd6.png)
  ***
  ## **📋Conclusiones. **
+ ***
 El desarrollo de este sistema será una solución para las cooperativas al momento de poder estar al pendiente de los movimientos y que sus usuarios tengan fácil acceso al momento de hacer todo tipo de transacciones, ya que será un sistema amigable con los usuarios al igual que para los administradores, puedan estar al pendiente de los movimientos de sus usuarios y conocer los usuarios del sistema para que no haya necesidad de tener un contacto directo con la base de datos.
