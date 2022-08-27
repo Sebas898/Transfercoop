@@ -149,7 +149,7 @@ public class MUsuario {
 
 		model.addColumn("ID");
 		model.addColumn("ID destino");
-		model.addColumn("Fecah");
+		model.addColumn("Fecha");
 		model.addColumn("Accion");
 		model.addColumn("Dinero");
 		

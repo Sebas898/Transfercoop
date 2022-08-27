@@ -67,6 +67,7 @@ public class CUsuario implements MouseListener{
     	
     	if(e.getSource() == v.btnMovimientos) {
     		m.abrirVMovimientos(v);
+    		m.listaTransacciones(v, mLogin);
     	}
     	
     	

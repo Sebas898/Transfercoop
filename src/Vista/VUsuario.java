@@ -65,6 +65,7 @@ public class VUsuario extends JFrame {
 	public JLabel btnVolverT;
 	public JTable table;
 	public JPanel panelM;
+	JLabel lblMovimientos;
 	
 	public static void main(String[] args) {
 		VUsuario v = new VUsuario();
@@ -114,34 +115,9 @@ public class VUsuario extends JFrame {
 		table.setBorder(null);
 		table.setForeground(Color.BLACK);
 		table.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-			},
-			new String[] {
-				"New column", "New column", "New column", "New column", "New column"
-			}
-		));
 		scrollPane.setViewportView(table);
 		
-		JLabel lblMovimientos = new JLabel("Movimientos");
+		lblMovimientos = new JLabel("Movimientos");
 		lblMovimientos.setHorizontalAlignment(SwingConstants.CENTER);
 		lblMovimientos.setForeground(Color.BLACK);
 		lblMovimientos.setFont(new Font("Tw Cen MT", Font.BOLD, 32));
