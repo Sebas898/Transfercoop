@@ -26,7 +26,7 @@ public class MUsuario {
     Cliente cliente = new Cliente();
 
     Double retirado;
-    Double dinero = cliente.getDinero();
+    Double dinero;
     
     PreparedStatement ps;
     ResultSet rs;
@@ -71,7 +71,7 @@ public class MUsuario {
         v.lblDinero.setText(prt.format(m.cliente.getDinero()));
     }
 
-    public void listaTransacciones(VUsuario v, MLogin ml){
+    public void trasferir(VUsuario v, MLogin ml){
 		Connection con = null;
         try {
             con = conexion.getConection();
@@ -105,6 +105,7 @@ public class MUsuario {
                         int res = ps.executeUpdate();
                         if(res > 0){
                             JOptionPane.showMessageDialog(null, "Transferencia exitosa");
+                            registrar();
                             v.id.setText(null);
                             v.monto.setText(null);
                     

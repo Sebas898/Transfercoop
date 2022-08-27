@@ -22,18 +22,18 @@ public class VCorresponsal extends JFrame {
 	private JPanel panelD;
 	private JPanel panelI;
 	private JPanel panelCg;
-	private JTextField IDCg;
-	private JTextField MontoCg;
+	public JTextField IDCg;
+	public JTextField MontoCg;
 	private JPanel panelCt;
 	private JLabel lblMarca;
-	private JTextField IDCt;
+	public JTextField IDCt;
 	private JTextField ContrasanaCt;
 	private JTextField btnConsultarCt;
 	private JTextField btnVolverCt;
 	private JPanel panelR;
-	private JTextField IDR;
-	private JTextField MONTOR;
-	private JTextField CONTRASEÑAR;
+	public JTextField IDR;
+	public JTextField MONTOR;
+	public JTextField CONTRASENAR;
 	private JLabel btnRetirarR;
 	private JLabel btnRetirar_1;
 	private JLabel btnConsultar;
@@ -288,13 +288,13 @@ public class VCorresponsal extends JFrame {
 		MONTOR.setBounds(178, 230, 220, 27);
 		panelR.add(MONTOR);
 		
-		CONTRASEÑAR = new JTextField();
-		CONTRASEÑAR.setBorder(null);
-		CONTRASEÑAR.setBackground(Color.LIGHT_GRAY);
-		CONTRASEÑAR.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
-		CONTRASEÑAR.setColumns(10);
-		CONTRASEÑAR.setBounds(178, 268, 220, 27);
-		panelR.add(CONTRASEÑAR);
+		CONTRASENAR = new JTextField();
+		CONTRASENAR.setBorder(null);
+		CONTRASENAR.setBackground(Color.LIGHT_GRAY);
+		CONTRASENAR.setFont(new Font("Tw Cen MT", Font.PLAIN, 24));
+		CONTRASENAR.setColumns(10);
+		CONTRASENAR.setBounds(178, 268, 220, 27);
+		panelR.add(CONTRASENAR);
 		
 		btnRetirarR = new JLabel("Retirar");
 		btnRetirarR.setHorizontalAlignment(SwingConstants.CENTER);

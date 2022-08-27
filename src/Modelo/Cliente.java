@@ -5,6 +5,7 @@ import java.sql.Date;
 public class Cliente extends Usuario{
 
 	private Double dinero;
+	private String accion = "";
 
 	public Cliente(String nombre, String apellido, String contrasena, String ID, char sexo, char rango, Date fechaN) {
 		super(nombre, apellido, contrasena, ID, sexo, rango, fechaN);
@@ -41,5 +42,13 @@ public class Cliente extends Usuario{
 
 	public void setDinero(Double dinero) {
 		this.dinero = dinero;
+	}
+
+	public String getAccion() {
+		return accion;
+	}
+
+	public void setAccion(String accion) {
+		this.accion = accion;
 	}
 }

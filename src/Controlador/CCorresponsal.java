@@ -11,7 +11,10 @@ public class CCorresponsal {
 	public CCorresponsal(VCorresponsal v, MCorresponsal m) {
 		this.v = v;
 		this.m = m;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5085f53a337de0a413866b7e98fcd8b766488ef9
 	}
-
+	
 }
