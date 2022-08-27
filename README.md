@@ -5,7 +5,6 @@
 1. [Introduccion](#Introduccion)
 2. [Resumen](#Resumen)
 3. [Planteamiento del problema](#Planteamiento del problema)
-   3.1. [Descripcion de Problematica](#Descripcion de Problematica)
 4. [Collaboration](#collaboration)
 5. [FAQs](#faqs)
 ## **💡Introduccion.** 
