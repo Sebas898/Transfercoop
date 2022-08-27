@@ -12,9 +12,6 @@ import Vista.VUsuario;
 
 
 public class MCorresponsal {
-<<<<<<< HEAD
-	
-=======
 
     PreparedStatement ps;
     ResultSet rs;
@@ -29,7 +26,7 @@ public class MCorresponsal {
 
 	public void trasferir(VUsuario v, MLogin ml){
         Double dinero;
-        accion = "Retirar";
+        accion = "Transferencia";
 
         try {
             con = conexion.getConection();
@@ -83,8 +80,8 @@ public class MCorresponsal {
 	}
 
     public void retirar(VCorresponsal v, MLogin ml){
-        Double retirado;
         Double dinero;
+        accion = "Retirar";
 
         if(v.MONTOR.getText().equals("")){
             v.MONTOR.setText("0");
@@ -110,6 +107,7 @@ public class MCorresponsal {
 
     public void agregar(VCorresponsal v, MLogin ml){
         Double dinero;
+        accion = "Consignar";
 
         try {
             con = conexion.getConection();
@@ -177,5 +175,4 @@ public class MCorresponsal {
             //TODO: handle exception
         }
     }
->>>>>>> 5085f53a337de0a413866b7e98fcd8b766488ef9
 }
