@@ -54,7 +54,23 @@ public class MUsuario {
 	}
 
 	public void mostrarDatos(VUsuario v, MLogin m) {
+		try {
+			con = conexion.getConection();
+			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
+			ps.setString(1, m.cliente.getID());
+			rs = ps.executeQuery();
+			if(rs.next()) {
+				m.cliente.setDinero(rs.getDouble("dinero"));
+			}
+			
+		}catch (Exception e) {
+			System.out.println(e);
+		}
+		
+		
 		NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
+		
+		
 
 		v.lblNombre.setText(m.cliente.getNombre() + " " + m.cliente.getApellido());
 		v.lblId.setText(m.cliente.getID());
@@ -79,8 +95,8 @@ public class MUsuario {
 			} else {
 				retirado = Double.parseDouble(v.monto.getText());
 				rs = ps.executeQuery();
-				System.out.println(rs.next());
-				if (retirado <= 0 || retirado > ml.cliente.getDinero()) {
+				
+				if (retirado <= 0 || retirado > ml.cliente.getDinero() || rs.next() != true) {
 					JOptionPane.showMessageDialog(null, "Valor no validos");
 				} else {
 					Double dineroU = rs.getDouble("dinero");
@@ -102,7 +118,7 @@ public class MUsuario {
 						int res = ps.executeUpdate();
 						if (res > 0) {
 							JOptionPane.showMessageDialog(null, "Transferencia exitosa");
-							registrar(ml);
+							registrar(ml,v);
 							v.id.setText(null);
 							v.monto.setText(null);
 
@@ -137,14 +153,13 @@ public class MUsuario {
 
 	}
 
-	public void registrar(MLogin ml) {
-		System.out.println("Registro");
+	public void registrar(MLogin ml, VUsuario v) {
 		try {
 			con = conexion.getConection();
 			ps = con.prepareStatement("INSERT INTO movimientos (nID, fecha, nID_Des, accion, monto) VALUES(?,?,?,?,?)");
 			ps.setString(1, ml.cliente.getID());
 			ps.setTimestamp(2, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
-			ps.setString(3, "");
+			ps.setString(3, v.id.getText());
 			ps.setString(4, accion);
 			ps.setDouble(5, retirado);
 			ps.executeUpdate();

@@ -56,10 +56,12 @@ public class CUsuario implements MouseListener{
     	
     	if(e.getSource() == v.btnVolverM) {
     		m.volver(v);
+    		 m.mostrarDatos(v, mLogin);
     	}
     	
     	if(e.getSource() == v.btnVolverT) {
     		m.volver(v);
+    		 m.mostrarDatos(v, mLogin);
     		
     	}
     	
@@ -69,7 +71,6 @@ public class CUsuario implements MouseListener{
     	
     	
     	if(e.getSource() == v.btnTrasferirT) {
-    		System.out.println("TransferirT");
     		m.trasferir(v, mLogin);
     	}
     	

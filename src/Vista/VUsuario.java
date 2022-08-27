@@ -95,7 +95,79 @@ public class VUsuario extends JFrame {
 		
 		panelT = new JPanel();
 		panelT.setVisible(false);
-		panelT.setBackground(Color.WHITE);
+		
+		panelM = new JPanel();
+		panelM.setVisible(false);
+		panelM.setBounds(229, 36, 571, 417);
+		panelM.setBackground(new Color(0,0,0,0));
+		panel.add(panelM);
+		panelM.setLayout(null);
+		
+		JScrollPane scrollPane = new JScrollPane();
+		scrollPane.setForeground(Color.BLACK);
+		scrollPane.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
+		scrollPane.setBorder(null);
+		scrollPane.setBounds(58, 164, 475, 186);
+		panelM.add(scrollPane);
+		
+		table = new JTable();
+		table.setBorder(null);
+		table.setForeground(Color.BLACK);
+		table.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
+		table.setModel(new DefaultTableModel(
+			new Object[][] {
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+				{null, null, null, null, null},
+			},
+			new String[] {
+				"New column", "New column", "New column", "New column", "New column"
+			}
+		));
+		scrollPane.setViewportView(table);
+		
+		JLabel lblMovimientos = new JLabel("Movimientos");
+		lblMovimientos.setHorizontalAlignment(SwingConstants.CENTER);
+		lblMovimientos.setForeground(Color.BLACK);
+		lblMovimientos.setFont(new Font("Tw Cen MT", Font.BOLD, 32));
+		lblMovimientos.setBounds(182, 101, 192, 33);
+		panelM.add(lblMovimientos);
+		
+		btnVolverM = new JLabel("");
+		btnVolverM.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnVolverM.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvra.png")));
+				contentPane.updateUI();
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btnVolverM.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
+				contentPane.updateUI();
+			}
+		});
+		btnVolverM.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
+		btnVolverM.setFont(new Font("Tw Cen MT", Font.BOLD, 28));
+		btnVolverM.setForeground(Color.BLACK);
+		btnVolverM.setHorizontalAlignment(SwingConstants.CENTER);
+		btnVolverM.setBounds(411, 367, 150, 39);
+		panelM.add(btnVolverM);
+		panelT.setBackground(new Color(1, 1, 1,0));
 		panelT.setLayout(null);
 		panelT.setBounds(229, 36, 571, 417);
 		panel.add(panelT);
@@ -171,7 +243,20 @@ public class VUsuario extends JFrame {
 		lblTransferir.setBounds(198, 98, 144, 33);
 		panelT.add(lblTransferir);
 		
-		btnVolverT = new JLabel("Volver");
+		btnVolverT = new JLabel("");
+		btnVolverT.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvra.png")));
+				contentPane.updateUI();
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
+				contentPane.updateUI();
+			}
+		});
+		btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
 		btnVolverT.setHorizontalAlignment(SwingConstants.CENTER);
 		btnVolverT.setFont(new Font("Tahoma", Font.BOLD, 28));
 		btnVolverT.setBounds(411, 367, 150, 39);
@@ -179,7 +264,7 @@ public class VUsuario extends JFrame {
 		
 		panelP = new JPanel();
 		panelP.setLayout(null);
-		panelP.setBackground(Color.WHITE);
+		panelP.setBackground(new Color(1, 1, 1,0));
 		panelP.setBounds(229, 36, 571, 417);
 		panel.add(panelP);
 		
@@ -258,66 +343,6 @@ public class VUsuario extends JFrame {
 		Logo.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/LOGO ORIGINAL S M.png")));
 		Logo.setBounds(340, 20, 350, 127);
 		panel.add(Logo);
-		
-		panelM = new JPanel();
-		panelM.setVisible(false);
-		panelM.setBounds(229, 36, 571, 417);
-		panelM.setBackground(Color.WHITE);
-		panel.add(panelM);
-		panelM.setLayout(null);
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setForeground(Color.BLACK);
-		scrollPane.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
-		scrollPane.setBorder(null);
-		scrollPane.setBounds(59, 164, 475, 186);
-		panelM.add(scrollPane);
-		
-		table = new JTable();
-		table.setBorder(null);
-		table.setForeground(Color.BLACK);
-		table.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
-		table.setModel(new DefaultTableModel(
-			new Object[][] {
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-				{null, null, null, null, null},
-			},
-			new String[] {
-				"New column", "New column", "New column", "New column", "New column"
-			}
-		));
-		scrollPane.setViewportView(table);
-		
-		JLabel lblMovimientos = new JLabel("Movimientos");
-		lblMovimientos.setHorizontalAlignment(SwingConstants.CENTER);
-		lblMovimientos.setForeground(Color.BLACK);
-		lblMovimientos.setFont(new Font("Tw Cen MT", Font.BOLD, 32));
-		lblMovimientos.setBounds(195, 96, 192, 33);
-		panelM.add(lblMovimientos);
-		
-		btnVolverM = new JLabel("Volver");
-		btnVolverM.setVisible(false);
-		btnVolverM.setFont(new Font("Tw Cen MT", Font.BOLD, 28));
-		btnVolverM.setForeground(Color.BLACK);
-		btnVolverM.setHorizontalAlignment(SwingConstants.CENTER);
-		btnVolverM.setBounds(418, 372, 116, 22);
-		panelM.add(btnVolverM);
 		
 		barra = new JPanel();
 		barra.setBounds(0, 0, 800, 36);

@@ -11,8 +11,6 @@ public class MVC {
 		MLogin m = new MLogin();
 		CLogin c = new CLogin(v, m);
 		v.setVisible(true);
-		
-
 	}
 
 }
