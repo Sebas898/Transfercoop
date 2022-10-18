@@ -3,8 +3,8 @@
 ***
 # **🗃️Tabla de contenido**.
 1. [Introduccion.](#Introduccion)
-2. [Abstrac.](#📝Abstrac)
-3. [Resumen.](#📝Resumen)
+2. [Abstrac.](#Abstrac)
+3. [Resumen.](#Resumen)
 4. [Planteamiento del problema.](#Planteamientodelproblema)
 
       3.1.[Descripcion del problema.](#Descripciondelproblema)
