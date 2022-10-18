@@ -3,21 +3,22 @@
 ***
 # **🗃️Tabla de contenido**.
 1. [Introduccion.](#Introduccion)
-2. [Resumen.](#Resumen)
-3. [Planteamiento del problema.](#Planteamientodelproblema)
+2. [Abstrac.](#📝Abstrac)
+3. [Resumen.](#📝Resumen)
+4. [Planteamiento del problema.](#Planteamientodelproblema)
 
       3.1.[Descripcion del problema.](#Descripciondelproblema)
   
-4. [Objetivos.](#Objetivos)
+5. [Objetivos.](#Objetivos)
 
       4.1.[Objetivo General.](#Objetivo_General)
       
       4.2.[Objetivos Especificos.](#Objetivos_Especificos)
       
-5. [Justificacion.](#Justificacion)
-6. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
+6. [Justificacion.](#Justificacion)
+7. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
 
-      6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
+      7.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
       
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
       
@@ -27,13 +28,15 @@
 ## **💡Introduccion.** 
 En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
 ***
+## **📝Abstrac.**
+
 ## **📝Resumen.**
-El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
+\justify{El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
 ***
 ## **📄Planteamiento del problema.** 
 ***
 ### 🖋️Descripcion de Problematica.
-La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.
+La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.}
 ***
 ## **🗄️Objetivos.** 
 ***
