@@ -1,7 +1,7 @@
 ***
 ![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
 ***
-##**🗃️Tabla de contenido**.
+# **🗃️Tabla de contenido**.
 [Introduccion.](#Introduccion)
 
 [Abstrac.](#Abstrac)
@@ -36,7 +36,7 @@ The software aims to solve the problems that are evidenced in some banking ident
 ## **📝Resumen.**
 El software aspira a solucionar las problemáticas que se evidencian en algunas identidades bancarias, ya sea por cuestiones de ahorro, retiro o transacción. De tal modo se tendrá en cuenta diversos objetivos que podrá dar una fácil solución a dichas problemáticas. Asimismo, complementar y mejorar la construcción del software. Es imprescindible el estudio de varios campos como metodologías, técnicas de información y conocimientos no visto. Se indicará los gastos que se podrían llevar a cabo para elaborar el proyecto. Se realiza bosquejos del software, un UML y diagrama de casos de uso que exige requerimientos funcionales, los cuales son de suma importancia . Para finalizar se establece conclusiones todo el contenido.
 ***
-### **📄Planteamiento del problema.** 
+# **📄Planteamiento del problema.** 
 ***
 ### 🖋️Descripcion de Problematica.
 La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.}
