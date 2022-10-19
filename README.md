@@ -12,11 +12,11 @@
 
      1.1. [Descripcion del problema.](#Descripcion-del-problema)
 
-1.2. [Objetivos.](#Objetivos)
+     1.2. [Objetivos.](#Objetivos)
 
-   1.2.1.  [Objetivo General.](#Objetivo-General)
+      1.2.1.  [Objetivo General.](#Objetivo-General)
     
-   1.2.2.  [Objetivos Especificos.](#Objetivos-Especificos)
+      1.2.2.  [Objetivos Especificos.](#Objetivos-Especificos)
       
 1.3. [Justificacion.](#Justificacion)
 
