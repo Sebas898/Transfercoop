@@ -24,6 +24,12 @@ public class MCorresponsal {
     Connection con = null;
     Double retirado;
 
+    public void abrirConsultar() {
+    	
+    }
+    
+    
+    
 	public void trasferir(VUsuario v, MLogin ml){
         Double dinero;
         accion = "Transferencia";

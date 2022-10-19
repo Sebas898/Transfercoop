@@ -8,6 +8,9 @@ import java.util.Calendar;
 import java.sql.Date;
 
 import javax.swing.JOptionPane;
+
+import Controlador.CLogin;
+import Vista.VLogin;
 import Vista.VRegistro;
 
 public class MRegistro {
@@ -17,6 +20,7 @@ public class MRegistro {
 	
 	VRegistro v = new VRegistro();
 	Encriptacion en = new Encriptacion();
+
 	
 	
 	public void comprobarContrasena(VRegistro v) {
@@ -29,6 +33,14 @@ public class MRegistro {
 			v.lblConfirm.setForeground(Color.RED);
 			v.lblConfirm.setText("Las contrasenas no coinciden");
 		}
+	}
+	
+	public void volver(VRegistro v) {
+		VLogin vL = new VLogin();
+		MLogin m = new MLogin();
+		CLogin c = new CLogin(vL, m);
+		vL.setVisible(true);
+		v.dispose();
 	}
 
 	public void casiilasEnBlanco(VRegistro v){
@@ -51,8 +63,8 @@ public class MRegistro {
 				String f = String.valueOf(v.dateChooser.getCalendar().get(Calendar.YEAR));
 				String f2 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.MONTH));
 				String f3 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH));
-				String fehca = (f+"-"+f2+"-"+f3);
-				Date z1 = Date.valueOf(fehca);
+				String fecha = (f+"-"+f2+"-"+f3);
+				Date z1 = Date.valueOf(fecha);
 
 				con = Conexion.getConection();
 				ps = con.prepareStatement("INSERT INTO usuarios (nID, nombre, apellido, fNacimiento, genero, contrasena, dinero, rango) VALUES (?,?,?,?,?,?,?,?)");

@@ -23,6 +23,17 @@ public class Cliente extends Usuario{
 		this.setDinero(0d);
 	}
 	
+	public Cliente(Cliente cliente) {
+		this.setNombre(cliente.getNombre()); 
+		this.setApellido(cliente.getApellido());
+		this.setContrasena(cliente.getContrasena());
+		this.setID(cliente.getID());
+		this.setSexo(cliente.getSexo());
+		this.setRango(cliente.getRango());
+		this.setFechaN(cliente.getFechaN());
+		this.setDinero(cliente.getDinero());
+	}
+
 	// Metodos
 	public void verMovimientos() {
 		

@@ -24,7 +24,7 @@ public class VLogin extends JFrame {
 	private JLabel creador;
 	private int mouseX;
 	private int mouseY;
-	private JLabel registrate;
+	public JLabel registrate;
 
 	
 	public VLogin() {
@@ -217,6 +217,11 @@ public class VLogin extends JFrame {
 		registrate.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
+				setCursor(HAND_CURSOR);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				setCursor(DEFAULT_CURSOR);
 			}
 		});
 		registrate.setHorizontalAlignment(SwingConstants.CENTER);

@@ -27,16 +27,16 @@ public class VCorresponsal extends JFrame {
 	private JPanel panelCt;
 	private JLabel lblMarca;
 	public JTextField IDCt;
-	private JTextField ContrasanaCt;
-	private JTextField btnConsultarCt;
-	private JTextField btnVolverCt;
+	public JTextField ContrasanaCt;
+	public JTextField btnConsultarCt;
+	public JTextField btnVolverCt;
 	private JPanel panelR;
 	public JTextField IDR;
 	public JTextField MONTOR;
 	public JTextField CONTRASENAR;
-	private JLabel btnRetirarR;
-	private JLabel btnRetirar_1;
-	private JLabel btnConsultar;
+	public JLabel btnRetirarR;
+	public JLabel btnRetirar;
+	public JLabel btnConsultar;
 	private JLabel lblNewLabel_1;
 	private JLabel btnConsignar;
 	private JLabel lblNewLabel_1_1;
@@ -49,7 +49,7 @@ public class VCorresponsal extends JFrame {
 	private JLabel lblID;
 	private JLabel lblContrasena;
 	private JLabel lblNewLabel_1_3;
-	private JLabel btnVolverR;
+	public JLabel btnVolverR;
 	private JLabel lblMonto;
 	private JLabel lblNewLabel_1_3_1;
 	private JLabel Logo;
@@ -104,12 +104,12 @@ public class VCorresponsal extends JFrame {
 		btnConsignar.setBounds(26, 283, 150, 39);
 		panelD.add(btnConsignar);
 		
-		btnRetirar_1 = new JLabel("");
-		btnRetirar_1.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnRa.png")));
-		btnRetirar_1.setHorizontalAlignment(SwingConstants.CENTER);
-		btnRetirar_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		btnRetirar_1.setBounds(216, 283, 150, 39);
-		panelD.add(btnRetirar_1);
+		btnRetirar = new JLabel("");
+		btnRetirar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnRa.png")));
+		btnRetirar.setHorizontalAlignment(SwingConstants.CENTER);
+		btnRetirar.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		btnRetirar.setBounds(216, 283, 150, 39);
+		panelD.add(btnRetirar);
 		
 		btnConsultar = new JLabel("");
 		btnConsultar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnCtb.png")));

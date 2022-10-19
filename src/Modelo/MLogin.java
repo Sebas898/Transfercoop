@@ -6,8 +6,10 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+import Controlador.CRegistro;
 import Controlador.CUsuario;
 import Vista.VLogin;
+import Vista.VRegistro;
 import Vista.VUsuario;
 
 public class MLogin {
@@ -47,6 +49,17 @@ public class MLogin {
 		v.dispose();
 	}
 
+	public void registro(VLogin v) {
+
+		VRegistro vU = new VRegistro();
+		MRegistro m = new MRegistro();
+		CRegistro c = new CRegistro(vU, m);
+		vU.setVisible(true);
+		v.dispose();
+		
+		
+	}
+	
 	public void login(VLogin v) {
 		Connection con = Conexion.getConection();
 		try {
@@ -57,7 +70,6 @@ public class MLogin {
 			if (rs.next()) {
 				JOptionPane.showMessageDialog(null, "Welcome " + rs.getString("nombre"), "Aviso",
 						JOptionPane.INFORMATION_MESSAGE);
-
 				if (rs.getString("rango").equals("U")) {
 					cliente = new Cliente();
 

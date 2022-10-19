@@ -3,9 +3,9 @@ package Modelo;
 import java.sql.*;
 
 public class Conexion {
-	private static String URL = "jdbc:mysql://139.144.51.53:3306/Transfercoop";
-	private static String USERNAME = "juan";
-	private static String PASSWORD = ".16794300.@";
+	private static String URL = "jdbc:mysql://localhost/transfer_prueba";
+	private static String USERNAME = "root";
+	private static String PASSWORD = "sebas123";
 	
 	public static Connection getConection() {
 		Connection con = null;

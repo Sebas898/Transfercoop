@@ -17,6 +17,7 @@ public class CLogin implements MouseListener, KeyListener {
 		this.m = m;
 		v.login.addMouseListener(this);
 		v.username.requestFocus();
+		v.registrate.addMouseListener(this);
 		v.password.addKeyListener(this);
 	}
 
@@ -24,6 +25,9 @@ public class CLogin implements MouseListener, KeyListener {
 	public void mouseClicked(MouseEvent e) {
 		if (e.getSource() == v.login) {
 			m.login(v);
+		}
+		if(e.getSource() == v.registrate) {
+			m.registro(v);
 		}
 	}
 	
@@ -33,6 +37,8 @@ public class CLogin implements MouseListener, KeyListener {
 			if(e.getExtendedKeyCode() == KeyEvent.VK_ENTER) {
 				m.login(v);
 			}
+			
+	
 		}
 		
 	}

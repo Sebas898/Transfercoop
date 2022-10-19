@@ -3,6 +3,7 @@ package Modelo;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.text.NumberFormat;
 import java.util.Locale;
 import javax.swing.JOptionPane;
@@ -58,7 +59,7 @@ public class MUsuario {
 
 	public void mostrarDatos(VUsuario v, MLogin m) {
 		try {
-			con = conexion.getConection();
+			con = Conexion.getConection();
 			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
 			ps.setString(1, m.cliente.getID());
 			rs = ps.executeQuery();
@@ -73,16 +74,26 @@ public class MUsuario {
 		
 		NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
 		
+	
 		
-
-		v.lblNombre.setText(m.cliente.getNombre() + " " + m.cliente.getApellido());
+		v.lblNombre.setText(m.cliente.getNombre());
+		v.lblApellido.setText(m.cliente.getApellido());
 		v.lblId.setText(m.cliente.getID());
 		v.lblFecha.setText(java.time.LocalDateTime.now().toLocalDate().toString());
 		v.lblDinero.setText(nf.format(m.cliente.getDinero()));
-
-		v.lblNombre.setText(m.cliente.getNombre() + " " + m.cliente.getApellido());
-		v.lblId.setText(m.cliente.getID());
-		v.lblDinero.setText(prt.format(m.cliente.getDinero()));
+		
+		try {
+			ps = con.prepareStatement("SELECT * FROM frases WHERE id=?");
+			ps.setString(1, String.valueOf(Math.floor(Math.random()*10+1)));
+			rs = ps.executeQuery();
+			rs.next();
+			v.txtFrase.setText(rs.getString(2)+"\n-\""+rs.getString(3)+"\"");
+		
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+		
 	}
 
 	public void trasferir(VUsuario v, MLogin ml) {
@@ -141,10 +152,10 @@ public class MUsuario {
 	}
 
 	public void listaTransacciones(VUsuario v, MLogin ml){
-		System.out.println("entrando metodo");
 		String a;
 		String sql;
 		String h;
+		String usuarios[] = new String[5];
 
 		
 		DefaultTableModel model = new DefaultTableModel();
@@ -159,36 +170,33 @@ public class MUsuario {
 
 		a = String.valueOf(ml.cliente.getRango());
 			try {
-			System.out.println("Try");
-//			if(a.equals("A")){
-//				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
-//			}else{
-//				"SELECT * FROM movimientos WHERE nID= ? OR nID_Des = ? ORDER BY fecha DESC";
-//			}
-			String usuarios[] = new String[5];
+			
+			if(a.equals("A")){
+				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
+			}else{
+				sql = "SELECT * FROM movimientos WHERE nID= ? OR nID_Des= ? ORDER BY fecha DESC";
+			}
+			
 			
 			NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
 			con = conexion.getConection();
 
 
 			
-			ps = con.prepareStatement("SELECT * FROM movimientos WHERE nID= ? OR nID_Des = ? ORDER BY fecha DESC");
+			ps = con.prepareStatement(sql);
 			ps.setString(1, ml.cliente.getID());
 			ps.setString(2, ml.cliente.getID());
 			rs = ps.executeQuery();
-			rs.next();
 		
-			System.out.println("Antes del while\nValor rs "+rs.next());
-			while(rs.next()){
-				System.out.println("Dentro");
-				h = nf.format(rs.getDouble("monto"));
+			
+			while(rs.next()==true){
+				h = nf.format(rs.getDouble(5));
 
-				usuarios[0] = rs.getString("nID");
-				usuarios[1] = rs.getString("nID_Des");
-				usuarios[2] = rs.getString("fecha");
-				usuarios[3] = rs.getString("accion");
+				usuarios[0] = rs.getString(1);
+				usuarios[1] = rs.getString(3);
+				usuarios[2] = rs.getString(2);
+				usuarios[3] = rs.getString(4);
 				usuarios[4] = h;
-				System.out.println("adding");
 				model.addRow(usuarios);
 			}
 			v.table.setModel(model);
