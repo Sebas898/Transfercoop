@@ -2,44 +2,74 @@
 ![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
 ***
 # **🗃️Tabla de contenido**.
-1. [Introduccion.](#Introduccion)
-2. [Resumen.](#Resumen)
-3. [Planteamiento del problema.](#Planteamientodelproblema)
+[Introduccion.](#Introduccion)
 
-      3.1.[Descripcion del problema.](#Descripciondelproblema)
-  
-4. [Objetivos.](#Objetivos)
+[Abstrac.](#Abstrac)
 
-      4.1.[Objetivo General.](#Objetivo_General)
-      
-      4.2.[Objetivos Especificos.](#Objetivos_Especificos)
-      
-5. [Justificacion.](#Justificacion)
-6. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
+[Resumen.](#Resumen)
 
-      6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
+1. [Planteamiento del problema.](#Planteamiento-del-problema)
+
+     1.1. [Descripcion del problema.](#Descripcion-del-problema)
+    
+     1.2. [Objetivos.](#Objetivos)
+     
+     1.2.1. [Objetivo General.](#Objetivo-General)
+     
+     1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
       
-      6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
-      
-7. [Conclusiones.](#Conclusiones)
+1.3. [Justificacion.](#Justificacion)
+
+2. [Marco de Referencias.](#Marco-de-Referencias)
+
+      2.1. [Marco Contextual.](#Marco-Contextual)
+   
+      2.2. [Marco Teorico.](#Marco-Teorico)
+   
+      2.3. [Marco Legal.](#Marco-Legal)
+ 
+3. [Metologia Ingenieril.](#Metologia-Ingenieril)
+
+4. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+
+      4.1. [Requerimientos.](#Requerimientos)
+
+      4.2. [Modelado.](#Modelado)
+ 
+      4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
+ 
+      4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
+ 
+5. [Analisis Economico.](#Analisis-Economico)
+
+6. [Conclusiones.](#Conclusiones)
+
+7. [Bibliografias.](#Bibliografias)
+
+8. [Anexos.](#Anexos)
 
 ***
 ## **💡Introduccion.** 
-En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
+Gracias a arduas investigaciones con bancos de Colombia, surgió la necesidad de poner en pie un software de transacciones que no solo funciones para manejar dinero, sino que con exactitud ayude a la persona, de manera que no se sientan agobiadas por costos adicionales. Por lo tanto, en el presente documento se evidenciará el desarrollo de un software bancario que quiere dar solución a esta problemática. Asimismo, realizar cambios radicales a diferentes identidades bancarias para que no tengan perdidas económicas.
+
+***
+## **📑Abstrac.**
+The software aims to solve the problems that are evidenced in some banking identities, either for saving, withdrawal or transaction issues. In such a way, it will have several objectives that will be able to give an easy solution to these problems. Also, to complement and improve the construction of the software. It is essential to study several fields such as methodologies, information techniques and unseen knowledge. It will be indicated the expenses that could be carried out to elaborate the project. Sketches of the software, a UML and a diagram of cases of use that demands functional requirements, which are of utmost importance, are made. To finish it is established conclusions all the content.
 ***
 ## **📝Resumen.**
-El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
+El software aspira a solucionar las problemáticas que se evidencian en algunas identidades bancarias, ya sea por cuestiones de ahorro, retiro o transacción. De tal modo se tendrá en cuenta diversos objetivos que podrá dar una fácil solución a dichas problemáticas. Asimismo, complementar y mejorar la construcción del software. Es imprescindible el estudio de varios campos como metodologías, técnicas de información y conocimientos no visto. Se indicará los gastos que se podrían llevar a cabo para elaborar el proyecto. Se realiza bosquejos del software, un UML y diagrama de casos de uso que exige requerimientos funcionales, los cuales son de suma importancia . Para finalizar se establece conclusiones todo el contenido.
 ***
-## **📄Planteamiento del problema.** 
+# **📄Planteamiento del problema.** 
 ***
-### 🖋️Descripcion de Problematica.
-La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.
+### 🖋️Descripcion de Problema.
+La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.}
 ***
 ## **🗄️Objetivos.** 
 ***
-### 🏷️Objetivo General.
+### **🏷️Objetivo General**.
 El objetivo principal de nuestro sistema es crear un sistema de cooperativa moderno que facilite a los estudiantes, maestros o personas de la comunidad, a hacer un ahorro económico, también puedan transferir dinero, ingresar dinero o retirar el mismo que se va a ahorrar, permitiendo a los usuarios ver un registro de los movimientos de la cuenta dando información o recibos que contiene el tipo de movimiento que hizo en la cuenta, la fecha y hora que se realizó su acción. Asimismo, también tiene acceso para los administradores que tienen el fin de modificar, agregar o eliminar usuarios ya existentes en el sistema.
-### 🔎Objetivos Especificos.
+
+### **🔎Objetivos Especificos**.
 Nuestro proyecto/sistema tiene como objetivo:
 
 ✅ Brindar un nuevo sistema más cómodo y moderno para las personas.
