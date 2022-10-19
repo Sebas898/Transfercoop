@@ -10,7 +10,7 @@
 
 1. [Planteamiento del problema.](#📄)
 
-   1.1. [Descripcion del problema.](#🖋️)
+   1.1. [Descripcion del problema.](#🖋️Descripcion del problema.)
     
 1.2. [Objetivos.](#Objetivos)
 
