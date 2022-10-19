@@ -2,24 +2,23 @@
 ![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
 ***
 # **🗃️Tabla de contenido**.
-1. [Introduccion.](#Introduccion)
-2. [Abstrac.](#Abstrac)
-3. [Resumen.](#Resumen)
-4. [Planteamiento del problema.](#Planteamientodelproblema)
+[Introduccion.](#Introduccion)
+[Abstrac.](#Abstrac)
+[Resumen.](#Resumen)
+1. [Planteamiento del problema.](#Planteamientodelproblema)
 
-      3.1.[Descripcion del problema.](#Descripciondelproblema)
-  
-5. [Objetivos.](#Objetivos)
+      1.1.[Descripcion del problema.](#Descripciondelproblema)
+    
+1.2. [Objetivos.](#Objetivos)
 
-      4.1.[Objetivo General.](#Objetivo_General)
+   1.2.1.[Objetivo General.](#ObjetivoGeneral)
+    
+   1.2.2.[Objetivos Especificos.](#ObjetivosEspecificos)
       
-      4.2.[Objetivos Especificos.](#Objetivos_Especificos)
-      
-6. [Justificacion.](#Justificacion)
+1.3. [Justificacion.](#Justificacion)
+2. [Marco de Referencias.](#Marco de Referencias)
 7. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
-
-      7.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
-      
+ 7.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
       
 7. [Conclusiones.](#Conclusiones)
