@@ -50,7 +50,8 @@
 
 ***
 ## **💡Introduccion.** 
-En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
+Gracias a arduas investigaciones con bancos de Colombia, surgió la necesidad de poner en pie un software de transacciones que no solo funciones para manejar dinero, sino que con exactitud ayude a la persona, de manera que no se sientan agobiadas por costos adicionales. Por lo tanto, en el presente documento se evidenciará el desarrollo de un software bancario que quiere dar solución a esta problemática. Asimismo, realizar cambios radicales a diferentes identidades bancarias para que no tengan perdidas económicas.
+
 ***
 ## **📑Abstrac.**
 The software aims to solve the problems that are evidenced in some banking identities, either for saving, withdrawal or transaction issues. In such a way, it will have several objectives that will be able to give an easy solution to these problems. Also, to complement and improve the construction of the software. It is essential to study several fields such as methodologies, information techniques and unseen knowledge. It will be indicated the expenses that could be carried out to elaborate the project. Sketches of the software, a UML and a diagram of cases of use that demands functional requirements, which are of utmost importance, are made. To finish it is established conclusions all the content.
