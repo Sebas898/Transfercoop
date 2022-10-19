@@ -4,24 +4,31 @@
 # **🗃️Tabla de contenido**.
 [Introduccion.](#Introduccion)
 
-## [Abstrac.](#Abstrac)
+[Abstrac.](#Abstrac)
 
-## [Resumen.](#Resumen)
+[Resumen.](#Resumen)
 
-## 1. [Planteamiento del problema.](#Planteamiento-del-problema)
+1. [Planteamiento del problema.](#Planteamiento-del-problema)
 
-   ### 1.1. [Descripcion del problema.](#Descripcion-del-problema)
+    1.1. [Descripcion del problema.](#Descripcion-del-problema)
+
+1.2. [Objetivos.](#Objetivos)
+
+   1.2.1. [Objetivo General.](#Objetivo-General)
     
-### 1.2. [Objetivos.](#Objetivos)
-
-   ### 1.2.1.[Objetivo General.](#Objetivo-General)
-    
-   ### 1.2.2.[Objetivos Especificos.](#Objetivos-Especificos)
+   1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
       
-### 1.3. [Justificacion.](#Justificacion)
+1.3. [Justificacion.](#Justificacion)
 
 2. [Marco de Referencias.](#Marco-de-Referencias)
-3. 
+
+   2.1. [Marco Contextual.](#Marco-Contextual)
+   
+   2.2. [Marco Teorico.](#Marco-Teorico)
+   
+   2.3. [Marco Legal.](#Marco-Legal)
+
+3.
 7. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
  7.1. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
