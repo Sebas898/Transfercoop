@@ -14,9 +14,9 @@
 
 1.2. [Objetivos.](#Objetivos)
 
-   1.2.1. [Objetivo General.](#Objetivo-General)
+   1.2.1.  [Objetivo General.](#Objetivo-General)
     
-   1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
+   1.2.2.  [Objetivos Especificos.](#Objetivos-Especificos)
       
 1.3. [Justificacion.](#Justificacion)
 
@@ -28,12 +28,25 @@
    
    2.3. [Marco Legal.](#Marco-Legal)
 
-3.
-7. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
- 7.1. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
-      6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
-      
+3. [Metologia Ingenieril.](#Metologia-Ingenieril)
+
+5. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+
+ 4.1. [Requerimientos.](#Requerimientos)
+
+ 4.2  [Modelado.](#Modelado)
+ 
+ 4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
+ 
+ 4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
+ 
+5. [Analisis Economico.](#Analisis-Economico)
+
 7. [Conclusiones.](#Conclusiones)
+
+9. [Bibliografias.](#Bibliografias)
+
+10. [Anexos.] (#Anexos)
 
 ***
 ## **💡Introduccion.** 
