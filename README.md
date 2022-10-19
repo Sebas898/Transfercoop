@@ -14,9 +14,9 @@
 
      1.2. [Objetivos.](#Objetivos)
 
-      1.2.1.  [Objetivo General.](#Objetivo-General)
+      1.2.1. [Objetivo General.](#Objetivo-General)
     
-      1.2.2.  [Objetivos Especificos.](#Objetivos-Especificos)
+      1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
       
 1.3. [Justificacion.](#Justificacion)
 
@@ -66,10 +66,11 @@ La problemática que se vive hoy en día es, que la mayoría de los estudiantes,
 ***
 ## **🗄️Objetivos.** 
 ***
-### 🏷️Objetivo General.
+### **🏷️Objetivo General.**
+***
 El objetivo principal de nuestro sistema es crear un sistema de cooperativa moderno que facilite a los estudiantes, maestros o personas de la comunidad, a hacer un ahorro económico, también puedan transferir dinero, ingresar dinero o retirar el mismo que se va a ahorrar, permitiendo a los usuarios ver un registro de los movimientos de la cuenta dando información o recibos que contiene el tipo de movimiento que hizo en la cuenta, la fecha y hora que se realizó su acción. Asimismo, también tiene acceso para los administradores que tienen el fin de modificar, agregar o eliminar usuarios ya existentes en el sistema.
 
-### 🔎Objetivos Especificos.
+### **🔎Objetivos Especificos**.
 Nuestro proyecto/sistema tiene como objetivo:
 
 ✅ Brindar un nuevo sistema más cómodo y moderno para las personas.
