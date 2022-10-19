@@ -4,24 +4,26 @@
 # **🗃️Tabla de contenido**.
 [Introduccion.](#Introduccion)
 
-[Abstrac.](#Abstrac)
+## [Abstrac.](#Abstrac)
 
-[Resumen.](#Resumen)
+## [Resumen.](#Resumen)
 
-1. [Planteamiento del problema.](#Planteamiento-del-problema)
+## 1. [Planteamiento del problema.](#Planteamiento-del-problema)
 
-   1.1. [Descripcion del problema.](#Descripcion-del-problema)
+   ### 1.1. [Descripcion del problema.](#Descripcion-del-problema)
     
-1.2. [Objetivos.](#Objetivos)
+### 1.2. [Objetivos.](#Objetivos)
 
-   1.2.1.[Objetivo General.](#ObjetivoGeneral)
+   ### 1.2.1.[Objetivo General.](#Objetivo-General)
     
-   1.2.2.[Objetivos Especificos.](#ObjetivosEspecificos)
+   ### 1.2.2.[Objetivos Especificos.](#Objetivos-Especificos)
       
-1.3. [Justificacion.](#Justificacion)
-2. [Marco de Referencias.](#Marco de Referencias)
-7. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
- 7.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
+### 1.3. [Justificacion.](#Justificacion)
+
+2. [Marco de Referencias.](#Marco-de-Referencias)
+3. 
+7. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+ 7.1. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
       6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
       
 7. [Conclusiones.](#Conclusiones)
@@ -45,6 +47,7 @@ La problemática que se vive hoy en día es, que la mayoría de los estudiantes,
 ***
 ### 🏷️Objetivo General.
 El objetivo principal de nuestro sistema es crear un sistema de cooperativa moderno que facilite a los estudiantes, maestros o personas de la comunidad, a hacer un ahorro económico, también puedan transferir dinero, ingresar dinero o retirar el mismo que se va a ahorrar, permitiendo a los usuarios ver un registro de los movimientos de la cuenta dando información o recibos que contiene el tipo de movimiento que hizo en la cuenta, la fecha y hora que se realizó su acción. Asimismo, también tiene acceso para los administradores que tienen el fin de modificar, agregar o eliminar usuarios ya existentes en el sistema.
+
 ### 🔎Objetivos Especificos.
 Nuestro proyecto/sistema tiene como objetivo:
 
