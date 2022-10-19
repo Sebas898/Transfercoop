@@ -11,12 +11,12 @@
 1. [Planteamiento del problema.](#Planteamiento-del-problema)
 
      1.1. [Descripcion del problema.](#Descripcion-del-problema)
-
-     1.2. [Objetivos.](#Objetivos)
-
-      1.2.1. [Objetivo General.](#Objetivo-General)
     
-      1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
+     1.2. [Objetivos.](#Objetivos)
+     
+     1.2.1. [Objetivo General.](#Objetivo-General)
+     
+     1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
       
 1.3. [Justificacion.](#Justificacion)
 
@@ -30,7 +30,7 @@
  
 3. [Metologia Ingenieril.](#Metologia-Ingenieril)
 
-5. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+4. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
 
       4.1. [Requerimientos.](#Requerimientos)
 
@@ -42,11 +42,11 @@
  
 5. [Analisis Economico.](#Analisis-Economico)
 
-7. [Conclusiones.](#Conclusiones)
+6. [Conclusiones.](#Conclusiones)
 
-9. [Bibliografias.](#Bibliografias)
+7. [Bibliografias.](#Bibliografias)
 
-10. [Anexos.](#Anexos)
+8. [Anexos.](#Anexos)
 
 ***
 ## **💡Introduccion.** 
