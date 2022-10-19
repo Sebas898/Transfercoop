@@ -10,7 +10,7 @@
 
 1. [Planteamiento del problema.](#Planteamiento-del-problema)
 
-    1.1. [Descripcion del problema.](#Descripcion-del-problema)
+     1.1. [Descripcion del problema.](#Descripcion-del-problema)
 
 1.2. [Objetivos.](#Objetivos)
 
@@ -22,23 +22,23 @@
 
 2. [Marco de Referencias.](#Marco-de-Referencias)
 
-   2.1. [Marco Contextual.](#Marco-Contextual)
+      2.1. [Marco Contextual.](#Marco-Contextual)
    
-   2.2. [Marco Teorico.](#Marco-Teorico)
+      2.2. [Marco Teorico.](#Marco-Teorico)
    
-   2.3. [Marco Legal.](#Marco-Legal)
-
+      2.3. [Marco Legal.](#Marco-Legal)
+ 
 3. [Metologia Ingenieril.](#Metologia-Ingenieril)
 
 5. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
 
- 4.1. [Requerimientos.](#Requerimientos)
+      4.1. [Requerimientos.](#Requerimientos)
 
- 4.2  [Modelado.](#Modelado)
+      4.2. [Modelado.](#Modelado)
  
- 4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
+      4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
  
- 4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
+      4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
  
 5. [Analisis Economico.](#Analisis-Economico)
 
@@ -46,7 +46,7 @@
 
 9. [Bibliografias.](#Bibliografias)
 
-10. [Anexos.] (#Anexos)
+10. [Anexos.](#Anexos)
 
 ***
 ## **💡Introduccion.** 
