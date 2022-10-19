@@ -28,10 +28,11 @@
 ## **💡Introduccion.** 
 En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
 ***
-## **📝Abstrac.**
-
+## **📑Abstrac.**
+The software aims to solve the problems that are evidenced in some banking identities, either for saving, withdrawal or transaction issues. In such a way, it will have several objectives that will be able to give an easy solution to these problems. Also, to complement and improve the construction of the software. It is essential to study several fields such as methodologies, information techniques and unseen knowledge. It will be indicated the expenses that could be carried out to elaborate the project. Sketches of the software, a UML and a diagram of cases of use that demands functional requirements, which are of utmost importance, are made. To finish it is established conclusions all the content.
+***
 ## **📝Resumen.**
-\justify{El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
+El software aspira a solucionar las problemáticas que se evidencian en algunas identidades bancarias, ya sea por cuestiones de ahorro, retiro o transacción. De tal modo se tendrá en cuenta diversos objetivos que podrá dar una fácil solución a dichas problemáticas. Asimismo, complementar y mejorar la construcción del software. Es imprescindible el estudio de varios campos como metodologías, técnicas de información y conocimientos no visto. Se indicará los gastos que se podrían llevar a cabo para elaborar el proyecto. Se realiza bosquejos del software, un UML y diagrama de casos de uso que exige requerimientos funcionales, los cuales son de suma importancia . Para finalizar se establece conclusiones todo el contenido.
 ***
 ## **📄Planteamiento del problema.** 
 ***
