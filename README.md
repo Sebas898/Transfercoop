@@ -117,7 +117,7 @@ Lo que se espera del software es:
  🟦 El manejo de administrativo sea optimo, eficiente y confiable.
 
  ***
-## ***📖Marco Teorico.*** 
+## *📖 Marco Teorico.* 
 ***
 
 
