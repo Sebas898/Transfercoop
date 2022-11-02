@@ -62,7 +62,7 @@ El software aspira a solucionar las problemáticas que se evidencian en algunas 
 # **📄Planteamiento del problema.** 
 ***
 ### 🖋️Descripcion de Problema.
-La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.}
+La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.
 ***
 ## **🗄️Objetivos.** 
 ***
@@ -139,15 +139,8 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ***
  ## **📲Diseño de Interfaz.**
  ***
- #### Bosquejos antiguos.
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016882-16850632-bd57-4cc8-995d-19cf4b48c021.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016943-dee4c9d9-214e-492c-96c2-8f7d1cc58a01.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016958-84b3ca1e-b500-4f73-a331-3ec9a63ccf21.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016970-db61c640-37a4-4346-8300-34f025419cd6.png)
+ Album de fotos de la evolucion de Transfercoop desde su inicio que fue el primer semestre el año 2021.
+ LINK: https://photos.app.goo.gl/epQQcrSby8doDXJY7.
  ***
  ## **📋Conclusiones.**
  ***
