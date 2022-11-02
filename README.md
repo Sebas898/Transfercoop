@@ -117,11 +117,14 @@ Lo que se espera del software es:
  🟦 El manejo de administrativo sea optimo, eficiente y confiable.
 
  ***
-# **📖 Marco Teorico.** 
+# **📚 Marco de Referencia.** 
 ***
-
-
-
+## **📕 Marco Contextual.** 
+***
+## **📗 Marco teorico.** 
+***
+## **📘 Marco legal.** 
+***
 
 
 
