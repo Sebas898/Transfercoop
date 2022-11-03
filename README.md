@@ -123,13 +123,20 @@ Lo que se espera del software es:
 ***
 
 Se hará una Comparamos softwares bancarios del mercando de la actualidad basándonos en las funciones del nuestro software las cuales son:
+
 •	Almacenamiento de datos.
+
 •	Gestión de datos.
+
 •	Privacidad de datos personales.
+
 •	Panel de listado de usuarios.
+
 •	Facturación.
+
 En el mercado se pueden encontrar opciones similares como pueden ser:
 Nombre del Software: Bankingly
+
 Funciones:
 •	Almacenamiento de documentos.
 •	Autenticación.
@@ -141,21 +148,35 @@ Funciones:
 Nombre del Software: NexorONE
 Es ideal para una amplia variedad de entidades financieras, tales como: bancos online y privados, cooperativas de crédito, billeteras electrónicas y fideicomisos y empresas de gestión de activos. 
 Funciones:
+
 •	API
+
 •	Gestión de documentos
+
 •	Gestión de la conformidad
+
 •	Gestión financiera 
+
 •	Almacenamiento de documentos
+
 •	Etc.
+
 Nombre del Software: COBIS CORE
 Las soluciones de Core bancario COBIS CORE son el punto de cálculo y el registro final de datos de una institución financiera:
 Cobis Core son soluciones nativas en la nube, para sistemas bancarios. 
+
 Funciones:
+
 •	Alertas y alzada
+
 •	Gestión de documentos
+
 •	API
+
 •	Gestión de usuarios
+
 •	Panal de actividades
+
 •	Etc.
 
 
