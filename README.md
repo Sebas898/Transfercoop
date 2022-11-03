@@ -139,10 +139,15 @@ Nombre del Software: Bankingly
 
 Funciones:
 •	Almacenamiento de documentos.
+
 •	Autenticación.
+
 •	Auténticas de dos facturas.
+
 •	Banca en línea.
+
 •	Banca privada.
+
 •	Etc.
 
 Nombre del Software: NexorONE
