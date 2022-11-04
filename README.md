@@ -189,10 +189,10 @@ Funciones:
 ***
 Se evidenciará la investigación y significados de palabras o temas que se va a utilizar y estudiar para poder hacer un desarrollo optimo al proyecto, siendo así para aprender y comprender temáticas nuevas, beneficiando tanto a los integrantes del proyecto y usuarios que lo vayan a utilizar, asimismo investigamos:
 
-Interfaz graficas (GUI):
+**Interfaz graficas (GUI):**
 La interfaz gráfica es un programa que concibe las veces que intervenga el usuario con la máquina. Este software demuestra una forma visual de todas las acciones con diferentes posibilidades en una plataforma, facilitando a los usuarios la forma de integración sin la necesidad de un conocimiento avanzados sobre sistemas.
 
-Swing:
+**Swing:**
 Es una biblioteca de java, que incorpora widgets para una GUI las cuales son: 
 •	Caja de texto.
 
@@ -204,25 +204,25 @@ Es una biblioteca de java, que incorpora widgets para una GUI las cuales son:
 
 El swing también proporciona varios tipos de elementos gráficos entre ellos contenedore y los componentes.
 
-Try-Catch:
+**Try-Catch:**
 ..o correspondiendo al caso o signos que no dejan el programa ejecutar.
 
-Equals ():
+**Equals ():**
 Este método se utiliza para saber si dos caos son del mismo tipo y que tienen el mismo dato. Si el Equals es tiene un valor igual su valor es true y si no el valor es falso.
 
-JLabel:
+**JLabel:**
 El JLabel es un tipo de texto que podemos agregar en el frame, además también se puede agregar imágenes e imágenes animaciones, este es de gran utilidad para decorara la interfaz gráfica o mejorar la presentación del software.
 
-String:
+**String:**
 Este objeto nos ayuda a incorporar u operar una serie de caracteres.
 
-JTextField:
+**JTextField:**
 El JTextField permite agregar una cadena de caracteres al programa.
 
-Transferencia bancaria:
+**Transferencia bancaria:**
 Consiste en que una persona quiera pasar una suma de dinero a una cuenta bancaria de otra persona.
 
-Cooperativa:
+**Cooperativa:**
 Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar, recoger dinero, vender un producto. Siendo algo que beneficia a los integrantes de la cooperativa, teniendo sus normativas o reglas.
 
 
