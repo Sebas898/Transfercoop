@@ -228,6 +228,22 @@ Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar,
 
 ## **📘 Marco legal.** 
 ***
+Régimen legal para proteger el derecho a la seguridad y reparación de los consumidores, sin perjuicio de otros reconocidos por leyes especiales, establecidas en la Constitución Política y el Reglamento de Consumo de uso.
+
+Ley 1581 de 2012 en sus artículos 2,4 y 6 estipula el correcto manejo, uso y protección de los datos personales para entidades de carácter público y privado.
+
+Decreto 1377 de 2013 según lo estipulado en su artículo 1. El presente decreto tiene como objeto reglamentar de forma parcial la ley 1581 del 2012 mediante la cual se dictan disposiciones generales para la protección de los datos personales. Según en el Art 4 la recolección de datos solo deberá limitarse para aquellos datos personales que son pertinentes y adecuados para la finalidad de la cual son solicitados o requeridos conforme con la normatividad vigente. Salvo en los casos expresamente previstos en la ley los cuales no se podrán recolectar datos personales sin autorización del titular. Art 13 en el presente decreto estipula cuales podrán ser las políticas de tratamiento de la información. La cual dice; los responsables del tratamiento deberán desarrollar sus políticas para el tratamiento de los datos personales y velar porque los encargados del tratamiento den cabal cumplimiento a las mismas.
+
+Ley 1273 de 2009, por medio de la cual se modifica el Código Penal, se crea un nuevo bien jurídico tutelado - denominado 'de la protección de la información y de los datos'- y se preservan integralmente los sistemas que utilicen las tecnologías de la información y las comunicaciones, entre otras disposiciones.
+
+Ley 1480 de 2011 
+Por su parte, la Ley 1480 de 2011 tiene como principio general, entre otros, proteger, promover y garantizar la efectiva defensa del derecho que tiene el consumidor a su seguridad e indemnidad, esto es, a que los productos que utiliza en la satisfacción de sus necesidades no le causen daño en situaciones normales de utilización.
+
+Artículo 78.
+Que el artículo 78 de la Constitución Política establece que la ley regulará el control de calidad de los bienes y servicios ofrecidos y prestados a la comunidad, así como la información que debe suministrarse al público en su comercialización
+
+Decreto 735 del 2013.
+Según el Art 1 del presente decreto establecen el objeto de este el cual es: mediante este decreto se establece las reglas para ser efectiva la garantía legal y las suplementarias de esta.
 
 
 
