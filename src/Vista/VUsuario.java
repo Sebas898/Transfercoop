@@ -2,37 +2,26 @@ package Vista;
 
 import java.awt.Color;
 import java.awt.Cursor;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import Controlador.CUsuario;
-import Modelo.MLogin;
-import Modelo.MUsuario;
-
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 import java.awt.Font;
-import javax.swing.SwingConstants;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import javax.swing.JTextPane;
-import javax.swing.JInternalFrame;
-import javax.swing.JButton;
-import java.awt.BorderLayout;
-import javax.swing.JDesktopPane;
-import javax.swing.JTextField;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 import javax.swing.text.StyledDocument;
-import javax.swing.JEditorPane;
 
 public class VUsuario extends JFrame {
 
@@ -73,13 +62,13 @@ public class VUsuario extends JFrame {
 	public JLabel lblApellido;
 	private JScrollPane scrollPane;
 	
-	public static void main(String[] args) {
-		VUsuario v = new VUsuario();
-		MUsuario m = new MUsuario();
-		MLogin mLogin = new MLogin();
-		CUsuario c = new CUsuario(v, m, mLogin);
-		v.setVisible(true);
-	}
+//	public static void main(String[] args) {
+//		VUsuario v = new VUsuario();
+//		MUsuario m = new MUsuario();
+//		MLogin mLogin = new MLogin();
+//		CUsuario c = new CUsuario(v, m, mLogin);
+//		v.setVisible(true);
+//	}
 	
 
 	

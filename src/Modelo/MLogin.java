@@ -6,8 +6,10 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+import Controlador.CCorresponsal;
 import Controlador.CRegistro;
 import Controlador.CUsuario;
+import Vista.VCorresponsal;
 import Vista.VLogin;
 import Vista.VRegistro;
 import Vista.VUsuario;
@@ -17,6 +19,7 @@ public class MLogin {
 	private String password;
 
 	public Cliente cliente;
+	public Corresponsal corresponsal;
 
 	PreparedStatement ps;
 	ResultSet rs;
@@ -41,12 +44,22 @@ public class MLogin {
 		this.password = password;
 	}
 
-	public void cerrar(VLogin v) {
-		VUsuario vU = new VUsuario();
+	public void abrirCliente(VLogin v) {
+	    VUsuario vU = new VUsuario();
 		MUsuario m = new MUsuario();
 		CUsuario c = new CUsuario(vU, m, this);
 		vU.setVisible(true);
 		v.dispose();
+		
+	    
+	}
+	
+	public void abrirCorresponsal(VLogin v) {
+	    VCorresponsal vC = new VCorresponsal();
+        MCorresponsal m = new MCorresponsal();
+        CCorresponsal c = new CCorresponsal(vC, m, this);
+        vC.setVisible(true);  
+        v.dispose();
 	}
 
 	public void registro(VLogin v) {
@@ -71,6 +84,7 @@ public class MLogin {
 				JOptionPane.showMessageDialog(null, "Welcome " + rs.getString("nombre"), "Aviso",
 						JOptionPane.INFORMATION_MESSAGE);
 				if (rs.getString("rango").equals("U")) {
+				    
 					cliente = new Cliente();
 
 					cliente.setID(rs.getString("nID"));
@@ -84,7 +98,23 @@ public class MLogin {
 					cliente.setRango(a.charAt(0));
 					cliente.setDinero(rs.getDouble("dinero"));
 					
-					cerrar(v);
+					abrirCliente(v);
+				}else if(rs.getString("rango").equals("C")) {
+				    
+				    corresponsal = new Corresponsal();
+				    
+				    corresponsal.setID(rs.getString("nID"));
+				    corresponsal.setNombre(rs.getString("nombre"));
+				    corresponsal.setApellido(rs.getString("apellido"));
+				    corresponsal.setContrasena(rs.getString("contrasena"));
+				    corresponsal.setFechaN(rs.getDate("fNacimiento"));
+                    a = rs.getString("genero");
+                    corresponsal.setSexo(a.charAt(0));
+                    a = rs.getString("rango");
+                    corresponsal.setRango(a.charAt(0));
+                    corresponsal.setCupo(rs.getDouble("dinero"));
+
+                    abrirCorresponsal(v);
 				}
 
 			} else {

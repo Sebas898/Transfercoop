@@ -1,11 +1,23 @@
 package Vista;
 
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Font;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
 
-import Controlador.CLogin;
-import Modelo.MLogin;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class VLogin extends JFrame {
 
@@ -30,7 +42,7 @@ public class VLogin extends JFrame {
 	public VLogin() {
 
 		// Crear componentes
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setSize(400, 420);
 		setTitle("Login");
 		setLocationRelativeTo(null);
@@ -42,7 +54,7 @@ public class VLogin extends JFrame {
 
 		contentPane.setBackground(new Color(1, 1, 1, 0));
 		setBackground(new Color(1, 1, 1, 0));
-
+		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
 		barra = new JPanel();
 
 		barra.setBounds(10, 11, 380, 32);
@@ -167,7 +179,8 @@ public class VLogin extends JFrame {
 		cerrar.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-				System.exit(0);
+			    
+			    dispose();
 			}
 
 			@Override
