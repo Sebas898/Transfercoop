@@ -8,41 +8,41 @@
 
 [Resumen.](#Resumen)
 
-1. [Planteamiento del problema.](#Planteamiento-del-problema)
+1. [Planteamiento del problema.](#planteamiento-del-problema)
 
-     1.1. [Descripcion del problema.](#Descripcion-del-problema)
+     1.1. [Descripcion del problema.](#%EF%B8%8Fdescripcion-de-problema)
     
      1.2. [Objetivos.](#Objetivos)
      
-     1.2.1. [Objetivo General.](#Objetivo-General)
+     1.2.1. [Objetivo General.](#%EF%B8%8Fobjetivo-general)
      
-     1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
+     1.2.2. [Objetivos Especificos.](#objetivos-especificos)
       
-1.3. [Justificacion.](#Justificacion)
+1.3. [Justificacion.](#%EF%B8%8Fjustificacion)
 
-2. [Marco de Referencias.](#Marco-de-Referencias)
+2. [Marco de Referencias.](#-marco-de-referencia)
 
-      2.1. [Marco Contextual.](#Marco-Contextual)
+      2.1. [Marco Contextual.](#-marco-contextual)
    
-      2.2. [Marco Teorico.](#Marco-Teorico)
+      2.2. [Marco Teorico.](#-marco-teorico)
    
-      2.3. [Marco Legal.](#Marco-Legal)
+      2.3. [Marco Legal.](#-marco-legal)
  
 3. [Metologia Ingenieril.](#Metologia-Ingenieril)
 
-4. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+4. [Desarrollo Ingenieril.](#desarollo-ingenieril)
 
       4.1. [Requerimientos.](#Requerimientos)
 
       4.2. [Modelado.](#Modelado)
  
-      4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
+      4.3. [Descripcion tecnica del sistema.](#%EF%B8%8Fdescripcion-tecnica-del-sistema)
  
-      4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
+      4.4. [Diseño de Interfaz.](#diseño-de-interfaz)
  
 5. [Analisis Economico.](#Analisis-Economico)
 
-6. [Conclusiones.](#Conclusiones)
+6. [Conclusiones.](#conclusiones)
 
 7. [Bibliografias.](#Bibliografias)
 
@@ -122,7 +122,7 @@ Lo que se espera del software es:
 ## **📕 Marco Contextual.** 
 ***
 
-Se hará una Comparamos softwares bancarios del mercando de la actualidad basándonos en las funciones del nuestro software las cuales son:
+Comparamos softwars bancarios del mercando de la actualidad basándonos en las funciones del nuestro software las cuales son:
 
 •	Almacenamiento de datos.
 
@@ -187,44 +187,19 @@ Funciones:
 
 ## **📗 Marco teorico.** 
 ***
-Se evidenciará la investigación y significados de palabras o temas que se va a utilizar y estudiar para poder hacer un desarrollo optimo al proyecto, siendo así para aprender y comprender temáticas nuevas, beneficiando tanto a los integrantes del proyecto y usuarios que lo vayan a utilizar, asimismo investigamos:
+El sistema bancario desempeña un papel central en el funcionamiento y desarrollo ya sea de la economio y brindar un beneficio para nuestros usuarios brindando un funcionamiento web, de las cuales se utilizo:
 
-**Interfaz graficas (GUI):**
-La interfaz gráfica es un programa que concibe las veces que intervenga el usuario con la máquina. Este software demuestra una forma visual de todas las acciones con diferentes posibilidades en una plataforma, facilitando a los usuarios la forma de integración sin la necesidad de un conocimiento avanzados sobre sistemas.
+**Html**
+Herramienta utilizada para darle contexto a la pagina web
 
-**Swing:**
-Es una biblioteca de java, que incorpora widgets para una GUI las cuales son: 
-•	Caja de texto.
+**Css**
+Herramienta utilizada para darle detalle, con ayuda de Boostrap
 
-•	Botones.
+**Javascript**
+Programa utilizada para darle funcionalidad a los botones y elementos de la pagina
 
-•	Listas.
-
-•	Tablas.
-
-El swing también proporciona varios tipos de elementos gráficos entre ellos contenedore y los componentes.
-
-**Try-Catch:**
-..o correspondiendo al caso o signos que no dejan el programa ejecutar.
-
-**Equals ():**
-Este método se utiliza para saber si dos caos son del mismo tipo y que tienen el mismo dato. Si el Equals es tiene un valor igual su valor es true y si no el valor es falso.
-
-**JLabel:**
-El JLabel es un tipo de texto que podemos agregar en el frame, además también se puede agregar imágenes e imágenes animaciones, este es de gran utilidad para decorara la interfaz gráfica o mejorar la presentación del software.
-
-**String:**
-Este objeto nos ayuda a incorporar u operar una serie de caracteres.
-
-**JTextField:**
-El JTextField permite agregar una cadena de caracteres al programa.
-
-**Transferencia bancaria:**
-Consiste en que una persona quiera pasar una suma de dinero a una cuenta bancaria de otra persona.
-
-**Cooperativa:**
-Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar, recoger dinero, vender un producto. Siendo algo que beneficia a los integrantes de la cooperativa, teniendo sus normativas o reglas.
-
+**Java**
+Programa tilizado para darle instrucciones a la pagina utiliando una BD (Base de datos)
 
 ## **📘 Marco legal.** 
 ***
@@ -275,3 +250,4 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ## **📋Conclusiones.**
  ***
 El desarrollo de este sistema será una solución para las cooperativas al momento de poder estar al pendiente de los movimientos y que sus usuarios tengan fácil acceso al momento de hacer todo tipo de transacciones, ya que será un sistema amigable con los usuarios al igual que para los administradores, puedan estar al pendiente de los movimientos de sus usuarios y conocer los usuarios del sistema para que no haya necesidad de tener un contacto directo con la base de datos.
+
