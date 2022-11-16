@@ -20,7 +20,7 @@ public class VRegistro extends JFrame {
 	private JPanel barra;
 	private int mouseX;
 	private int mouseY;
-	private JLabel cerrar;
+	public JLabel cerrar;
 	private JLabel minimizar;
 	private JLabel logo;
 	private JLabel lblSingup;
@@ -35,6 +35,7 @@ public class VRegistro extends JFrame {
 	public JRadioButton rbFemenino;  // genero 1
 	public JRadioButton rdbtnMasculino; // genero 2
 	public JRadioButton rdbtnOtro; // genero 3
+	public JLabel lblGenero_1;
 	private JLabel lblFechaDeNacimiento;
 	private JLabel lbl;
 	private JLabel lblApellidos_2;
@@ -43,24 +44,19 @@ public class VRegistro extends JFrame {
 	public JPasswordField txtCpassword; // vercontra
 	private JLabel lblNewLabel;
 	public JDateChooser dateChooser; // fechaNaci
-	private JTextPane txtpnSiYaEstas;
 	public JLabel lblConfirm;
+	public JLabel volver1_0;
+	public JLabel volver1_1;
 
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		VRegistro v = new VRegistro();
-		MRegistro m = new MRegistro();
-		CRegistro c = new CRegistro(v, m);
-		v.setVisible(true);
-	}
 
 	
 
 	public VRegistro() {
 		setUndecorated(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 		setBounds(100, 100, 720, 635);
 		setLocationRelativeTo(null);
 		contentPane = new JPanel();
@@ -201,8 +197,31 @@ public class VRegistro extends JFrame {
 		
 		// Agregar componentes
 
-		barra.add(minimizar);
-		barra.add(cerrar);
+		
+		volver1_1 = new JLabel("da click aqui!!!");
+		volver1_1.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseEntered(MouseEvent e) {
+				setCursor(HAND_CURSOR);
+			}
+			@Override
+			public void mouseExited(MouseEvent e) {
+				setCursor(DEFAULT_CURSOR);
+			}
+			
+		});
+		volver1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		volver1_1.setForeground(Color.WHITE);
+		volver1_1.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		volver1_1.setBounds(479, 365, 231, 27);
+		contentPane.add(volver1_1);
+		
+		volver1_0 = new JLabel("Si ya estas registrado");
+		volver1_0.setForeground(Color.WHITE);
+		volver1_0.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		volver1_0.setHorizontalAlignment(SwingConstants.CENTER);
+		volver1_0.setBounds(479, 327, 231, 27);
+		contentPane.add(volver1_0);
 		
 		lblConfirm = new JLabel("Confirmacion");
 		lblConfirm.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
@@ -210,19 +229,11 @@ public class VRegistro extends JFrame {
 		lblConfirm.setBounds(198, 524, 257, 20);
 		contentPane.add(lblConfirm);
 		
-		JLabel lblGenero_1 = new JLabel("Genero");
+		lblGenero_1 = new JLabel("Genero");
 		lblGenero_1.setForeground(Color.BLACK);
 		lblGenero_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		lblGenero_1.setBounds(27, 192, 112, 27);
 		contentPane.add(lblGenero_1);
-		
-		txtpnSiYaEstas = new JTextPane();
-		txtpnSiYaEstas.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
-		txtpnSiYaEstas.setBackground(new Color(1, 1, 1,0));
-		txtpnSiYaEstas.setText("Si ya estas registrado\r\n        clickea aqui !");
-		txtpnSiYaEstas.setForeground(Color.WHITE);
-		txtpnSiYaEstas.setBounds(501, 288, 209, 80);
-		contentPane.add(txtpnSiYaEstas);
 		
 		lblNewLabel = new JLabel("");
 		lblNewLabel.setIcon(new ImageIcon(VRegistro.class.getResource("/Vista/img/login.png")));
@@ -257,7 +268,7 @@ public class VRegistro extends JFrame {
 		lbl.setBounds(30, 382, 150, 27);
 		
 		
-		lblApellidos_2 = new JLabel("Contraseña: ");
+		lblApellidos_2 = new JLabel("Contrase\u00F1a: ");
 		lblApellidos_2.setForeground(Color.BLACK);
 		lblApellidos_2.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		lblApellidos_2.setBounds(30, 436, 136, 27);
@@ -336,6 +347,8 @@ public class VRegistro extends JFrame {
 		lblApellidos.setBounds(30, 140, 112, 27);
 		
 		
+		barra.add(minimizar);
+		barra.add(cerrar);
 		
 		contentPane.add(lbl);
 		contentPane.add(lblApellidos_2);

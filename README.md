@@ -2,44 +2,72 @@
 ![image](https://user-images.githubusercontent.com/110683543/186949077-f98d74be-cad2-4b61-8096-acfaa3272547.png)
 ***
 # **🗃️Tabla de contenido**.
-1. [Introduccion.](#Introduccion)
-2. [Resumen.](#Resumen)
-3. [Planteamiento del problema.](#Planteamientodelproblema)
+[Introduccion.](#Introduccion)
 
-      3.1.[Descripcion del problema.](#Descripciondelproblema)
-  
-4. [Objetivos.](#Objetivos)
+[Abstrac.](#Abstrac)
 
-      4.1.[Objetivo General.](#Objetivo_General)
-      
-      4.2.[Objetivos Especificos.](#Objetivos_Especificos)
-      
-5. [Justificacion.](#Justificacion)
-6. [Desarollo Ingenieril.](#Desarollo_Ingenieril)
+[Resumen.](#Resumen)
 
-      6.1. [Descripcion tecnica del sistema.](#Descripcion_tecnica_del_sistema)
+1. [Planteamiento del problema.](#Planteamiento-del-problema)
+
+     1.1. [Descripcion del problema.](#Descripcion-del-problema)
+    
+     1.2. [Objetivos.](#Objetivos)
+     
+     1.2.1. [Objetivo General.](#Objetivo-General)
+     
+     1.2.2. [Objetivos Especificos.](#Objetivos-Especificos)
       
-      6.2. [Diseño de Interfaz.](#Diseño_de_Interfaz)
-      
-7. [Conclusiones.](#Conclusiones)
+1.3. [Justificacion.](#Justificacion)
+
+2. [Marco de Referencias.](#Marco-de-Referencias)
+
+      2.1. [Marco Contextual.](#Marco-Contextual)
+   
+      2.2. [Marco Teorico.](#Marco-Teorico)
+   
+      2.3. [Marco Legal.](#Marco-Legal)
+ 
+3. [Metologia Ingenieril.](#Metologia-Ingenieril)
+
+4. [Desarollo Ingenieril.](#Desarollo-Ingenieril)
+
+      4.1. [Requerimientos.](#Requerimientos)
+
+      4.2. [Modelado.](#Modelado)
+ 
+      4.3. [Descripcion tecnica del sistema.](#Descripcion-tecnica-del-sistema)
+ 
+      4.4. [Diseño de Interfaz.](#Diseño-de-Interfaz)
+ 
+5. [Analisis Economico.](#Analisis-Economico)
+
+6. [Conclusiones.](#Conclusiones)
+
+7. [Bibliografias.](#Bibliografias)
+
+8. [Anexos.](#Anexos)
 
 ***
 ## **💡Introduccion.** 
-En el presente documento encontraremos lo que sería como fue que surgió la necesidad de un software de transacciones, dando énfasis a problemas de la cotidianidad y de porque es requerido un sistema de este tipo, planteamos objetivos que tiene este software para brindarles a las personas de la cooperativa, se evidencia como fue el paso a paso para la realización de la interfaz, a lo cual realizamos modelados, requerimientos e investigaciones hacerla de leyes basadas en transacciones y la seguridad de los datos personales.
+Gracias a arduas investigaciones con bancos de Colombia, surgió la necesidad de poner en pie un software de transacciones que no solo funciones para manejar dinero, sino que con exactitud ayude a la persona, de manera que no se sientan agobiadas por costos adicionales. Por lo tanto, en el presente documento se evidenciará el desarrollo de un software bancario que quiere dar solución a esta problemática. Asimismo, realizar cambios radicales a diferentes identidades bancarias para que no tengan perdidas económicas.
+
+***
+## **📑Abstrac.**
+The software aims to solve the problems that are evidenced in some banking identities, either for saving, withdrawal or transaction issues. In such a way, it will have several objectives that will be able to give an easy solution to these problems. Also, to complement and improve the construction of the software. It is essential to study several fields such as methodologies, information techniques and unseen knowledge. It will be indicated the expenses that could be carried out to elaborate the project. Sketches of the software, a UML and a diagram of cases of use that demands functional requirements, which are of utmost importance, are made. To finish it is established conclusions all the content.
 ***
 ## **📝Resumen.**
-El software quiere solucionar los problemas que tiene la gente con algunas identidades bancares ya sea por temas de ahorro, retiro o tracción, de la misma forma encontrara sus objetivos para poder solucionar dichos problemas. Además, para poder complementar y mejorar la construcción de este software, se es necesario el estudio de varios campos como metodologías, técnicas de información, estudios previos y conocimientos no visto, se mostrará los gastos que genera el proyecto, se realizará bosquejos de interfaz, un modelado de diagramas de clase y diagrama de casos de uso que requerirán sus requisitos funcionales, y al finalizar se concluirá todo el contenido.
+El software aspira a solucionar las problemáticas que se evidencian en algunas identidades bancarias, ya sea por cuestiones de ahorro, retiro o transacción. De tal modo se tendrá en cuenta diversos objetivos que podrá dar una fácil solución a dichas problemáticas. Asimismo, complementar y mejorar la construcción del software. Es imprescindible el estudio de varios campos como metodologías, técnicas de información y conocimientos no visto. Se indicará los gastos que se podrían llevar a cabo para elaborar el proyecto. Se realiza bosquejos del software, un UML y diagrama de casos de uso que exige requerimientos funcionales, los cuales son de suma importancia . Para finalizar se establece conclusiones todo el contenido.
 ***
-## **📄Planteamiento del problema.** 
+# **📄Planteamiento del problema.** 
 ***
-### 🖋️Descripcion de Problematica.
+### 🖋️Descripcion de Problema.
 La problemática que se vive hoy en día es, que la mayoría de los estudiantes, maestro o personas de la comunidad, les cobran valores extra de dinero ya sea para retirar, transferir, y meter dinero en las cuentas de ellos, esto teniendo un límite de tiempo para el almacenamiento del dinero y llegando a pagar pequeños porcentajes a la identidad bancaria. Por lo tanto, esto demuestra la incomodidad de mini pagos por hacer un movimiento con el dinero, ya que se sale gasta más de lo que va a ahorrar o retirar.
-***
-## **🗄️Objetivos.** 
-***
-### 🏷️Objetivo General.
+
+### **🏷️Objetivo General**.
 El objetivo principal de nuestro sistema es crear un sistema de cooperativa moderno que facilite a los estudiantes, maestros o personas de la comunidad, a hacer un ahorro económico, también puedan transferir dinero, ingresar dinero o retirar el mismo que se va a ahorrar, permitiendo a los usuarios ver un registro de los movimientos de la cuenta dando información o recibos que contiene el tipo de movimiento que hizo en la cuenta, la fecha y hora que se realizó su acción. Asimismo, también tiene acceso para los administradores que tienen el fin de modificar, agregar o eliminar usuarios ya existentes en el sistema.
-### 🔎Objetivos Especificos.
+
+### **🔎Objetivos Especificos**.
 Nuestro proyecto/sistema tiene como objetivo:
 
 ✅ Brindar un nuevo sistema más cómodo y moderno para las personas.
@@ -87,7 +115,138 @@ Lo que se espera del software es:
  🟦 Sea seguro, util y comodo para los usuarios.
  
  🟦 El manejo de administrativo sea optimo, eficiente y confiable.
- 
+
+ ***
+# **📚 Marco de Referencia.** 
+***
+## **📕 Marco Contextual.** 
+***
+
+Se hará una Comparamos softwares bancarios del mercando de la actualidad basándonos en las funciones del nuestro software las cuales son:
+
+•	Almacenamiento de datos.
+
+•	Gestión de datos.
+
+•	Privacidad de datos personales.
+
+•	Panel de listado de usuarios.
+
+•	Facturación.
+
+En el mercado se pueden encontrar opciones similares como pueden ser:
+Nombre del Software: Bankingly
+
+Funciones:
+•	Almacenamiento de documentos.
+
+•	Autenticación.
+
+•	Auténticas de dos facturas.
+
+•	Banca en línea.
+
+•	Banca privada.
+
+•	Etc.
+
+Nombre del Software: NexorONE
+Es ideal para una amplia variedad de entidades financieras, tales como: bancos online y privados, cooperativas de crédito, billeteras electrónicas y fideicomisos y empresas de gestión de activos. 
+Funciones:
+
+•	API
+
+•	Gestión de documentos
+
+•	Gestión de la conformidad
+
+•	Gestión financiera 
+
+•	Almacenamiento de documentos
+
+•	Etc.
+
+Nombre del Software: COBIS CORE
+Las soluciones de Core bancario COBIS CORE son el punto de cálculo y el registro final de datos de una institución financiera:
+Cobis Core son soluciones nativas en la nube, para sistemas bancarios. 
+
+Funciones:
+
+•	Alertas y alzada
+
+•	Gestión de documentos
+
+•	API
+
+•	Gestión de usuarios
+
+•	Panal de actividades
+
+•	Etc.
+
+
+## **📗 Marco teorico.** 
+***
+Se evidenciará la investigación y significados de palabras o temas que se va a utilizar y estudiar para poder hacer un desarrollo optimo al proyecto, siendo así para aprender y comprender temáticas nuevas, beneficiando tanto a los integrantes del proyecto y usuarios que lo vayan a utilizar, asimismo investigamos:
+
+**Interfaz graficas (GUI):**
+La interfaz gráfica es un programa que concibe las veces que intervenga el usuario con la máquina. Este software demuestra una forma visual de todas las acciones con diferentes posibilidades en una plataforma, facilitando a los usuarios la forma de integración sin la necesidad de un conocimiento avanzados sobre sistemas.
+
+**Swing:**
+Es una biblioteca de java, que incorpora widgets para una GUI las cuales son: 
+•	Caja de texto.
+
+•	Botones.
+
+•	Listas.
+
+•	Tablas.
+
+El swing también proporciona varios tipos de elementos gráficos entre ellos contenedore y los componentes.
+
+**Try-Catch:**
+..o correspondiendo al caso o signos que no dejan el programa ejecutar.
+
+**Equals ():**
+Este método se utiliza para saber si dos caos son del mismo tipo y que tienen el mismo dato. Si el Equals es tiene un valor igual su valor es true y si no el valor es falso.
+
+**JLabel:**
+El JLabel es un tipo de texto que podemos agregar en el frame, además también se puede agregar imágenes e imágenes animaciones, este es de gran utilidad para decorara la interfaz gráfica o mejorar la presentación del software.
+
+**String:**
+Este objeto nos ayuda a incorporar u operar una serie de caracteres.
+
+**JTextField:**
+El JTextField permite agregar una cadena de caracteres al programa.
+
+**Transferencia bancaria:**
+Consiste en que una persona quiera pasar una suma de dinero a una cuenta bancaria de otra persona.
+
+**Cooperativa:**
+Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar, recoger dinero, vender un producto. Siendo algo que beneficia a los integrantes de la cooperativa, teniendo sus normativas o reglas.
+
+
+## **📘 Marco legal.** 
+***
+Régimen legal para proteger el derecho a la seguridad y reparación de los consumidores, sin perjuicio de otros reconocidos por leyes especiales, establecidas en la Constitución Política y el Reglamento de Consumo de uso.
+
+Ley 1581 de 2012 en sus artículos 2,4 y 6 estipula el correcto manejo, uso y protección de los datos personales para entidades de carácter público y privado.
+
+Decreto 1377 de 2013 según lo estipulado en su artículo 1. El presente decreto tiene como objeto reglamentar de forma parcial la ley 1581 del 2012 mediante la cual se dictan disposiciones generales para la protección de los datos personales. Según en el Art 4 la recolección de datos solo deberá limitarse para aquellos datos personales que son pertinentes y adecuados para la finalidad de la cual son solicitados o requeridos conforme con la normatividad vigente. Salvo en los casos expresamente previstos en la ley los cuales no se podrán recolectar datos personales sin autorización del titular. Art 13 en el presente decreto estipula cuales podrán ser las políticas de tratamiento de la información. La cual dice; los responsables del tratamiento deberán desarrollar sus políticas para el tratamiento de los datos personales y velar porque los encargados del tratamiento den cabal cumplimiento a las mismas.
+
+Ley 1273 de 2009, por medio de la cual se modifica el Código Penal, se crea un nuevo bien jurídico tutelado - denominado 'de la protección de la información y de los datos'- y se preservan integralmente los sistemas que utilicen las tecnologías de la información y las comunicaciones, entre otras disposiciones.
+
+Ley 1480 de 2011 
+Por su parte, la Ley 1480 de 2011 tiene como principio general, entre otros, proteger, promover y garantizar la efectiva defensa del derecho que tiene el consumidor a su seguridad e indemnidad, esto es, a que los productos que utiliza en la satisfacción de sus necesidades no le causen daño en situaciones normales de utilización.
+
+Artículo 78.
+Que el artículo 78 de la Constitución Política establece que la ley regulará el control de calidad de los bienes y servicios ofrecidos y prestados a la comunidad, así como la información que debe suministrarse al público en su comercialización
+
+Decreto 735 del 2013.
+Según el Art 1 del presente decreto establecen el objeto de este el cual es: mediante este decreto se establece las reglas para ser efectiva la garantía legal y las suplementarias de esta.
+
+
+
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
@@ -109,15 +268,9 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ***
  ## **📲Diseño de Interfaz.**
  ***
- #### Bosquejos antiguos.
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016882-16850632-bd57-4cc8-995d-19cf4b48c021.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016943-dee4c9d9-214e-492c-96c2-8f7d1cc58a01.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016958-84b3ca1e-b500-4f73-a331-3ec9a63ccf21.png)
- ***
- ![image](https://user-images.githubusercontent.com/110683543/187016970-db61c640-37a4-4346-8300-34f025419cd6.png)
+ Album de fotos de la evolucion de Transfercoop desde su inicio que fue el año 2021.
+ 
+ LINK: https://photos.app.goo.gl/epQQcrSby8doDXJY7.
  ***
  ## **📋Conclusiones.**
  ***

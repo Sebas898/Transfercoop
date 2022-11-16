@@ -23,6 +23,7 @@ public class Cliente extends Usuario{
 		this.setDinero(0d);
 	}
 	
+
 	// Metodos
 	public void verMovimientos() {
 		

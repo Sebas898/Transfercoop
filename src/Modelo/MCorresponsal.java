@@ -5,14 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 import Controlador.CCorresponsal;
+import Controlador.CLogin;
 import Vista.VCorresponsal;
+import Vista.VLogin;
 import Vista.VUsuario;
 
 
 public class MCorresponsal {
 
+    
+    
     PreparedStatement ps;
     ResultSet rs;
 
@@ -24,6 +29,50 @@ public class MCorresponsal {
     Connection con = null;
     Double retirado;
 
+    public void abrirConsultar(VCorresponsal v) {
+        v.panelD.setVisible(false);
+        v.panelCg.setVisible(false);
+        v.panelCt.setVisible(true);
+        v.panelR.setVisible(false);
+    }
+    
+    public void abrirConsignar(VCorresponsal v) {
+        v.panelD.setVisible(false);
+        v.panelCg.setVisible(true);
+        v.panelCt.setVisible(false);
+        v.panelR.setVisible(false);
+    }
+    
+    public void abrirRetirar(VCorresponsal v) {
+        if(verificador()) {
+        v.panelD.setVisible(false);
+        v.panelCg.setVisible(false);
+        v.panelCt.setVisible(false);
+        v.panelR.setVisible(true);
+        System.out.println("Hola");
+        }
+    }
+    
+    public boolean verificador() {
+        VLogin vl = new VLogin();
+        MVerificacion m = new MVerificacion();
+        CLogin c = new CLogin(vl, m);
+        vl.setVisible(true);
+        if(m.r) {
+           return true; 
+        }else {
+            return false;
+        }
+        
+    }
+    
+    public void abrirMenu(VCorresponsal v) {
+        v.panelD.setVisible(true);
+        v.panelCg.setVisible(false);
+        v.panelCt.setVisible(false);
+        v.panelR.setVisible(false);
+    }
+    
 	public void trasferir(VUsuario v, MLogin ml){
         Double dinero;
         accion = "Transferencia";

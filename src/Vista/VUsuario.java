@@ -2,33 +2,26 @@ package Vista;
 
 import java.awt.Color;
 import java.awt.Cursor;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import Controlador.CUsuario;
-import Modelo.MLogin;
-import Modelo.MUsuario;
-
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
 import java.awt.Font;
-import javax.swing.SwingConstants;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseMotionAdapter;
-import javax.swing.JTextPane;
-import javax.swing.JInternalFrame;
-import javax.swing.JButton;
-import java.awt.BorderLayout;
-import javax.swing.JDesktopPane;
-import javax.swing.JTextField;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
+import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
+import javax.swing.text.StyledDocument;
 
 public class VUsuario extends JFrame {
 
@@ -38,13 +31,13 @@ public class VUsuario extends JFrame {
 	private int mouseY;
 	private JPanel panelD;
 	private JLabel imagenUser;
-	private JTextPane txtFrase;
+	public JTextPane txtFrase;
 	public JLabel lblId;
 	public JLabel lblFecha;
 	public JLabel lblNombre;
 	private JLabel lblMarca;
 	private JPanel barra;
-	private JLabel cerrar;
+	public JLabel cerrar;
 	private JLabel minimizar;
 	public JPanel panelP;
 	public JLabel lblDinero;
@@ -66,14 +59,16 @@ public class VUsuario extends JFrame {
 	public JTable table;
 	public JPanel panelM;
 	JLabel lblMovimientos;
+	public JLabel lblApellido;
+	private JScrollPane scrollPane;
 	
-	public static void main(String[] args) {
-		VUsuario v = new VUsuario();
-		MUsuario m = new MUsuario();
-		MLogin mLogin = new MLogin();
-		CUsuario c = new CUsuario(v, m, mLogin);
-		v.setVisible(true);
-	}
+//	public static void main(String[] args) {
+//		VUsuario v = new VUsuario();
+//		MUsuario m = new MUsuario();
+//		MLogin mLogin = new MLogin();
+//		CUsuario c = new CUsuario(v, m, mLogin);
+//		v.setVisible(true);
+//	}
 	
 
 	
@@ -104,7 +99,7 @@ public class VUsuario extends JFrame {
 		panel.add(panelM);
 		panelM.setLayout(null);
 		
-		JScrollPane scrollPane = new JScrollPane();
+		scrollPane = new JScrollPane();
 		scrollPane.setForeground(Color.BLACK);
 		scrollPane.setFont(new Font("Tw Cen MT", Font.PLAIN, 14));
 		scrollPane.setBorder(null);
@@ -396,15 +391,19 @@ public class VUsuario extends JFrame {
 		txtFrase.setForeground(Color.WHITE);
 		txtFrase.setFont(new Font("Tw Cen MT", Font.PLAIN, 16));
 		txtFrase.setBackground(new Color(32, 178, 170, 0));
-		txtFrase.setBounds(10, 203, 209, 96);
+		txtFrase.setBounds(10, 219, 209, 96);
 		txtFrase.setEditable(false);
+		StyledDocument doc = txtFrase.getStyledDocument();
+		SimpleAttributeSet center = new SimpleAttributeSet();
+		StyleConstants.setAlignment(center, StyleConstants.ALIGN_CENTER);
+		doc.setParagraphAttributes(0, doc.getLength(), center, false);
 		panelD.add(txtFrase);
 		
 		lblId = new JLabel("ID");
 		lblId.setHorizontalAlignment(SwingConstants.CENTER);
 		lblId.setForeground(Color.WHITE);
 		lblId.setFont(new Font("Tw Cen MT", Font.BOLD, 18));
-		lblId.setBounds(-1, 160, 230, 21);
+		lblId.setBounds(0, 187, 230, 21);
 		panelD.add(lblId);
 		
 		lblFecha = new JLabel("DD/MM/AAAA");
@@ -415,7 +414,7 @@ public class VUsuario extends JFrame {
 		panelD.add(lblFecha);
 		
 		lblNombre = new JLabel();
-		lblNombre.setText("Nombre Apellido");
+		lblNombre.setText("Nombre");
 		lblNombre.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNombre.setForeground(Color.WHITE);
 		lblNombre.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
@@ -428,6 +427,15 @@ public class VUsuario extends JFrame {
 		lblMarca.setFont(new Font("Tw Cen MT", Font.PLAIN, 12));
 		lblMarca.setBounds(0, 390, 229, 21);
 		panelD.add(lblMarca);
+		
+		lblApellido = new JLabel("Apellido");
+		lblApellido.setHorizontalAlignment(SwingConstants.CENTER);
+		lblApellido.setForeground(Color.WHITE);
+		lblApellido.setFont(new Font("Tw Cen MT", Font.BOLD, 20));
+		lblApellido.setBounds(0, 153, 230, 23);
+		panelD.add(lblApellido);
+		
+	
 		
 		fondo = new JLabel("");
 		fondo.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/fondo_user.png")));

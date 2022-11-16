@@ -1,47 +1,46 @@
 package Vista;
 
-import java.awt.BorderLayout;
 import java.awt.Color;
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.JLabel;
-import javax.swing.ImageIcon;
+import java.awt.Cursor;
 import java.awt.Font;
-import javax.swing.SwingConstants;
-import javax.swing.JTextPane;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionAdapter;
+
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.JTextPane;
+import javax.swing.SwingConstants;
+import javax.swing.border.EmptyBorder;
 
 public class VCorresponsal extends JFrame {
 
 	private JPanel contentPane;
-	private JLabel fondo;
-	private JPanel barra;
-	private JPanel panelD;
+	public JPanel barra;
+	public JPanel panelD;
 	private JPanel panelI;
-	private JPanel panelCg;
+	public JPanel panelCg;
+	public JPanel panelCt;
+	public JPanel panelR;
 	public JTextField IDCg;
 	public JTextField MontoCg;
-	private JPanel panelCt;
 	private JLabel lblMarca;
 	public JTextField IDCt;
-	private JTextField ContrasanaCt;
-	private JTextField btnConsultarCt;
-	private JTextField btnVolverCt;
-	private JPanel panelR;
+	public JTextField ContrasanaCt;
+	public JLabel btnConsultarCt;
+	public JLabel btnVolverCt;
 	public JTextField IDR;
 	public JTextField MONTOR;
 	public JTextField CONTRASENAR;
-	private JLabel btnRetirarR;
-	private JLabel btnRetirar_1;
-	private JLabel btnConsultar;
-	private JLabel lblNewLabel_1;
+	public JLabel btnRetirarR;
+	public JLabel btnRetirar;
+	public JLabel btnConsultar;
 	private JLabel btnConsignar;
 	private JLabel lblNewLabel_1_1;
 	private JLabel lblNewLabel_1_2;
-	private JLabel lblNewLabel;
 	private JLabel btnSalir;
 	private JLabel lblId_1;
 	private JLabel lblId;
@@ -49,7 +48,7 @@ public class VCorresponsal extends JFrame {
 	private JLabel lblID;
 	private JLabel lblContrasena;
 	private JLabel lblNewLabel_1_3;
-	private JLabel btnVolverR;
+	public JLabel btnVolverR;
 	private JLabel lblMonto;
 	private JLabel lblNewLabel_1_3_1;
 	private JLabel Logo;
@@ -58,18 +57,25 @@ public class VCorresponsal extends JFrame {
 	private JLabel lblContrasea;
 	private JTextPane txtFrase;
 	private JLabel lblFecha;
-
-	public static void main(String[] args) {
-		VCorresponsal frame = new VCorresponsal();
-		frame.setVisible(true);
-	}
+	private JLabel lbl_Saldo_t;
+	private JLabel lbl_Saldo;
+	private JLabel fondo;
+	private int mouseX;
+    private int mouseY;
+    private JLabel cerrar;
+    private JLabel minimizar;
+//
+//	public static void main(String[] args) {
+//		VCorresponsal frame = new VCorresponsal();
+//		frame.setVisible(true);
+//	}
 
 	
 
 	public VCorresponsal() {
+	    setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+	    setUndecorated(true);
 		setBackground(new Color(64, 224, 208,0));
-		setUndecorated(true);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 		setBounds(100, 100, 800, 450);
 		contentPane = new JPanel();
@@ -78,22 +84,14 @@ public class VCorresponsal extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		panelD = new JPanel();
-		panelD.setBounds(230, 36, 570, 414);
-		panelD.setBackground(Color.WHITE);
-
-		
-		
-		barra = new JPanel();
-		barra.setBounds(0, 0, 800, 36);
-		barra.setBackground(new Color(1,1,1,0));
-		
-		contentPane.add(barra);
-		
 		Logo = new JLabel("");
 		Logo.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/LOGO ORIGINAL S M.png")));
 		Logo.setBounds(340, 20, 350, 127);
 		contentPane.add(Logo);
+		
+		panelD = new JPanel();
+		panelD.setBounds(230, 36, 570, 414);
+		panelD.setBackground(Color.WHITE);
 		contentPane.add(panelD);
 		panelD.setLayout(null);
 		
@@ -104,12 +102,12 @@ public class VCorresponsal extends JFrame {
 		btnConsignar.setBounds(26, 283, 150, 39);
 		panelD.add(btnConsignar);
 		
-		btnRetirar_1 = new JLabel("");
-		btnRetirar_1.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnRa.png")));
-		btnRetirar_1.setHorizontalAlignment(SwingConstants.CENTER);
-		btnRetirar_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		btnRetirar_1.setBounds(216, 283, 150, 39);
-		panelD.add(btnRetirar_1);
+		btnRetirar = new JLabel("");
+		btnRetirar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnRa.png")));
+		btnRetirar.setHorizontalAlignment(SwingConstants.CENTER);
+		btnRetirar.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		btnRetirar.setBounds(216, 283, 150, 39);
+		panelD.add(btnRetirar);
 		
 		btnConsultar = new JLabel("");
 		btnConsultar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/btnCtb.png")));
@@ -124,6 +122,141 @@ public class VCorresponsal extends JFrame {
 		btnSalir.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
 		btnSalir.setBounds(411, 364, 150, 39);
 		panelD.add(btnSalir);
+		
+		lbl_Saldo_t = new JLabel("Cupo Disponible");
+		lbl_Saldo_t.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_Saldo_t.setFont(new Font("Tw Cen MT", Font.BOLD, 32));
+		lbl_Saldo_t.setBounds(136, 103, 318, 39);
+		panelD.add(lbl_Saldo_t);
+		
+		lbl_Saldo = new JLabel("$00000");
+		lbl_Saldo.setHorizontalAlignment(SwingConstants.CENTER);
+		lbl_Saldo.setFont(new Font("Tw Cen MT", Font.BOLD, 32));
+		lbl_Saldo.setBounds(136, 153, 318, 39);
+		panelD.add(lbl_Saldo);
+		
+		panelCg = new JPanel();
+		panelCg.setVisible(false);
+		panelCg.setBounds(230, 36, 570, 414);
+		panelCg.setBackground(Color.WHITE);
+		
+		contentPane.add(panelCg);
+		panelCg.setLayout(null);
+		
+		lblNewLabel_1_1 = new JLabel("ID");
+		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		lblNewLabel_1_1.setBounds(102, 192, 103, 27);
+		panelCg.add(lblNewLabel_1_1);
+		
+		lblNewLabel_1_2 = new JLabel("Monto");
+		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_2.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		lblNewLabel_1_2.setBounds(102, 230, 103, 27);
+		panelCg.add(lblNewLabel_1_2);
+		
+		IDCg = new JTextField();
+		IDCg.setBorder(null);
+		IDCg.setBackground(Color.LIGHT_GRAY);
+		IDCg.setForeground(Color.BLACK);
+		IDCg.setHorizontalAlignment(SwingConstants.CENTER);
+		IDCg.setFont(new Font("Tw Cen MT", Font.PLAIN, 22));
+		IDCg.setBounds(215, 192, 214, 27);
+		panelCg.add(IDCg);
+		IDCg.setColumns(10);
+		
+		MontoCg = new JTextField();
+		MontoCg.setBorder(null);
+		MontoCg.setHorizontalAlignment(SwingConstants.CENTER);
+		MontoCg.setForeground(Color.BLACK);
+		MontoCg.setFont(new Font("Tw Cen MT", Font.PLAIN, 22));
+		MontoCg.setColumns(10);
+		MontoCg.setBackground(Color.LIGHT_GRAY);
+		MontoCg.setBounds(215, 230, 214, 27);
+		panelCg.add(MontoCg);
+		
+		lblNewLabel_1_3 = new JLabel("Consignar");
+		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		lblNewLabel_1_3.setBounds(250, 292, 103, 27);
+		panelCg.add(lblNewLabel_1_3);
+		
+		lblNewLabel_1_3_1 = new JLabel("Volver");
+		lblNewLabel_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_1_3_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
+		lblNewLabel_1_3_1.setBounds(438, 365, 103, 27);
+		panelCg.add(lblNewLabel_1_3_1);
+
+		
+		
+		barra = new JPanel();
+		barra.setBounds(0, 0, 800, 36);
+		barra.setBackground(new Color(1,1,1,0));
+		barra.addMouseMotionListener(new MouseMotionAdapter() {
+            @Override
+            public void mouseDragged(MouseEvent e) {
+                setLocation(getX() + e.getX() - mouseX, getY() + e.getY() - mouseY);
+            }
+        });
+        barra.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mousePressed(MouseEvent e) {
+
+                mouseX = e.getX();
+                mouseY = e.getY();
+
+            }
+        });
+		
+		contentPane.add(barra);
+		barra.setLayout(null);
+		
+		cerrar = new JLabel();
+		cerrar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/cerraa.png")));
+		cerrar.addMouseListener(new MouseAdapter() {
+		    @Override
+            public void mouseClicked(MouseEvent e) {
+                System.exit(0);
+            } 
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                cerrar.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                cerrar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/cerrab.png")));
+                contentPane.updateUI();
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                cerrar.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                cerrar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/cerraa.png")));
+                contentPane.updateUI();
+            }
+        });
+		cerrar.setBounds(758, 0, 32, 32);
+		barra.add(cerrar);
+		
+		minimizar = new JLabel();
+		minimizar.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/minimizara.png")));
+		minimizar.addMouseListener(new MouseAdapter() {
+		    @Override
+            public void mouseClicked(MouseEvent e) {
+                setExtendedState(ICONIFIED);
+            }
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                minimizar.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                minimizar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/minimizara.png")));
+                contentPane.updateUI();
+            }
+            @Override
+            public void mouseExited(MouseEvent e) {
+                minimizar.setCursor(new Cursor(Cursor.HAND_CURSOR));
+                minimizar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/minimizara.png")));
+                contentPane.updateUI();
+            }
+        });
+		minimizar.setBounds(716, 0, 32, 32);
+		minimizar.setHorizontalAlignment(SwingConstants.CENTER);
+		barra.add(minimizar);
 		
 		
 		panelI = new JPanel();
@@ -176,16 +309,11 @@ public class VCorresponsal extends JFrame {
 		panelI.add(lblMarca);
 		
 		panelCt = new JPanel();
+		panelCt.setVisible(false);
 		panelCt.setBackground(Color.WHITE);
 		panelCt.setBounds(230, 36, 570, 414);
 		contentPane.add(panelCt);
 		panelCt.setLayout(null);
-		
-		lblNewLabel = new JLabel("Consultar");
-		lblNewLabel.setFont(new Font("Tahoma", Font.BOLD, 24));
-		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel.setBounds(225, 132, 114, 29);
-		panelCt.add(lblNewLabel);
 		
 		lblId_1 = new JLabel("ID");
 		lblId_1.setHorizontalAlignment(SwingConstants.CENTER);
@@ -213,25 +341,24 @@ public class VCorresponsal extends JFrame {
 		ContrasanaCt.setBounds(219, 223, 216, 30);
 		panelCt.add(ContrasanaCt);
 		
-		btnConsultarCt = new JTextField();
+		btnConsultarCt = new JLabel();
 		btnConsultarCt.setBorder(null);
 		btnConsultarCt.setHorizontalAlignment(SwingConstants.CENTER);
 		btnConsultarCt.setFont(new Font("Tahoma", Font.BOLD, 24));
 		btnConsultarCt.setText("Consultar");
-		btnConsultarCt.setColumns(10);
 		btnConsultarCt.setBounds(219, 284, 153, 30);
 		panelCt.add(btnConsultarCt);
 		
-		btnVolverCt = new JTextField();
+		btnVolverCt = new JLabel();
 		btnVolverCt.setBorder(null);
 		btnVolverCt.setText("Volver");
 		btnVolverCt.setHorizontalAlignment(SwingConstants.CENTER);
 		btnVolverCt.setFont(new Font("Tahoma", Font.BOLD, 24));
-		btnVolverCt.setColumns(10);
 		btnVolverCt.setBounds(390, 361, 153, 30);
 		panelCt.add(btnVolverCt);
 		
 		panelR = new JPanel();
+		panelR.setVisible(false);
 		panelR.setBackground(Color.WHITE);
 		panelR.setBounds(230, 36, 570, 414);
 		contentPane.add(panelR);
@@ -303,68 +430,9 @@ public class VCorresponsal extends JFrame {
 		btnRetirarR.setBounds(250, 312, 67, 27);
 		panelR.add(btnRetirarR);
 		
-		panelCg = new JPanel();
-		panelCg.setBackground(Color.WHITE);
-		
-		contentPane.add(panelCg);
-		panelCg.setLayout(null);
-		
-		lblNewLabel_1 = new JLabel("Consignar");
-		lblNewLabel_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		lblNewLabel_1.setBounds(250, 141, 103, 27);
-		panelCg.add(lblNewLabel_1);
-		
-		lblNewLabel_1_1 = new JLabel("ID");
-		lblNewLabel_1_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		lblNewLabel_1_1.setBounds(102, 192, 103, 27);
-		panelCg.add(lblNewLabel_1_1);
-		
-		lblNewLabel_1_2 = new JLabel("Monto");
-		lblNewLabel_1_2.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_2.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		lblNewLabel_1_2.setBounds(102, 230, 103, 27);
-		panelCg.add(lblNewLabel_1_2);
-		
-		IDCg = new JTextField();
-		IDCg.setBorder(null);
-		IDCg.setBackground(Color.LIGHT_GRAY);
-		IDCg.setForeground(Color.BLACK);
-		IDCg.setHorizontalAlignment(SwingConstants.CENTER);
-		IDCg.setFont(new Font("Tw Cen MT", Font.PLAIN, 22));
-		IDCg.setBounds(215, 192, 214, 27);
-		panelCg.add(IDCg);
-		IDCg.setColumns(10);
-		
-		MontoCg = new JTextField();
-		MontoCg.setBorder(null);
-		MontoCg.setHorizontalAlignment(SwingConstants.CENTER);
-		MontoCg.setForeground(Color.BLACK);
-		MontoCg.setFont(new Font("Tw Cen MT", Font.PLAIN, 22));
-		MontoCg.setColumns(10);
-		MontoCg.setBackground(Color.LIGHT_GRAY);
-		MontoCg.setBounds(215, 230, 214, 27);
-		panelCg.add(MontoCg);
-		
-		lblNewLabel_1_3 = new JLabel("Consignar");
-		lblNewLabel_1_3.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_3.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		lblNewLabel_1_3.setBounds(250, 292, 103, 27);
-		panelCg.add(lblNewLabel_1_3);
-		
-		lblNewLabel_1_3_1 = new JLabel("Volver");
-		lblNewLabel_1_3_1.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_1_3_1.setFont(new Font("Tw Cen MT", Font.BOLD, 24));
-		lblNewLabel_1_3_1.setBounds(438, 365, 103, 27);
-		panelCg.add(lblNewLabel_1_3_1);
-		
 		fondo = new JLabel("");
 		fondo.setIcon(new ImageIcon(VCorresponsal.class.getResource("/Vista/img/fondo_user.png")));
 		fondo.setBounds(0, 0, 800, 451);
-		
-		
-		
 		contentPane.add(fondo);
 		
 	}

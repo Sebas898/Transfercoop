@@ -23,29 +23,17 @@ public class CUsuario implements MouseListener{
         v.btnMovimientos.addMouseListener(this);
         v.btnVolverT.addMouseListener(this);
         v.btnVolverM.addMouseListener(this);
+        v.cerrar.addMouseListener(this);
         m.mostrarDatos(v, mLogin);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
-        
-    }
-
-    @Override
-    public void mouseEntered(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void mouseExited(MouseEvent e) {
-        // TODO Auto-generated method stub
-        
-    }
-
-    @Override
-    public void mousePressed(MouseEvent e) {
+    	if(e.getSource() == v.cerrar) {
+    		m.salir(v);
+    	}
+    	
     	if(e.getSource() == v.btnSalir){
             m.salir(v);
         }
@@ -70,10 +58,26 @@ public class CUsuario implements MouseListener{
     		
     	}
     	
-    	
     	if(e.getSource() == v.btnTrasferirT) {
     		m.trasferir(v, mLogin);
     	}
+        
+    }
+
+    @Override
+    public void mouseEntered(MouseEvent e) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void mouseExited(MouseEvent e) {
+        // TODO Auto-generated method stub
+        
+    }
+
+    @Override
+    public void mousePressed(MouseEvent e) {
     	
     	
     }
