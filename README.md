@@ -250,4 +250,3 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ## **📋Conclusiones.**
  ***
 El desarrollo de este sistema será una solución para las cooperativas al momento de poder estar al pendiente de los movimientos y que sus usuarios tengan fácil acceso al momento de hacer todo tipo de transacciones, ya que será un sistema amigable con los usuarios al igual que para los administradores, puedan estar al pendiente de los movimientos de sus usuarios y conocer los usuarios del sistema para que no haya necesidad de tener un contacto directo con la base de datos.
-
