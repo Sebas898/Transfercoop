@@ -188,11 +188,14 @@ Funciones:
 ## **📗 Marco teorico.** 
 ***
 Se evidenciará la investigación y significados de palabras o temas que se va a utilizar y estudiar para poder hacer un desarrollo optimo al proyecto, siendo así para aprender y comprender temáticas nuevas, beneficiando tanto a los integrantes del proyecto y usuarios que lo vayan a utilizar, asimismo investigamos:
+
 **Interfaz graficas (GUI):**
 La interfaz gráfica es un programa que concibe las veces que intervenga el usuario con la máquina. Este software demuestra una forma visual de todas las acciones con diferentes posibilidades en una plataforma, facilitando a los usuarios la forma de integración sin la necesidad de un conocimiento avanzados sobre sistemas.
-EventQueue.invokeLater(new Runnable () {
-public void run () {**
+
+
+**public void run () {**
 Se ejecuta dentro de un método run () llevándolo a una cola de eventos de swing. Esta línea de código se define dentro del run () que se ejecutara por un hilo de varios sucesos en un método gráfico.
+
 **Swing:**
 Es una biblioteca de java, que incorpora widgets para una GUI las cuales son: 
 •	Caja de texto.
@@ -214,6 +217,7 @@ El JTextField permite agregar una cadena de caracteres al programa.
 
 **Transferencia bancaria:**
 Consiste en que una persona quiera pasar una suma de dinero a una cuenta bancaria de otra persona.
+
 **Cooperativa:**
 Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar, recoger dinero, vender un producto. Siendo algo que beneficia a los integrantes de la cooperativa, teniendo sus normativas o reglas.
 
@@ -254,6 +258,7 @@ Según el Art 1 del presente decreto establecen el objeto de este el cual es: me
 ##  **👨‍💼Metodologia Ingenieril.**
  ***
 Se establecerá la metodología que nos ayudará al desarrollo del proyecto, la técnica de recolección de datos y cronograma de actividades.
+
 **Selección de metodología.**
 La metodología que se implementara en este proyecto y se evidenciara a lo largo del desarrollo de este, es el Scrum este proceso en que aplican conjunto de prácticas para la elaboración de trabajo en equipo, obteniendo unos resultados eficientes para el proyecto. 
 El Scrum proporciona o intenta realizar entregas parciales y usuales del producto final, enfocándose en dar los beneficios que aportaran al proyecto. Además, el Scrum se aplica en proyectos de medios complejos, donde se requiere resultado precisos y rápidos, donde se involucra varios aspectos de innovación, competitividad, flexibilidad y producción.
@@ -261,14 +266,13 @@ El Scrum proporciona o intenta realizar entregas parciales y usuales del product
 El proceso a la hora de ejecutar esta metodología se divide en tiempo corto y de duración fija. Cada planificación o actividad se itera normalmente de 2 semanas y si el proyecto está a mayor escala puede durar más de 3 a 4 semanas.
 
 Ventajas que nos puede ayudar al proyecto a futuro:
-
 •	Gestión en tiempo de elaboración del proyecto.
 •	La entrega rápida de en el tiempo estimado con la menor margen de errores.
 •	El aprendizaje de nuevos campos a la hora de hacer el proyecto.
 •	Rapidez en reuniones diarias retroalimentando del avance y problemas del proyecto.
 •	Autonomía y responsabilidad.
-Desventajas que nos puede perjudicar al proyecto:
 
+Desventajas que nos puede perjudicar al proyecto:
 •	Los equipos deben ser reducidos.
 •	El entendimiento rápido de las tares.
 •	Comprensión de rápida de las reuniones.
@@ -301,6 +305,7 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  Album de fotos de la evolucion de Transfercoop desde su inicio que fue el año 2021.
  
  LINK: https://photos.app.goo.gl/epQQcrSby8doDXJY7.
+ 
  ***
  ## **📋Conclusiones.**
  ***
