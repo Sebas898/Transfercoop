@@ -314,10 +314,11 @@ En el siguiente cronograma se observará los tiempos para realizar cada una de l
 ##  **💢Modelado.**
  ***
 ### **🔥Diagrama de casos de uso.**
-
+![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/uso.jpg)
 
 ### **💧Diagrama de clase.**
- 
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/casos.jpg)
+
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
@@ -347,3 +348,15 @@ Este sistema recibe el nombre de Sistema Bancario Transfercoop, el cual está co
  ## **📋Conclusiones.**
  ***
 El desarrollo de este sistema será una solución para las cooperativas al momento de poder estar al pendiente de los movimientos y que sus usuarios tengan fácil acceso al momento de hacer todo tipo de transacciones, ya que será un sistema amigable con los usuarios al igual que para los administradores, puedan estar al pendiente de los movimientos de sus usuarios y conocer los usuarios del sistema para que no haya necesidad de tener un contacto directo con la base de datos.
+***
+ ## **🔰Mision.**
+ La mision de Transfercoop es proporcionar a nuestros usurios una solucion financiera, un metodo seguro para transacciones, retiros y un facil acceso y manejo de la aplicacion, y lo mas importante, no sufocar a nuestro usuarios a pagar algun movimiento en especifico.
+ ***
+ ***
+ ## **👁️Vision.**
+ Mantenernos en estatus social de confianza con los futuros clientes y asi lograr el desarrollo de la empresa. Esto con el fin de seguir evolucionando al paso del tiempo. Por lo tanto se seguira trabajando para satisfacer las necesidades de los usurio y no solo de ellos si no tambien de los trabajadores que sin ellos no habria empresa.
+ ***
+ ***
+ ## **💪Los valores corporativos.**
+ "Evolución, compromiso, honestidad, comprensión, eficiencia"
+ ***
