@@ -296,20 +296,28 @@ En el siguiente cronograma se observará los tiempos para realizar cada una de l
  ***
 ## **🖥️DESARROLLO INGENIERIL.** 
  ***
- ### **REQUERIMIENTOS**
+ ### **⚙️REQUERIMIENTOS**
  ***
- #### **REQUERIMIENTOS FUNCIONALES**
+ #### **⏩REQUERIMIENTOS FUNCIONALES**
  ***
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/1.png)
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/2.png)
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/3.png)
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/4.png)
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/5.png)
- ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/6.png)
  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/7.png)
- #### **REQUERIMIENTOS NO FUNCIONALES**
+ #### **▶️REQUERIMIENTOS NO FUNCIONALES**
  ***
   ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/81.png)
+  
+  ***
+##  **💢Modelado.**
+ ***
+### **🔥Diagrama de casos de uso.**
+
+
+### **💧Diagrama de clase.**
+ 
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
