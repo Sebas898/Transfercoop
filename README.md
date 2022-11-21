@@ -250,7 +250,32 @@ Que el artículo 78 de la Constitución Política establece que la ley regulará
 Decreto 735 del 2013.
 Según el Art 1 del presente decreto establecen el objeto de este el cual es: mediante este decreto se establece las reglas para ser efectiva la garantía legal y las suplementarias de esta.
 
+***
+##  **👨‍💼Metodologia Ingenieril.**
+ ***
+Se establecerá la metodología que nos ayudará al desarrollo del proyecto, la técnica de recolección de datos y cronograma de actividades.
+**Selección de metodología.**
+La metodología que se implementara en este proyecto y se evidenciara a lo largo del desarrollo de este, es el Scrum este proceso en que aplican conjunto de prácticas para la elaboración de trabajo en equipo, obteniendo unos resultados eficientes para el proyecto. 
+El Scrum proporciona o intenta realizar entregas parciales y usuales del producto final, enfocándose en dar los beneficios que aportaran al proyecto. Además, el Scrum se aplica en proyectos de medios complejos, donde se requiere resultado precisos y rápidos, donde se involucra varios aspectos de innovación, competitividad, flexibilidad y producción.
 
+El proceso a la hora de ejecutar esta metodología se divide en tiempo corto y de duración fija. Cada planificación o actividad se itera normalmente de 2 semanas y si el proyecto está a mayor escala puede durar más de 3 a 4 semanas.
+
+Ventajas que nos puede ayudar al proyecto a futuro:
+
+•	Gestión en tiempo de elaboración del proyecto.
+•	La entrega rápida de en el tiempo estimado con la menor margen de errores.
+•	El aprendizaje de nuevos campos a la hora de hacer el proyecto.
+•	Rapidez en reuniones diarias retroalimentando del avance y problemas del proyecto.
+•	Autonomía y responsabilidad.
+Desventajas que nos puede perjudicar al proyecto:
+
+•	Los equipos deben ser reducidos.
+•	El entendimiento rápido de las tares.
+•	Comprensión de rápida de las reuniones.
+
+**Técnica de recolección y cronograma de actividades.**
+El proyecto necesita una técnica de recolección de información, en donde recolectamos información en base de indagaciones y reporte, con la finalidad de obtener datos de diferentes, ayudando a los diversos negocio y procesos que el usuario o cliente necesite.
+En el siguiente cronograma se observará los tiempos para realizar cada una de las tareas en el trascurso del proyecto.
 
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
