@@ -206,12 +206,16 @@ El swing también proporciona varios tipos de elementos gráficos entre ellos co
  
 **Try-Catch:**
 El propósito de un bloque try-catch es detectar y controlar una excepción generada por código en funcionamiento.
+
 **Equals ():**
 Este método se utiliza para saber si dos caos son del mismo tipo y que tienen el mismo dato. Si el Equals es tiene un valor igual su valor es true y si no el valor es falso.
+
 **JLabel:**
 El JLabel es un tipo de texto que podemos agregar en el frame, además también se puede agregar imágenes e imágenes animaciones, este es de gran utilidad para decorara la interfaz gráfica o mejorar la presentación del software.
+
 **String:**
 Este objeto nos ayuda a incorporar u operar una serie de caracteres.
+
 **JTextField:**
 El JTextField permite agregar una cadena de caracteres al programa.
 
@@ -220,7 +224,6 @@ Consiste en que una persona quiera pasar una suma de dinero a una cuenta bancari
 
 **Cooperativa:**
 Es un grupo de personas que son autónomas que tienen un fin en común: ahorrar, recoger dinero, vender un producto. Siendo algo que beneficia a los integrantes de la cooperativa, teniendo sus normativas o reglas.
-
 El sistema bancario desempeña un papel central en el funcionamiento y desarrollo ya sea de la economio y brindar un beneficio para nuestros usuarios brindando un funcionamiento web, de las cuales se utilizo:
 
 **Html**
