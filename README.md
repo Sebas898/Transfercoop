@@ -298,12 +298,18 @@ En el siguiente cronograma se observará los tiempos para realizar cada una de l
  ***
  ### **REQUERIMIENTOS**
  ***
-
  #### **REQUERIMIENTOS FUNCIONALES**
  ***
- 
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/1.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/2.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/3.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/4.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/5.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/6.png)
+ ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/7.png)
  #### **REQUERIMIENTOS NO FUNCIONALES**
  ***
+  ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/81.png)
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
