@@ -266,15 +266,23 @@ El Scrum proporciona o intenta realizar entregas parciales y usuales del product
 El proceso a la hora de ejecutar esta metodología se divide en tiempo corto y de duración fija. Cada planificación o actividad se itera normalmente de 2 semanas y si el proyecto está a mayor escala puede durar más de 3 a 4 semanas.
 
 Ventajas que nos puede ayudar al proyecto a futuro:
+
 •	Gestión en tiempo de elaboración del proyecto.
+
 •	La entrega rápida de en el tiempo estimado con la menor margen de errores.
+
 •	El aprendizaje de nuevos campos a la hora de hacer el proyecto.
+
 •	Rapidez en reuniones diarias retroalimentando del avance y problemas del proyecto.
+
 •	Autonomía y responsabilidad.
 
 Desventajas que nos puede perjudicar al proyecto:
+
 •	Los equipos deben ser reducidos.
+
 •	El entendimiento rápido de las tares.
+
 •	Comprensión de rápida de las reuniones.
 
 **Técnica de recolección y cronograma de actividades.**
@@ -283,6 +291,19 @@ En el siguiente cronograma se observará los tiempos para realizar cada una de l
 ***
 ![image](https://github.com/Sebas898/Transfercoop/blob/main/bin/Vista/img/Captura%20de%20pantalla%202022-11-20%20203203.png?raw=true)
 ***
+
+
+ ***
+## **🖥️DESARROLLO INGENIERIL.** 
+ ***
+ ### **REQUERIMIENTOS**
+ ***
+
+ #### **REQUERIMIENTOS FUNCIONALES**
+ ***
+ 
+ #### **REQUERIMIENTOS NO FUNCIONALES**
+ ***
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
