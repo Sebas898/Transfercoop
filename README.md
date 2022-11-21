@@ -280,7 +280,9 @@ Desventajas que nos puede perjudicar al proyecto:
 **Técnica de recolección y cronograma de actividades.**
 El proyecto necesita una técnica de recolección de información, en donde recolectamos información en base de indagaciones y reporte, con la finalidad de obtener datos de diferentes, ayudando a los diversos negocio y procesos que el usuario o cliente necesite.
 En el siguiente cronograma se observará los tiempos para realizar cada una de las tareas en el trascurso del proyecto.
-
+***
+![image](https://user-images.githubusercontent.com/Captura de pantalla 2022-11-20 203203.jpeg)
+***
  ***
 ##  **👨‍💻Desarollo Ingenieril.**
  ***
