@@ -5,9 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
-import Controlador.CCorresponsal;
 import Controlador.CLogin;
 import Vista.VCorresponsal;
 import Vista.VLogin;

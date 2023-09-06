@@ -1,10 +1,7 @@
 package MVC;
 
-import Controlador.CCorresponsal;
 import Controlador.CLogin;
-import Modelo.MCorresponsal;
 import Modelo.MLogin;
-import Vista.VCorresponsal;
 import Vista.VLogin;
 
 public class MVC {

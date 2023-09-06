@@ -1,0 +1,9 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "libreria/AnimatonClass.jar",
+        "libreria/jcalendar-1.4.jar",
+        "libreria/mysql-connector-java-8.0.26.jar",
+        "libreria/RSPanelSlider.jar"
+    ]
+}
