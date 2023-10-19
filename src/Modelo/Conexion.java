@@ -3,8 +3,8 @@ package Modelo;
 import java.sql.*;
 
 public class Conexion {
-	private static String URL = "jdbc:mysql://localhost/transfer_prueba";
-	private static String USERNAME = "root";
+	private static String URL = "jdbc:mysql://localhost/TransfercoopDB";
+	private static String USERNAME = "sebastian";
 	private static String PASSWORD = "sebas123";
 	
 	public static Connection getConection() {
@@ -21,7 +21,7 @@ public class Conexion {
 			System.out.println("Error al cargar el controlador");
 			e.printStackTrace();
 		} catch (SQLException e) {
-			System.out.println("ERROR ALCONECTAR");
+			System.out.println("ERROR AL CONECTAR");
 			e.printStackTrace();
 		}
 		return con;

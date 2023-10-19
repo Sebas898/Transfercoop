@@ -190,7 +190,7 @@ public class MUsuario {
 		
 			
 			while(rs.next()==true){
-				h = nf.format(rs.getDouble(5));
+				h = nf.format(rs.getDouble(6));
 
 				usuarios[0] = rs.getString(1);
 				usuarios[1] = rs.getString(3);
