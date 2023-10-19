@@ -9,57 +9,57 @@ import Vista.VUsuario;
 
 public class CUsuario implements MouseListener{
 
-    private VUsuario v;
-    private MUsuario m;
+    private VUsuario vUsuario;
+    private MUsuario mUsuario;
     private MLogin mLogin;
 
-    public CUsuario(VUsuario v, MUsuario m, MLogin mLogin){
-        this.v = v;
-        this.m = m;
+    public CUsuario(VUsuario vUsuario, MUsuario mUsuario, MLogin mLogin){
+        this.vUsuario = vUsuario;
+        this.mUsuario = mUsuario;
         this.mLogin = mLogin;
-        v.btnSalir.addMouseListener(this);
-        v.btnTrasferir.addMouseListener(this);
-        v.btnTrasferirT.addMouseListener(this);
-        v.btnMovimientos.addMouseListener(this);
-        v.btnVolverT.addMouseListener(this);
-        v.btnVolverM.addMouseListener(this);
-        v.cerrar.addMouseListener(this);
-        m.mostrarDatos(v, mLogin);
+        vUsuario.btnSalir.addMouseListener(this);
+        vUsuario.btnTrasferir.addMouseListener(this);
+        vUsuario.btnTrasferirT.addMouseListener(this);
+        vUsuario.btnMovimientos.addMouseListener(this);
+        vUsuario.btnVolverT.addMouseListener(this);
+        vUsuario.btnVolverM.addMouseListener(this);
+        vUsuario.cerrar.addMouseListener(this);
+        mUsuario.mostrarDatos(vUsuario, mLogin);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
         
-    	if(e.getSource() == v.cerrar) {
-    		m.salir(v);
+    	if(e.getSource() == vUsuario.cerrar) {
+    		mUsuario.salir(vUsuario);
     	}
     	
-    	if(e.getSource() == v.btnSalir){
-            m.salir(v);
+    	if(e.getSource() == vUsuario.btnSalir){
+            mUsuario.salir(vUsuario);
         }
     	
-    	if(e.getSource() == v.btnTrasferir) {
-    		m.abrirVTransferir(v);
+    	if(e.getSource() == vUsuario.btnTrasferir) {
+    		mUsuario.abrirVTransferir(vUsuario);
     	}
     	
-    	if(e.getSource() == v.btnVolverM) {
-    		m.volver(v);
-    		m.mostrarDatos(v, mLogin);
+    	if(e.getSource() == vUsuario.btnVolverM) {
+    		mUsuario.volver(vUsuario);
+    		mUsuario.mostrarDatos(vUsuario, mLogin);
     	}
     	
-    	if(e.getSource() == v.btnVolverT) {
-    		m.volver(v);
-    		 m.mostrarDatos(v, mLogin);
+    	if(e.getSource() == vUsuario.btnVolverT) {
+    		mUsuario.volver(vUsuario);
+    		 mUsuario.mostrarDatos(vUsuario, mLogin);
     		
     	}
     	
-    	if(e.getSource() == v.btnMovimientos) {
-    		m.abrirVMovimientos(v, mLogin);
+    	if(e.getSource() == vUsuario.btnMovimientos) {
+    		mUsuario.abrirVMovimientos(vUsuario, mLogin);
     		
     	}
     	
-    	if(e.getSource() == v.btnTrasferirT) {
-    		m.trasferir(v, mLogin);
+    	if(e.getSource() == vUsuario.btnTrasferirT) {
+    		mUsuario.trasferir(vUsuario, mLogin);
     	}
         
     }

@@ -10,10 +10,10 @@ import Vista.VLogin;
 public class MVC {
 
 	public static void main(String[] args) {
-		VLogin v = new VLogin();
-		MLogin m = new MLogin();
-		CLogin c = new CLogin(v, m);
-		v.setVisible(true);
+		VLogin vLogin = new VLogin();
+		MLogin mLogin = new MLogin();
+		CLogin cLogin = new CLogin(vLogin, mLogin);
+		vLogin.setVisible(true);
 	}
 
 }

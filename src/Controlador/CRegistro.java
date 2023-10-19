@@ -13,38 +13,39 @@ import Vista.VRegistro;
 
 public class CRegistro implements MouseListener, KeyListener {
 
-	private VRegistro v;
-	private MRegistro m;
-	public CRegistro(VRegistro v, MRegistro m) {
-		this.v = v;
-		this.m = m;
-		v.btnNext.addMouseListener(this);
-		v.txtCpassword.addKeyListener(this);
-		v.txtPassword.addKeyListener(this);
-		v.volver1_1.addMouseListener(this);
-		m.casiilasEnBlanco(v);
+	private VRegistro vRegistro;
+	private MRegistro mRegistro;
+	
+	public CRegistro(VRegistro vRegistro, MRegistro mRegistro) {
+		this.vRegistro = vRegistro;
+		this.mRegistro = mRegistro;
+		vRegistro.btnNext.addMouseListener(this);
+		vRegistro.txtCpassword.addKeyListener(this);
+		vRegistro.txtPassword.addKeyListener(this);
+		vRegistro.volver1_1.addMouseListener(this);
+		mRegistro.casiilasEnBlanco(vRegistro);
 	}
 	
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if(e.getSource() == v.btnNext) {
-			m.guardar(v);
+		if(e.getSource() == vRegistro.btnNext) {
+			mRegistro.guardar(vRegistro);
 		}
 		
-		if(e.getSource() == v.volver1_1 || e.getSource() == v.volver1_0) {
-			m.volver(v);
+		if(e.getSource() == vRegistro.volver1_1 || e.getSource() == vRegistro.volver1_0) {
+			mRegistro.volver(vRegistro);
 		}
 	}
 	
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if(e.getSource()== v.txtCpassword) {
-			m.comprobarContrasena(v);		
-			m.casiilasEnBlanco(v);
+		if(e.getSource()== vRegistro.txtCpassword) {
+			mRegistro.comprobarContrasena(vRegistro);		
+			mRegistro.casiilasEnBlanco(vRegistro);
 		}
-		if(e.getSource()== v.txtPassword) {
-			m.comprobarContrasena(v);
-			m.casiilasEnBlanco(v);
+		if(e.getSource()== vRegistro.txtPassword) {
+			mRegistro.comprobarContrasena(vRegistro);
+			mRegistro.casiilasEnBlanco(vRegistro);
 		}
 	}
 	@Override

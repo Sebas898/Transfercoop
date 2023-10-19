@@ -3,17 +3,17 @@ package Modelo;
 import java.sql.*;
 
 public class Conexion {
-	private static String URL = "jdbc:mysql://localhost/transfer_prueba";
-	private static String USERNAME = "root";
-	private static String PASSWORD = "sebas123";
+	private static String URL = "jdbc:mysql://localhost/transfercoop";
+	private static String USERNAME = "juan";
+	private static String PASSWORD = ".16794300.@";
 	
 	public static Connection getConection() {
-		Connection con = null;
+		Connection connection = null;
 
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			con = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
+			connection = (Connection) DriverManager.getConnection(URL, USERNAME, PASSWORD);
 
 		}
 
@@ -24,7 +24,7 @@ public class Conexion {
 			System.out.println("ERROR ALCONECTAR");
 			e.printStackTrace();
 		}
-		return con;
+		return connection;
 
 	}
 }

@@ -15,79 +15,131 @@ import Vista.VUsuario;
 
 public class MUsuario {
 
-	VLogin vLogin = new VLogin();
-	NumberFormat prt = NumberFormat.getInstance(new Locale("es", "COL"));
+//	VLogin vLogin = new VLogin();
+	NumberFormat format = NumberFormat.getInstance(new Locale("es", "COL"));
 	Conexion conexion = new Conexion();
 	Cliente cliente = new Cliente();
 
 	Double retirado;
 	Double dinero;
 
-	Connection con = null;
+	Connection connection = null;
 	String accion = cliente.getAccion();
 
-	PreparedStatement ps;
-	ResultSet rs;
+	PreparedStatement preparedStatement;
+	ResultSet resultSet;
 
-	public void salir(VUsuario v) {
+	public void salir(VUsuario vUsuario) {
 
-		VLogin vl = new VLogin();
-		MLogin m = new MLogin();
-		CLogin c = new CLogin(vl, m);
-		vl.setVisible(true);
-		v.dispose();
+		VLogin vLogin = new VLogin();
+		MLogin mLogin = new MLogin();
+		CLogin cLogin = new CLogin(vLogin, mLogin);
+		vLogin.setVisible(true);
+		vUsuario.dispose();
 	}
 
-	public void abrirVTransferir(VUsuario v) {
-		v.panelP.setVisible(false);
-		v.panelT.setVisible(true);
+	public void abrirVTransferir(VUsuario vUsuario) {
+		vUsuario.panelP.setVisible(false);
+		vUsuario.panelT.setVisible(true);
+
+	}
+	
+   public void listaTransacciones(VUsuario vUsuario, MLogin mLogin){
+        String rango;
+        String sql;
+        String dinero;
+        String usuarios[] = new String[5];
+        
+        DefaultTableModel model = new DefaultTableModel();
+
+        model.addColumn("ID");
+        model.addColumn("ID destino");
+        model.addColumn("Fecha");
+        model.addColumn("Accion");
+        model.addColumn("Dinero");
+        
+        vUsuario.table.setModel(model);
+
+        rango = String.valueOf(mLogin.cliente.getRango());
+            try {
+            
+            if(rango.equals("A")){
+                sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
+            }else{
+                sql = "SELECT * FROM movimientos WHERE nID= ? OR nID_Des= ? ORDER BY fecha DESC";
+            }
+            
+            
+//            NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
+            connection = conexion.getConection();
+
+            preparedStatement = connection.prepareStatement(sql);
+            preparedStatement.setString(1, mLogin.cliente.getID());
+            preparedStatement.setString(2, mLogin.cliente.getID());
+            resultSet = preparedStatement.executeQuery();
+        
+            
+            while(resultSet.next()==true){
+                dinero = format.format(resultSet.getDouble(5));
+
+                usuarios[0] = resultSet.getString(1);
+                usuarios[1] = resultSet.getString(3);
+                usuarios[2] = resultSet.getString(2);
+                usuarios[3] = resultSet.getString(4);
+                usuarios[4] = dinero;
+                model.addRow(usuarios);
+            }
+            vUsuario.table.setModel(model);
+            vUsuario.table.getColumnModel().getColumn(2).setPreferredWidth(150);
+            vUsuario.table.getTableHeader().setReorderingAllowed(false);
+            
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+   
+
+	public void abrirVMovimientos(VUsuario vUsuario, MLogin mLogin) {
+		vUsuario.panelP.setVisible(false);
+		vUsuario.panelM.setVisible(true);
+		listaTransacciones(vUsuario, mLogin);
 
 	}
 
-	public void abrirVMovimientos(VUsuario v, MLogin ml) {
-		v.panelP.setVisible(false);
-		v.panelM.setVisible(true);
-		listaTransacciones(v, ml);
-
+	public void volver(VUsuario vUsuario) {
+		vUsuario.panelP.setVisible(true);
+		vUsuario.panelT.setVisible(false);
+		vUsuario.panelM.setVisible(false);
 	}
 
-	public void volver(VUsuario v) {
-		v.panelP.setVisible(true);
-		v.panelT.setVisible(false);
-		v.panelM.setVisible(false);
-	}
-
-	public void mostrarDatos(VUsuario v, MLogin m) {
+	public void mostrarDatos(VUsuario vUsuario, MLogin mLogin) {
 		try {
-			con = Conexion.getConection();
-			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
-			ps.setString(1, m.cliente.getID());
-			rs = ps.executeQuery();
-			if(rs.next()) {
-				m.cliente.setDinero(rs.getDouble("dinero"));
+			connection = Conexion.getConection();
+			preparedStatement = connection.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
+			preparedStatement.setString(1, mLogin.cliente.getID());
+			resultSet = preparedStatement.executeQuery();
+			if(resultSet.next()) {
+				mLogin.cliente.setDinero(resultSet.getDouble("dinero"));
 			}
 			
 		}catch (Exception e) {
 			System.out.println(e);
 		}
+
+//		NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
 		
-		
-		NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
-		
-	
-		
-		v.lblNombre.setText(m.cliente.getNombre());
-		v.lblApellido.setText(m.cliente.getApellido());
-		v.lblId.setText(m.cliente.getID());
-		v.lblFecha.setText(java.time.LocalDateTime.now().toLocalDate().toString());
-		v.lblDinero.setText(nf.format(m.cliente.getDinero()));
+		vUsuario.lblNombre.setText(mLogin.cliente.getNombre());
+		vUsuario.lblApellido.setText(mLogin.cliente.getApellido());
+		vUsuario.lblId.setText(mLogin.cliente.getID());
+		vUsuario.lblFecha.setText(java.time.LocalDateTime.now().toLocalDate().toString());
+		vUsuario.lblDinero.setText(format.format(mLogin.cliente.getDinero()));
 		
 		try {
-			ps = con.prepareStatement("SELECT * FROM frases WHERE id=?");
-			ps.setString(1, String.valueOf(Math.floor(Math.random()*10+1)));
-			rs = ps.executeQuery();
-			rs.next();
-			v.txtFrase.setText(rs.getString(2)+"\n-\""+rs.getString(3)+"\"");
+			preparedStatement = connection.prepareStatement("SELECT * FROM frases WHERE id=?");
+			preparedStatement.setString(1, String.valueOf(Math.floor(Math.random()*10+1)));
+			resultSet = preparedStatement.executeQuery();
+			resultSet.next();
+			vUsuario.txtFrase.setText(resultSet.getString(2)+"\n-\""+resultSet.getString(3)+"\"");
 		
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -95,51 +147,82 @@ public class MUsuario {
 		
 		
 	}
+	
+	
+   public void actualizar(MLogin mLogin) {
+        try {
+            connection = conexion.getConection();
+            preparedStatement = connection.prepareStatement("UPDATE usuarios SET dinero = ? WHERE nID = ?");
+            preparedStatement.setDouble(1, mLogin.cliente.getDinero());
+            preparedStatement.setString(2, mLogin.cliente.getID());
+            preparedStatement.executeUpdate();
 
-	public void trasferir(VUsuario v, MLogin ml) {
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void registrar(MLogin mLogin, VUsuario vUsuario) {
+        try {
+            connection = conexion.getConection();
+            preparedStatement = connection.prepareStatement("INSERT INTO movimientos (nID, fecha, nID_Des, accion, monto) VALUES(?,?,?,?,?)");
+            preparedStatement.setString(1, mLogin.cliente.getID());
+            preparedStatement.setTimestamp(2, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
+            preparedStatement.setString(3, vUsuario.id.getText());
+            preparedStatement.setString(4, accion);
+            preparedStatement.setDouble(5, retirado);
+            preparedStatement.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+    
+
+	public void trasferir(VUsuario vUsuario, MLogin mLogin) {
 		accion = "Transferencia";
 		try {
-			con = conexion.getConection();
-			ps = con.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
-			ps.setString(1, v.id.getText());
+			connection = conexion.getConection();
+			preparedStatement = connection.prepareStatement("SELECT * FROM usuarios WHERE nID = ?");
+			preparedStatement.setString(1, vUsuario.id.getText());
 
 			
-			if (v.monto.getText().equals("") || v.id.getText().equals("")) {
+			if (vUsuario.monto.getText().equals("") || vUsuario.id.getText().equals("")) {
 				JOptionPane.showMessageDialog(null, "Hay campos vacio");
 			} else {
-				retirado = Double.parseDouble(v.monto.getText());
-				rs = ps.executeQuery();
+				retirado = Double.parseDouble(vUsuario.monto.getText());
+				resultSet = preparedStatement.executeQuery();
 				
-				if (retirado <= 0 || retirado > ml.cliente.getDinero() || rs.next() != true) {
+				if (retirado <= 0 || retirado > mLogin.cliente.getDinero() || resultSet.next() != true) {
 					JOptionPane.showMessageDialog(null, "Valor no validos");
 				} else {
-					Double dineroU = rs.getDouble("dinero");
+					Double dineroU = resultSet.getDouble("dinero");
 					dineroU = dineroU + retirado;
-					dinero = ml.cliente.getDinero() - retirado;
-					ml.cliente.setDinero(dinero);
+					dinero = mLogin.cliente.getDinero() - retirado;
+					mLogin.cliente.setDinero(dinero);
 
-					ps = con.prepareStatement("UPDATE usuarios SET dinero = '" + dineroU + "' WHERE nID = ?");
-					ps.setString(1, v.id.getText());
-					ps.executeUpdate();
+					preparedStatement = connection.prepareStatement("UPDATE usuarios SET dinero = '" + dineroU + "' WHERE nID = ?");
+					preparedStatement.setString(1, vUsuario.id.getText());
+					preparedStatement.executeUpdate();
 
-					actualizar(ml);
+					actualizar(mLogin);
 
-					if (v.id.getText().equals(ml.cliente.getID())) {
+					if (vUsuario.id.getText().equals(mLogin.cliente.getID())) {
 						JOptionPane.showMessageDialog(null, "No se puede hacer la transaccion a su propia cuenta");
-						v.id.setText(null);
-						v.monto.setText(null);
+						vUsuario.id.setText(null);
+						vUsuario.monto.setText(null);
 					} else {
-						int res = ps.executeUpdate();
+						int res = preparedStatement.executeUpdate();
 						if (res > 0) {
 							JOptionPane.showMessageDialog(null, "Transferencia exitosa");
-							registrar(ml,v);
-							v.id.setText(null);
-							v.monto.setText(null);
+							registrar(mLogin,vUsuario);
+							vUsuario.id.setText(null);
+							vUsuario.monto.setText(null);
 
 						} else {
 							JOptionPane.showMessageDialog(null, "Ocurrio un error");
-							v.id.setText(null);
-							v.monto.setText(null);
+							vUsuario.id.setText(null);
+							vUsuario.monto.setText(null);
 						}
 					}
 
@@ -148,92 +231,6 @@ public class MUsuario {
 
 		} catch (Exception e) {
 			System.err.println(e);
-		}
-	}
-
-	public void listaTransacciones(VUsuario v, MLogin ml){
-		String a;
-		String sql;
-		String h;
-		String usuarios[] = new String[5];
-
-		
-		DefaultTableModel model = new DefaultTableModel();
-
-		model.addColumn("ID");
-		model.addColumn("ID destino");
-		model.addColumn("Fecha");
-		model.addColumn("Accion");
-		model.addColumn("Dinero");
-		
-		v.table.setModel(model);
-
-		a = String.valueOf(ml.cliente.getRango());
-			try {
-			
-			if(a.equals("A")){
-				sql = "SELECT * FROM movimientos ORDER BY fecha DESC";
-			}else{
-				sql = "SELECT * FROM movimientos WHERE nID= ? OR nID_Des= ? ORDER BY fecha DESC";
-			}
-			
-			
-			NumberFormat nf = NumberFormat.getInstance(new Locale("es", "COL"));
-			con = conexion.getConection();
-
-
-			
-			ps = con.prepareStatement(sql);
-			ps.setString(1, ml.cliente.getID());
-			ps.setString(2, ml.cliente.getID());
-			rs = ps.executeQuery();
-		
-			
-			while(rs.next()==true){
-				h = nf.format(rs.getDouble(5));
-
-				usuarios[0] = rs.getString(1);
-				usuarios[1] = rs.getString(3);
-				usuarios[2] = rs.getString(2);
-				usuarios[3] = rs.getString(4);
-				usuarios[4] = h;
-				model.addRow(usuarios);
-			}
-			v.table.setModel(model);
-			v.table.getColumnModel().getColumn(2).setPreferredWidth(150);
-			v.table.getTableHeader().setReorderingAllowed(false);
-			
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-
-	public void actualizar(MLogin ml) {
-		try {
-			con = conexion.getConection();
-			ps = con.prepareStatement("UPDATE usuarios SET dinero = ? WHERE nID = ?");
-			ps.setDouble(1, ml.cliente.getDinero());
-			ps.setString(2, ml.cliente.getID());
-			ps.executeUpdate();
-
-		} catch (Exception e) {
-			System.out.println(e);
-		}
-	}
-
-	public void registrar(MLogin ml, VUsuario v) {
-		try {
-			con = conexion.getConection();
-			ps = con.prepareStatement("INSERT INTO movimientos (nID, fecha, nID_Des, accion, monto) VALUES(?,?,?,?,?)");
-			ps.setString(1, ml.cliente.getID());
-			ps.setTimestamp(2, java.sql.Timestamp.valueOf(java.time.LocalDateTime.now()));
-			ps.setString(3, v.id.getText());
-			ps.setString(4, accion);
-			ps.setDouble(5, retirado);
-			ps.executeUpdate();
-
-		} catch (Exception e) {
-			System.out.println(e);
 		}
 	}
 }

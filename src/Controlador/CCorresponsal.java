@@ -9,25 +9,25 @@ import Vista.VCorresponsal;
 
 public class CCorresponsal implements MouseListener{
 	
-	private MCorresponsal m;
-	private VCorresponsal v;
+	private MCorresponsal mCorresponsal;
+	private VCorresponsal vCorresponsal;
 	private MLogin mLogin;
 
-	public CCorresponsal(VCorresponsal v, MCorresponsal m,MLogin mLogin) {
-		this.v = v;
-		this.m = m;
+	public CCorresponsal(VCorresponsal vCorresponsal, MCorresponsal mCorresponsal, MLogin mLogin) {
+		this.vCorresponsal = vCorresponsal;
+		this.mCorresponsal = mCorresponsal;
 		this.mLogin = mLogin;
-		v.btnConsultar.addMouseListener(this);
-		v.btnRetirar.addMouseListener(this);
+		vCorresponsal.btnConsultar.addMouseListener(this);
+		vCorresponsal.btnRetirar.addMouseListener(this);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if(e.getSource()==v.btnConsultar) {
-		    m.abrirConsultar(v);
+		if(e.getSource()==vCorresponsal.btnConsultar) {
+		    mCorresponsal.abrirConsultar(vCorresponsal);
 		}
-		if(e.getSource()==v.btnRetirar) {
-		    m.abrirRetirar(v);
+		if(e.getSource()==vCorresponsal.btnRetirar) {
+		    mCorresponsal.abrirRetirar(vCorresponsal);
 		}
 
 		
