@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 
 import javax.swing.JOptionPane;
 
+import com.mysql.cj.CoreSession;
+
 import Controlador.CCorresponsal;
 import Controlador.CRegistro;
 import Controlador.CUsuario;
@@ -20,6 +22,8 @@ public class MLogin {
 
 	public Cliente cliente;
 	public Corresponsal corresponsal;
+	public Usuario usuario;
+	public double saldoCliente;
 
 	PreparedStatement preparedStatement;
 	ResultSet resultSet;
@@ -43,6 +47,19 @@ public class MLogin {
 	public void setPassword(String password) {
 		this.password = password;
 	}
+	
+//	------------------------
+	
+    public UsuarioFactory getUsuarioFactory(String userType) {
+        if (userType.equals("U")) {
+            return new ClienteFactory();
+        } else if (userType.equals("C")) {
+            return new CorresponsalFactory();
+        }
+        return null;
+    }
+	
+//	------------------------
 
 	public void abrirCliente(VLogin vLogin) {
 	    VUsuario vUsuario = new VUsuario();
@@ -50,8 +67,6 @@ public class MLogin {
 		CUsuario usuario = new CUsuario(vUsuario, mUsuario, this);
 		vUsuario.setVisible(true);
 		vLogin.dispose();
-		
-	    
 	}
 	
 	public void abrirCorresponsal(VLogin vLogin) {
@@ -69,8 +84,6 @@ public class MLogin {
 		CRegistro cRegistro = new CRegistro(vRegistro, mRegistro);
 		vRegistro.setVisible(true);
 		vLogin.dispose();
-		
-		
 	}
 	
 	public void login(VLogin vLogin) {
@@ -83,40 +96,30 @@ public class MLogin {
 			if (resultSet.next()) {
 				JOptionPane.showMessageDialog(null, "Welcome " + resultSet.getString("nombre"), "Aviso",
 						JOptionPane.INFORMATION_MESSAGE);
-				if (resultSet.getString("rango").equals("U")) {
-				    
-					cliente = new Cliente();
-
-					cliente.setID(resultSet.getString("nID"));
-					cliente.setNombre(resultSet.getString("nombre"));
-					cliente.setApellido(resultSet.getString("apellido"));
-					cliente.setContrasena(resultSet.getString("contrasena"));
-					cliente.setFechaN(resultSet.getDate("fNacimiento"));
-					tipo = resultSet.getString("genero");
-					cliente.setSexo(tipo.charAt(0));
-					tipo = resultSet.getString("rango");
-					cliente.setRango(tipo.charAt(0));
-					cliente.setDinero(resultSet.getDouble("dinero"));
-					
-					abrirCliente(vLogin);
-				}else if(resultSet.getString("rango").equals("C")) {
-				    
-				    corresponsal = new Corresponsal();
-				    
-				    corresponsal.setID(resultSet.getString("nID"));
-				    corresponsal.setNombre(resultSet.getString("nombre"));
-				    corresponsal.setApellido(resultSet.getString("apellido"));
-				    corresponsal.setContrasena(resultSet.getString("contrasena"));
-				    corresponsal.setFechaN(resultSet.getDate("fNacimiento"));
-                    tipo = resultSet.getString("genero");
-                    corresponsal.setSexo(tipo.charAt(0));
-                    tipo = resultSet.getString("rango");
-                    corresponsal.setRango(tipo.charAt(0));
+				
+				UsuarioFactory factory = getUsuarioFactory(resultSet.getString("rango"));
+				usuario = factory.crearUsurio();
+				
+				usuario.setID(resultSet.getString("nID"));
+                usuario.setNombre(resultSet.getString("nombre"));
+                usuario.setApellido(resultSet.getString("apellido"));
+                usuario.setContrasena(resultSet.getString("contrasena"));
+                usuario.setFechaN(resultSet.getDate("fNacimiento"));
+                tipo = resultSet.getString("genero");
+                usuario.setSexo(tipo.charAt(0));
+                tipo = resultSet.getString("rango");
+                usuario.setRango(tipo.charAt(0));
+				
+                if(usuario instanceof Cliente) {
+                    cliente = (Cliente) usuario;
+                    cliente.setDinero(resultSet.getDouble("dinero"));
+                    saldoCliente = cliente.getDinero();
+                    abrirCliente(vLogin);
+                }else if(usuario instanceof Corresponsal) {
+                    corresponsal = (Corresponsal) usuario;
                     corresponsal.setCupo(resultSet.getDouble("dinero"));
-
                     abrirCorresponsal(vLogin);
-				}
-
+                }
 			} else {
 				JOptionPane.showMessageDialog(null, "Datos no validos", "Error", JOptionPane.ERROR_MESSAGE);
 			}
