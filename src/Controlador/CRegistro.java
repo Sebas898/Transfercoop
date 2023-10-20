@@ -5,10 +5,7 @@ import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-import javax.swing.plaf.synth.SynthScrollBarUI;
-
 import Modelo.MRegistro;
-import Vista.VLogin;
 import Vista.VRegistro;
 
 public class CRegistro implements MouseListener, KeyListener {
