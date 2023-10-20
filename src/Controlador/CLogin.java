@@ -10,51 +10,51 @@ import Modelo.MVerificacion;
 import Vista.VLogin;
 
 public class CLogin implements MouseListener, KeyListener {
-	private VLogin v;
-	private MLogin ml;
-	private MVerificacion mv;
+	private VLogin vLogin;
+	private MLogin mLogin;
+	private MVerificacion mVerificacion;
 	private String modelo;
 	public boolean verificacion;
 	public Class<? extends MLogin> datos;
 
-	public CLogin(VLogin v, MLogin m) {
-		this.v = v;
-		this.ml = m;
-		v.login.addMouseListener(this);
-		v.username.requestFocus();
-		v.registrate.addMouseListener(this);
-		v.password.addKeyListener(this);
-		modelo="l";
+	public CLogin(VLogin vLogin, MLogin mLogin) {
+		this.vLogin = vLogin;
+		this.mLogin = mLogin;
+		vLogin.login.addMouseListener(this);
+		vLogin.username.requestFocus();
+		vLogin.registrate.addMouseListener(this);
+		vLogin.password.addKeyListener(this);
+		modelo = "l";
 	}
 	
-	public CLogin(VLogin v, MVerificacion m) {
-        this.v = v;
-        this.mv = m;
-        v.login.addMouseListener(this);
-        v.username.requestFocus();
-        v.password.addKeyListener(this);
-        v.registrate.setVisible(false);
+	public CLogin(VLogin vLogin, MVerificacion mVerificacion) {
+        this.vLogin = vLogin;
+        this.mVerificacion = mVerificacion;
+        vLogin.login.addMouseListener(this);
+        vLogin.username.requestFocus();
+        vLogin.password.addKeyListener(this);
+        vLogin.registrate.setVisible(false);
         modelo="v";
     }
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
 	    if(modelo.equals("l")) {
-	        if (e.getSource() == v.login) {
-	            ml.login(v);
+	        if (e.getSource() == vLogin.login) {
+	            mLogin.login(vLogin);
 	            
 	        }
-	        if(e.getSource() == v.registrate) {
-	            ml.registro(v);
+	        if(e.getSource() == vLogin.registrate) {
+	            mLogin.registro(vLogin);
 	        }
 	    }
 		
 		if (modelo.equals("v")) {
-		    if (e.getSource() == v.login) {
-		        mv.comprobacion(v);
-		        if(mv.r==true) {
-		            v.dispose();
-		            System.out.println(mv.r);
+		    if (e.getSource() == vLogin.login) {
+		        mVerificacion.comprobacion(vLogin);
+		        if(mVerificacion.estado==true) {
+		            vLogin.dispose();
+		            System.out.println(mVerificacion.estado);
 		        }
             }
 		}
@@ -62,9 +62,9 @@ public class CLogin implements MouseListener, KeyListener {
 	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if ( e.getSource() == v.password) {
+		if ( e.getSource() == vLogin.password) {
 			if(e.getExtendedKeyCode() == KeyEvent.VK_ENTER) {
-				ml.login(v);
+				mLogin.login(vLogin);
 			}
 			
 	

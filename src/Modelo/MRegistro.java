@@ -15,75 +15,73 @@ import Vista.VRegistro;
 
 public class MRegistro {
 
-	PreparedStatement ps;
-	ResultSet rs;
+	PreparedStatement preparedStatement;
+	ResultSet resultSet;
 	
-	VRegistro v = new VRegistro();
-	Encriptacion en = new Encriptacion();
-
+//	VRegistro v = new VRegistro();
+	Encriptacion encriptacion = new Encriptacion();
 	
+	public void comprobarContrasena(VRegistro vRegistro) {
 	
-	public void comprobarContrasena(VRegistro v) {
-	
-		if(v.txtPassword.getText().equals(v.txtCpassword.getText())) {
-			v.lblConfirm.setForeground(Color.GREEN);
-			v.lblConfirm.setText("Las contrasenas coinciden");
+		if(vRegistro.txtPassword.getText().equals(vRegistro.txtCpassword.getText())) {
+			vRegistro.lblConfirm.setForeground(Color.GREEN);
+			vRegistro.lblConfirm.setText("Las contrasenas coinciden");
 
 		}else {
-			v.lblConfirm.setForeground(Color.RED);
-			v.lblConfirm.setText("Las contrasenas no coinciden");
+			vRegistro.lblConfirm.setForeground(Color.RED);
+			vRegistro.lblConfirm.setText("Las contrasenas no coinciden");
 		}
 	}
 	
-	public void volver(VRegistro v) {
-		VLogin vL = new VLogin();
-		MLogin m = new MLogin();
-		CLogin c = new CLogin(vL, m);
-		vL.setVisible(true);
-		v.dispose();
+	public void volver(VRegistro vRegistro) {
+		VLogin vLogin = new VLogin();
+		MLogin mLogin = new MLogin();
+		CLogin cLogin = new CLogin(vLogin, mLogin);
+		vLogin.setVisible(true);
+		vRegistro.dispose();
 	}
 
-	public void casiilasEnBlanco(VRegistro v){
-		if(v.txtPassword.getText().equals("") && v.txtCpassword.getText().equals("")){
-			v.lblConfirm.setText("");
+	public void casiilasEnBlanco(VRegistro vRegistro){
+		if(vRegistro.txtPassword.getText().equals("") && vRegistro.txtCpassword.getText().equals("")){
+			vRegistro.lblConfirm.setText("");
 		}
 	}
 
-	public void guardar(VRegistro v){
-		Connection con = null;
+	public void guardar(VRegistro vRegistro){
+		Connection connection = null;
 
 		try {
 
-			if(v.nID.getText().isEmpty() || v.nombre.getText().isEmpty() || v.apellido.getText().isEmpty() || v.dateChooser.getDate()==null ||
-					v.buttonGroup.getSelection().getActionCommand().toString().isEmpty() || v.txtCpassword.getText().isEmpty() || v.txtPassword.getText().isEmpty()){
+			if(vRegistro.nID.getText().isEmpty() || vRegistro.nombre.getText().isEmpty() || vRegistro.apellido.getText().isEmpty() || vRegistro.dateChooser.getDate()==null ||
+					vRegistro.buttonGroup.getSelection().getActionCommand().toString().isEmpty() || vRegistro.txtCpassword.getText().isEmpty() || vRegistro.txtPassword.getText().isEmpty()){
 						JOptionPane.showMessageDialog(null, "Hay campos vacios","Error",JOptionPane.ERROR_MESSAGE);
 
 			}else{
 
-				String f = String.valueOf(v.dateChooser.getCalendar().get(Calendar.YEAR));
-				String f2 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.MONTH));
-				String f3 = String.valueOf(v.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH));
-				String fecha = (f+"-"+f2+"-"+f3);
-				Date z1 = Date.valueOf(fecha);
+				String anho = String.valueOf(vRegistro.dateChooser.getCalendar().get(Calendar.YEAR));
+				String mes = String.valueOf(vRegistro.dateChooser.getCalendar().get(Calendar.MONTH));
+				String dia = String.valueOf(vRegistro.dateChooser.getCalendar().get(Calendar.DAY_OF_MONTH));
+				String fecha = (anho+"-"+mes+"-"+dia);
+				Date fechaNacimiento = Date.valueOf(fecha);
 
-				con = Conexion.getConection();
-				ps = con.prepareStatement("INSERT INTO usuarios (nID, nombre, apellido, fNacimiento, genero, contrasena, dinero, rango) VALUES (?,?,?,?,?,?,?,?)");
-				ps.setString(1, v.nID.getText());
-				ps.setString(2, v.nombre.getText());
-				ps.setString(3, v.apellido.getText());
-				ps.setDate(4, z1);
-				ps.setString(5, v.buttonGroup.getSelection().getActionCommand());
-				ps.setString(6, en.encriptar(v.txtCpassword.getText()));
-				ps.setDouble(7, 0);
-				ps.setString(8, "U");
-				int rs = ps.executeUpdate();
+				connection = Conexion.getConection();
+				preparedStatement = connection.prepareStatement("INSERT INTO usuarios (nID, nombre, apellido, fNacimiento, genero, contrasena, dinero, rango) VALUES (?,?,?,?,?,?,?,?)");
+				preparedStatement.setString(1, vRegistro.nID.getText());
+				preparedStatement.setString(2, vRegistro.nombre.getText());
+				preparedStatement.setString(3, vRegistro.apellido.getText());
+				preparedStatement.setDate(4, fechaNacimiento);
+				preparedStatement.setString(5, vRegistro.buttonGroup.getSelection().getActionCommand());
+				preparedStatement.setString(6, encriptacion.encriptar(vRegistro.txtCpassword.getText()));
+				preparedStatement.setDouble(7, 0);
+				preparedStatement.setString(8, "U");
+				int rs = preparedStatement.executeUpdate();
 	
 				if(rs > 0){
 					JOptionPane.showMessageDialog(null, "Registro exitoso","Aviso",JOptionPane.INFORMATION_MESSAGE);
 				}else{
 					JOptionPane.showMessageDialog(null, "Error al registrar","Error",JOptionPane.ERROR_MESSAGE);
 				}
-				con.close();
+				connection.close();
 			}
 		} catch (Exception e) {
 			System.out.println(e);

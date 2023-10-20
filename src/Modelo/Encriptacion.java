@@ -11,19 +11,19 @@ import Vista.VRegistro;
 
 public class Encriptacion {
     
-    VRegistro v = new VRegistro();
+//    VRegistro vRegistro = new VRegistro();
 
 	private String key = "oFWP1a1mChuKipd6o1SapG2IwafamV5Ihu1QIVLI1SU=";
 
-    public Encriptacion(){
-    }
-
+//    public Encriptacion(){
+//    }
+	
     	// Clave encriptar/Des-encriptar
 	public SecretKeySpec crearClave(String llave){
 		try {
 			byte[] cadena = llave.getBytes("UTF-8");
-			MessageDigest md = MessageDigest.getInstance("SHA-1");
-			cadena = md.digest(cadena);
+			MessageDigest messageDigest = MessageDigest.getInstance("SHA-1");
+			cadena = messageDigest.digest(cadena);
 			cadena = Arrays.copyOf(cadena, 16);
 			SecretKeySpec secretKeySpec = new SecretKeySpec(cadena, "AES");
 			return secretKeySpec;
