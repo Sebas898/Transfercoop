@@ -2,6 +2,10 @@ package Modelo;
 
 import java.sql.Date;
 
+import Controlador.CUsuario;
+import Vista.VLogin;
+import Vista.VUsuario;
+
 public class Cliente extends Usuario{
 
 	private Double dinero;
@@ -21,20 +25,6 @@ public class Cliente extends Usuario{
 		this.setRango(' ');
 		this.setFechaN(null);
 		this.setDinero(0d);
-	}
-	
-
-	// Metodos
-	public void verMovimientos() {
-		
-	}
-	
-	public void transferirDinero() {
-		
-	}
-	
-	public void consultarInformacion() {
-		
 	}
 
 	public Double getDinero() {
