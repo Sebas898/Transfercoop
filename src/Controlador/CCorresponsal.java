@@ -6,28 +6,49 @@ import java.awt.event.MouseListener;
 import Modelo.MCorresponsal;
 import Modelo.MLogin;
 import Vista.VCorresponsal;
+import Vista.Paneles.Principal;
 
 public class CCorresponsal implements MouseListener{
 	
 	private MCorresponsal mCorresponsal;
 	private VCorresponsal vCorresponsal;
 	private MLogin mLogin;
+	private Principal p;
 
-	public CCorresponsal(VCorresponsal vCorresponsal, MCorresponsal mCorresponsal, MLogin mLogin) {
+	public CCorresponsal(VCorresponsal vCorresponsal, MCorresponsal mCorresponsal, MLogin mLogin, Principal p) {
 		this.vCorresponsal = vCorresponsal;
 		this.mCorresponsal = mCorresponsal;
 		this.mLogin = mLogin;
-		vCorresponsal.btnConsultar.addMouseListener(this);
-		vCorresponsal.btnRetirar.addMouseListener(this);
+		this.p = p;
+		p.btnVolver.addMouseListener(this);
+		p.PConsultar.btnConsultar.addMouseListener(this);
+		p.PConsignar.btnConsignar.addMouseListener(this);;
+		p.PRetirar.btnRetirar.addMouseListener(this);
+		mCorresponsal.mostrarDatos(vCorresponsal, mLogin, p);
 	}
 
 	@Override
 	public void mouseClicked(MouseEvent e) {
-		if(e.getSource()==vCorresponsal.btnConsultar) {
-		    mCorresponsal.abrirConsultar(vCorresponsal);
+		if(e.getSource()==p.btnVolver) {
+		    mCorresponsal.volver(vCorresponsal);
 		}
-		if(e.getSource()==vCorresponsal.btnRetirar) {
-		    mCorresponsal.abrirRetirar(vCorresponsal);
+		if(e.getSource()==p.PConsignar.btnConsignar) {
+		    mCorresponsal.consignar(vCorresponsal, p, mLogin);
+		}
+		if(e.getSource()==p.PConsultar.btnConsultar) {
+		    mCorresponsal.consultar(vCorresponsal, p);
+		}
+		if(e.getSource()==p.PRetirar.btnRetirar) {
+		    mCorresponsal.retirar(vCorresponsal, p, mLogin);
+		}
+		if(e.getSource()==p.PConsignar.btnVolver) {
+		    mCorresponsal.mostrarDatos(vCorresponsal, mLogin, p);
+		}
+		if(e.getSource()==p.PConsultar.btnVolver) {
+		    mCorresponsal.mostrarDatos(vCorresponsal, mLogin, p);
+		}
+		if(e.getSource()==p.PRetirar.btnVolver) {
+		    mCorresponsal.mostrarDatos(vCorresponsal, mLogin, p);
 		}
 
 		
@@ -36,7 +57,6 @@ public class CCorresponsal implements MouseListener{
 	@Override
 	public void mousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
