@@ -222,12 +222,12 @@ public class VUsuario extends JFrame {
 			@Override
 			public void mouseEntered(MouseEvent e) {
 				btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvra.png")));
-				//contentPane.updateUI();
+				contentPane.updateUI();
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
 				btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
-				//contentPane.updateUI();
+				contentPane.updateUI();
 			}
 		});
 		btnVolverT.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnVlvrb.png")));
@@ -255,13 +255,12 @@ public class VUsuario extends JFrame {
 			public void mouseEntered(MouseEvent e) {
 				btnTrasferir.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				btnTrasferir.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnTb.png")));
-				//contentPane.updateUI();
+				contentPane.updateUI();
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnTrasferir.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				btnTrasferir.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnTa.png")));
-				//contentPane.updateUI();
+				contentPane.updateUI();
 			}
 		});
 		btnTrasferir.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnTa.png")));
@@ -280,16 +279,14 @@ public class VUsuario extends JFrame {
 		btnMovimientos.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseEntered(MouseEvent e) {
-				if (currentImage == null) {
-					currentImage = btnMovimientos.getIcon();
-				}
+			    btnMovimientos.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				btnMovimientos.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnMb.png")));
-				btnMovimientos.repaint();
+				contentPane.updateUI();
 			}
 			
 			public void mouseExited(MouseEvent e) {
-				btnMovimientos.setIcon(currentImage);
-				btnMovimientos.repaint();
+			    btnMovimientos.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnMa.png")));
+				contentPane.updateUI();
 			}
 			
 		});
@@ -307,7 +304,7 @@ public class VUsuario extends JFrame {
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				btnSalir.setCursor(new Cursor(Cursor.HAND_CURSOR));
+
 				btnSalir.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/btnSa.png")));
 				contentPane.updateUI();
 			}
@@ -352,7 +349,6 @@ public class VUsuario extends JFrame {
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				cerrar.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				cerrar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/cerraa.png")));
 				contentPane.updateUI();
 			}
@@ -371,7 +367,6 @@ public class VUsuario extends JFrame {
 			}
 			@Override
 			public void mouseExited(MouseEvent e) {
-				minimizar.setCursor(new Cursor(Cursor.HAND_CURSOR));
 				minimizar.setIcon(new ImageIcon(VUsuario.class.getResource("/Vista/img/minimizara.png")));
 				contentPane.updateUI();
 			}

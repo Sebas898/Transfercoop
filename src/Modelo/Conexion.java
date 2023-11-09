@@ -5,8 +5,8 @@ import java.sql.*;
 public class Conexion {
 
 	private static String URL = "jdbc:mysql://localhost/transfercoop";
-	private static String USERNAME = "juan";
-	private static String PASSWORD = ".16794300.@";
+	private static String USERNAME = "app";
+	private static String PASSWORD = "1122";
 	
 	public static Connection getConection() {
 		Connection connection = null;

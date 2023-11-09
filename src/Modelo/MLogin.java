@@ -15,6 +15,7 @@ import Vista.VCorresponsal;
 import Vista.VLogin;
 import Vista.VRegistro;
 import Vista.VUsuario;
+import Vista.Paneles.Principal;
 
 public class MLogin {
 	private String username;
@@ -71,8 +72,9 @@ public class MLogin {
 	
 	public void abrirCorresponsal(VLogin vLogin) {
 	    VCorresponsal vCorresponsal = new VCorresponsal();
+	    Principal p = (Principal) vCorresponsal.PPrincipal;
         MCorresponsal mCorresponsal = new MCorresponsal();
-        CCorresponsal cCorresponsal = new CCorresponsal(vCorresponsal, mCorresponsal, this);
+        CCorresponsal cCorresponsal = new CCorresponsal(vCorresponsal, mCorresponsal, this,p);
         vCorresponsal.setVisible(true);  
         vLogin.dispose();
 	}
@@ -118,6 +120,7 @@ public class MLogin {
                 }else if(usuario instanceof Corresponsal) {
                     corresponsal = (Corresponsal) usuario;
                     corresponsal.setCupo(resultSet.getDouble("dinero"));
+                    System.out.println(resultSet.getDouble("dinero"));
                     abrirCorresponsal(vLogin);
                 }
 			} else {
